@@ -1,26 +1,183 @@
 @import "tailwindcss";
 
+/* Compact treatment for short viewports (laptop windows with browser chrome) —
+   lets the hero fit in one screen without scrolling, mirroring the reference design's
+   own max-height:900px breakpoint. */
+@custom-variant short (@media (max-height: 900px));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafaf8;
+  --foreground: #0c0d10;
+
+  /* Brand palette — red from the LeverageAds logo, rest tuned to match */
+  --color-brand-red: #ed3237;
+  --color-brand-red-dark: #c31f24;
+  --color-brand-red-tint: #fdedec;
+  --color-brand-grey: #96989a;
+  /* logo accent grey */
+
+  --color-brand-ink: #0c0d10;
+  --color-brand-ink-2: #15171c;
+  --color-brand-ink-3: #23262d;
+  --color-brand-paper: #fafaf8;
+  --color-brand-gray: #5f646c;
+  --color-brand-gray-2: #9da2aa;
+  --color-brand-line: #e8e6e1;
+  --color-brand-line-dark: rgba(255, 255, 255, 0.1);
+
+  --shadow-brand-sm: 0 2px 8px rgba(12, 13, 16, 0.05);
+  --shadow-brand-md: 0 12px 40px rgba(12, 13, 16, 0.08);
+  --shadow-brand-lg: 0 24px 64px rgba(12, 13, 16, 0.14);
+
+  --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand-red: var(--color-brand-red);
+  --color-brand-red-dark: var(--color-brand-red-dark);
+  --color-brand-red-tint: var(--color-brand-red-tint);
+  --color-brand-grey: var(--color-brand-grey);
+
+  --color-brand-ink: var(--color-brand-ink);
+  --color-brand-ink-2: var(--color-brand-ink-2);
+  --color-brand-ink-3: var(--color-brand-ink-3);
+  --color-brand-paper: var(--color-brand-paper);
+  --color-brand-gray: var(--color-brand-gray);
+  --color-brand-gray-2: var(--color-brand-gray-2);
+  --color-brand-line: var(--color-brand-line);
+  --color-brand-line-dark: var(--color-brand-line-dark);
+
+  --shadow-brand-sm: var(--shadow-brand-sm);
+  --shadow-brand-md: var(--shadow-brand-md);
+  --shadow-brand-lg: var(--shadow-brand-lg);
+
+  --ease-brand: var(--ease-brand);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-jakarta);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container-page {
+  width: 100%;
+  max-width: 84rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity 0.8s var(--ease-brand),
+    transform 0.8s var(--ease-brand);
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Marquee ---------- */
+@keyframes brand-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: brand-marquee 30s linear infinite;
+}
+.marquee-track-reverse {
+  animation: brand-marquee 42s linear infinite reverse;
+}
+.marquee-track-slow {
+  animation: brand-marquee 80s linear infinite;
+}
+.marquee:hover .marquee-track,
+.marquee:hover .marquee-track-reverse,
+.marquee:hover .marquee-track-slow {
+  animation-play-state: paused;
+}
+
+/* ---------- Floating cards ---------- */
+@keyframes brand-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.animate-float {
+  animation: brand-float 7s ease-in-out infinite;
+}
+
+@keyframes brand-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(237, 50, 55, 0.4);
+  }
+  55% {
+    box-shadow: 0 0 0 8px rgba(237, 50, 55, 0);
+  }
+}
+.animate-pulse-ring {
+  animation: brand-pulse 2.4s infinite;
+}
+
+@keyframes brand-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: brand-spin 24s linear infinite;
+}
+
+@keyframes menuLink {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal docs / agent instructions / scratch files
+/docs/
+CLAUDE.md
+AGENTS.md
+leverageads-landing.html

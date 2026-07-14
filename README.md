@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LeverageAds — Website
+
+Phase 1 rebuild of [leverageads.com](https://leverageads.com): Next.js (App Router, TypeScript,
+Tailwind CSS v4) replacing the previous WordPress site. Brand colors and content are sourced
+from `docs/LeverageAds_Website_Implementation_Document_POLISHED.docx`, the client's approved
+content/IA plan.
+
+See `docs/CONTENT-GUIDE.md` for where content lives and how to edit it, and `docs/ROADMAP.md`
+for what's built vs. what's planned for Phase 2/3.
+
+## Stack
+
+- **Next.js 16** (App Router, Turbopack, TypeScript)
+- **Tailwind CSS v4** — theme tokens defined in `src/app/globals.css` (`@theme inline` block)
+- **lucide-react** for icons, **clsx** for conditional classNames
+- No CMS / database — content lives in typed data files under `src/data/`
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # production build
+npm run start   # serve the production build
+npm run lint    # ESLint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+src/
+  app/
+    layout.tsx          root layout: fonts, global <head>, Header/Footer/WhatsApp bar, Organization schema
+    page.tsx             homepage
+    about/page.tsx
+    contact/page.tsx
+    services/page.tsx    services index
+    services/[slug]/     dynamic route — one template, generates all 6 service pages
+    api/contact/route.ts enquiry form handler (see "Contact form" below)
+    sitemap.ts robots.ts metadata routes
+    icon.png apple-icon.png  favicon, cropped from the logo's triangle mark
+  components/
+    layout/               Header (mega menu), Footer, WhatsAppBar
+    ui/                   Button, Container, SectionHeading — shared primitives
+    sections/              page sections (Hero, ServiceSelectorGrid, CTABand, FAQAccordion, ...)
+  data/
+    site.ts               phone/email/address/WhatsApp number — single source of truth
+    nav.ts                 primary nav + services mega-menu structure
+    services.ts             the 6 core service pages' full content (copy, FAQs, included lists)
+    faqs.ts                 homepage general FAQs
+  lib/
+    schema.ts               JSON-LD builders (Service, FAQ, Breadcrumb)
+public/
+  brand/logo.png            source logo (also used in header/footer)
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Editing content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Almost all copy lives in `src/data/services.ts`, `src/data/site.ts`, `src/data/nav.ts` and
+`src/data/faqs.ts` — not scattered across JSX. To change a phone number, service description or
+FAQ, edit the data file; the pages and JSON-LD schema pick it up automatically. Details in
+`docs/CONTENT-GUIDE.md`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact form
 
-## Deploy on Vercel
+`src/components/sections/ContactForm.tsx` posts to `src/app/api/contact/route.ts`, which
+currently **validates and logs the enquiry server-side only** — it is not yet wired to email, a
+CRM or a spreadsheet. Before launch, connect it to a real destination (e.g. Resend/SMTP email, a
+CRM webhook, or a Google Sheet via a service like Zapier). See the `TODO` in that file.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Brand
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Primary red `#ED3237`, grey `#96989A` — taken from the client-supplied `logo.png`.
+- Full token set (tints, ink, charcoal, off-white, hairline) in `src/app/globals.css`.
+- Typography: Inter (body) + Plus Jakarta Sans (display/headings) via `next/font/google`.
+
+## Deployment
+
+See `docs/DEPLOYMENT.md`.
