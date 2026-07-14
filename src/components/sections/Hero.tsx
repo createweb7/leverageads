@@ -87,9 +87,10 @@ export function Hero() {
 
         <Reveal
           delay={200}
-          className="relative hidden h-full min-h-110 lg:block"
+          className="relative h-full min-h-70 overflow-hidden sm:min-h-80 lg:min-h-110 lg:overflow-visible"
           aria-hidden
         >
+        <div className="absolute left-1/2 top-0 h-110 w-120 origin-top -translate-x-1/2 scale-[0.62] sm:scale-[0.72] lg:static lg:h-full lg:w-full lg:translate-x-0 lg:scale-100">
           <div className="absolute left-[38%] top-[2%] h-30 w-30 short:h-22 short:w-22 rounded-full border border-dashed border-brand-red/35 animate-spin-slow">
             <span className="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-brand-red" />
           </div>
@@ -204,6 +205,7 @@ export function Hero() {
               </div>
             ))}
           </div>
+        </div>
         </Reveal>
       </Container>
     </section>

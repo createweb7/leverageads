@@ -7,7 +7,7 @@ export function HeroVisual({ images }: { images?: HeroVisualImage[] }) {
   if (!primary) return null;
 
   return (
-    <div className="relative hidden min-h-90 lg:flex lg:items-center lg:justify-center">
+    <div className="relative flex min-h-70 items-center justify-center lg:min-h-90">
       <div
         className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full"
         style={{ background: "radial-gradient(circle, rgba(237,50,55,.12), transparent 65%)" }}
@@ -27,7 +27,7 @@ export function HeroVisual({ images }: { images?: HeroVisualImage[] }) {
           alt={primary.alt}
           width={primary.width}
           height={primary.height}
-          sizes="(min-width: 1024px) 40vw, 0px"
+          sizes="(min-width: 1024px) 40vw, 75vw"
           className="relative z-10 h-auto max-h-105 w-auto max-w-full rounded-3xl object-contain shadow-brand-lg"
           priority
         />
@@ -37,7 +37,7 @@ export function HeroVisual({ images }: { images?: HeroVisualImage[] }) {
               src={secondary.src}
               alt={secondary.alt}
               fill
-              sizes="(min-width: 1024px) 14vw, 0px"
+              sizes="(min-width: 1024px) 14vw, 192px"
               className="object-cover"
             />
           </div>
