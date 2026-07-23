@@ -9,10 +9,10 @@ import { CTABand } from "@/components/sections/CTABand";
 
 const heroImages = [
   {
-    src: "/team/suresh-ramakrishnan.jpeg",
+    src: "/team/cam.webp",
     alt: "Suresh Ramakrishnan, Founder of LeverageAds, leading a corporate training session",
-    width: 1204,
-    height: 1240,
+    width: 2560,
+    height: 1707,
   },
 ];
 

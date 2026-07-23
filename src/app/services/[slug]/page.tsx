@@ -10,6 +10,7 @@ import { ServiceIntro, ServiceIncluded, ServiceIdealFor } from "@/components/sec
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
+import { RelatedCaseStudies } from "@/components/sections/RelatedCaseStudies";
 import { CTABand } from "@/components/sections/CTABand";
 import { WhatsAppRequirementForm } from "@/components/sections/WhatsAppRequirementForm";
 import { getServiceBySlug, services } from "@/data/services";
@@ -81,6 +82,7 @@ export default async function ServicePageRoute({
       )}
       <ServiceIntro service={service} />
       <ServiceIncluded service={service} />
+      <RelatedCaseStudies serviceSlug={service.slug} />
       <ServiceIdealFor service={service} />
       <ProcessSteps />
       <FAQAccordion faqs={service.faqs} title={`FAQs — ${service.navLabel}`} />

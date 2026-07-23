@@ -6,8 +6,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 const stats = [
-  { value: 24, suffix: "+", label: "Years of Experience" },
-  { value: 500, suffix: "+", label: "Projects Delivered" },
+  { value: 26, suffix: "+", label: "Years of Experience" },
+  { value: 3200, suffix: "+", label: "Projects Delivered" },
   { value: 1000, suffix: "+", label: "Clients Served" },
   { value: 15, suffix: "+", label: "Industries" },
 ];

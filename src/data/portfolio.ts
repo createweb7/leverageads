@@ -14,7 +14,8 @@ export type PortfolioItem = {
 export const portfolioCategories: PortfolioCategory[] = [
   { slug: "jewellery", name: "Jewellery" },
   { slug: "logo-identity", name: "Logo & Identity" },
-  { slug: "photography", name: "Photography" },
+  { slug: "model-photography", name: "Model Photography" },
+  { slug: "product-photography", name: "Product Photography" },
   { slug: "hospitality-food", name: "Hospitality & Food" },
   { slug: "corporate", name: "Corporate" },
   { slug: "real-estate", name: "Real Estate" },
@@ -37,6 +38,10 @@ export const portfolioItems: PortfolioItem[] = [
   { src: "/portfolio/jewellery/06.webp", alt: "Challani Jewellery Mart brand campaign portrait", categorySlug: "jewellery", width: 591, height: 835 },
   { src: "/portfolio/jewellery/07.webp", alt: "PGP gemstone jewellery flatlay", categorySlug: "jewellery", width: 591, height: 591 },
   { src: "/portfolio/jewellery/08.webp", alt: "KRT gold antique jewellery campaign", categorySlug: "jewellery", width: 1167, height: 1096 },
+  { src: "/portfolio/jewellery/09.webp", alt: "Challani Jewellery Mart temple jewellery campaign", categorySlug: "jewellery", width: 1476, height: 738 },
+  { src: "/portfolio/jewellery/10.webp", alt: "Challani Jewellery Mart bridal jewellery campaign", categorySlug: "jewellery", width: 887, height: 1119 },
+  { src: "/portfolio/jewellery/11.webp", alt: "Challani Jewellery Mart brand campaign cover", categorySlug: "jewellery", width: 567, height: 709 },
+  { src: "/portfolio/jewellery/12.webp", alt: "Shanthi Jewellers \"Chain Mela\" gold chain campaign", categorySlug: "jewellery", width: 3438, height: 2432 },
 
   // logo-identity
   { src: "/portfolio/logo-identity/01.webp", alt: "Challani Jewellery Mart brand identity and stationery", categorySlug: "logo-identity", width: 3937, height: 4650 },
@@ -46,18 +51,14 @@ export const portfolioItems: PortfolioItem[] = [
   { src: "/portfolio/logo-identity/05.webp", alt: "Logo design collection — Nidhish Krishnaa, Phoenix, Sudharma, MFM, Big Tree, Haco Tech", categorySlug: "logo-identity", width: 2267, height: 2993 },
   { src: "/portfolio/logo-identity/06.webp", alt: "Logo design collection — CoolTrip, Tejaas, SS Shriman, IcorePro, RARS", categorySlug: "logo-identity", width: 2267, height: 2993 },
 
-  // photography
-  { src: "/portfolio/photography/01.webp", alt: "Diamond and pearl necklace product photography", categorySlug: "photography", width: 827, height: 727 },
-  { src: "/portfolio/photography/02.webp", alt: "Emerald and ruby necklace product photography", categorySlug: "photography", width: 827, height: 583 },
-  { src: "/portfolio/photography/03.webp", alt: "Diamond necklace product photography", categorySlug: "photography", width: 827, height: 583 },
-  { src: "/portfolio/photography/04.webp", alt: "Gold necklace product photography on colour backdrop", categorySlug: "photography", width: 583, height: 827 },
-  { src: "/portfolio/photography/05.webp", alt: "Pearl bracelet styled product photography", categorySlug: "photography", width: 583, height: 827 },
-  { src: "/portfolio/photography/06.webp", alt: "Jewellery styled product photography", categorySlug: "photography", width: 827, height: 583 },
-  { src: "/portfolio/photography/07.webp", alt: "Luxury watch product photography", categorySlug: "photography", width: 827, height: 583 },
-  { src: "/portfolio/photography/08.webp", alt: "Lakshmi Jewellery campaign model photography", categorySlug: "photography", width: 1456, height: 1322 },
+  // product-photography
+  { src: "/portfolio/photography/03.webp", alt: "Diamond necklace product photography", categorySlug: "product-photography", width: 827, height: 583 },
+  { src: "/portfolio/photography/04.webp", alt: "Gold necklace product photography on colour backdrop", categorySlug: "product-photography", width: 583, height: 827 },
+
+  // model-photography
+  { src: "/portfolio/photography/08.webp", alt: "Lakshmi Jewellery campaign model photography", categorySlug: "model-photography", width: 1456, height: 1322 },
 
   // hospitality-food
-  { src: "/portfolio/hospitality-food/01.webp", alt: "Restaurant buffet promotional creative", categorySlug: "hospitality-food", width: 1181, height: 778 },
   { src: "/portfolio/hospitality-food/02.webp", alt: "Relishpro beverage brand campaign", categorySlug: "hospitality-food", width: 1181, height: 778 },
   { src: "/portfolio/hospitality-food/03.webp", alt: "Bar and drinks menu design", categorySlug: "hospitality-food", width: 931, height: 1317 },
   { src: "/portfolio/hospitality-food/04.webp", alt: "Dakshin restaurant menu design", categorySlug: "hospitality-food", width: 1181, height: 840 },
@@ -65,9 +66,12 @@ export const portfolioItems: PortfolioItem[] = [
   { src: "/portfolio/hospitality-food/06.webp", alt: "Vijay Homoeo Clinic healthcare campaign", categorySlug: "hospitality-food", width: 860, height: 1289 },
   { src: "/portfolio/hospitality-food/07.webp", alt: "Buhari Hotel restaurant campaign", categorySlug: "hospitality-food", width: 3543, height: 3543 },
   { src: "/portfolio/hospitality-food/08.webp", alt: "Ocean Spray resort magazine advertisement", categorySlug: "hospitality-food", width: 1772, height: 665 },
+  { src: "/portfolio/hospitality-food/09.webp", alt: "Alpha Ortho Clinic healthcare campaign", categorySlug: "hospitality-food", width: 1500, height: 1500 },
+  { src: "/portfolio/hospitality-food/10.webp", alt: "Bar whisky and tequila cocktail menu design", categorySlug: "hospitality-food", width: 1200, height: 849 },
+  { src: "/portfolio/hospitality-food/11.webp", alt: "Svaastha spa Ayurveda campaign", categorySlug: "hospitality-food", width: 827, height: 1169 },
+  { src: "/portfolio/hospitality-food/12.webp", alt: "Prana Spa & Fitness Center skincare campaign", categorySlug: "hospitality-food", width: 827, height: 1169 },
 
   // corporate
-  { src: "/portfolio/corporate/01.webp", alt: "Premier Voltage Stabilizer product campaign", categorySlug: "corporate", width: 945, height: 946 },
   { src: "/portfolio/corporate/02.webp", alt: "Festive corporate greeting creative", categorySlug: "corporate", width: 945, height: 1489 },
   { src: "/portfolio/corporate/03.webp", alt: "Raj Printers brand campaign", categorySlug: "corporate", width: 1686, height: 2403 },
   { src: "/portfolio/corporate/04.webp", alt: "MMRT corporate event creative", categorySlug: "corporate", width: 827, height: 1170 },
@@ -77,13 +81,13 @@ export const portfolioItems: PortfolioItem[] = [
   { src: "/portfolio/corporate/08.webp", alt: "Philips sustainability campaign", categorySlug: "corporate", width: 939, height: 2004 },
 
   // real-estate
-  { src: "/portfolio/real-estate/01.webp", alt: "REBI Property Fair campaign", categorySlug: "real-estate", width: 1181, height: 949 },
   { src: "/portfolio/real-estate/02.webp", alt: "Landmax real estate campaign", categorySlug: "real-estate", width: 945, height: 1508 },
   { src: "/portfolio/real-estate/03.webp", alt: "Vertical Brokers real estate brand creative", categorySlug: "real-estate", width: 1524, height: 1363 },
   { src: "/portfolio/real-estate/04.webp", alt: "Real estate investment campaign", categorySlug: "real-estate", width: 904, height: 1413 },
   { src: "/portfolio/real-estate/05.webp", alt: "Rau Holdings anniversary campaign", categorySlug: "real-estate", width: 1018, height: 1013 },
   { src: "/portfolio/real-estate/06.webp", alt: "Real estate launch invitation stationery", categorySlug: "real-estate", width: 1181, height: 1559 },
   { src: "/portfolio/real-estate/07.webp", alt: "Residential property architectural render poster", categorySlug: "real-estate", width: 2481, height: 1754 },
+  { src: "/portfolio/real-estate/08.webp", alt: "ETA Star Lilac Heights apartment campaign", categorySlug: "real-estate", width: 4000, height: 2000 },
 
   // education
   { src: "/portfolio/education/01.webp", alt: "St. Paul's Matriculation School brochure cover", categorySlug: "education", width: 1181, height: 788 },
@@ -94,26 +98,17 @@ export const portfolioItems: PortfolioItem[] = [
   { src: "/portfolio/education/06.webp", alt: "Achariya school admissions campaign", categorySlug: "education", width: 3513, height: 2483 },
 
   // textile-fashion
-  { src: "/portfolio/textile-fashion/01.webp", alt: "Atelier Trousers \"Royal Satin\" campaign", categorySlug: "textile-fashion", width: 750, height: 531 },
   { src: "/portfolio/textile-fashion/02.webp", alt: "Atelier Trousers \"Structured\" campaign", categorySlug: "textile-fashion", width: 1781, height: 1100 },
   { src: "/portfolio/textile-fashion/03.webp", alt: "Sellers menswear fashion photography", categorySlug: "textile-fashion", width: 650, height: 520 },
   { src: "/portfolio/textile-fashion/04.webp", alt: "Nakshatra silk sarees festive campaign", categorySlug: "textile-fashion", width: 1600, height: 1132 },
   { src: "/portfolio/textile-fashion/05.webp", alt: "Diva Collection fashion campaign", categorySlug: "textile-fashion", width: 827, height: 1170 },
-  { src: "/portfolio/textile-fashion/06.webp", alt: "Atelier Trousers \"Cool Khakis\" campaign", categorySlug: "textile-fashion", width: 750, height: 531 },
   { src: "/portfolio/textile-fashion/07.webp", alt: "Fashion retail digital campaign creative", categorySlug: "textile-fashion", width: 1250, height: 850 },
   { src: "/portfolio/textile-fashion/08.webp", alt: "Rajendira's Women's Store & Men's Store family campaign photography", categorySlug: "textile-fashion", width: 1000, height: 1001 },
   { src: "/portfolio/textile-fashion/09.webp", alt: "Rajendira's Women's Store \"What Women Want\" hoarding campaign", categorySlug: "textile-fashion", width: 1000, height: 1000 },
-  { src: "/portfolio/textile-fashion/10.webp", alt: "Rajendira's Women's Store magazine advertisement", categorySlug: "textile-fashion", width: 1500, height: 1057 },
-  { src: "/portfolio/textile-fashion/11.webp", alt: "Rajendira's Women's Store Tamil press advertisement with floor directory", categorySlug: "textile-fashion", width: 1079, height: 1700 },
-  { src: "/portfolio/textile-fashion/12.webp", alt: "Rajendira's Women's Store press advertisement with floor directory", categorySlug: "textile-fashion", width: 800, height: 1050 },
-  { src: "/portfolio/textile-fashion/13.webp", alt: "Rajendira's Men's Store & Women's Store brochure cover design", categorySlug: "textile-fashion", width: 1500, height: 1000 },
-  { src: "/portfolio/textile-fashion/14.webp", alt: "Rajendira's Women's Store outdoor banner campaign", categorySlug: "textile-fashion", width: 1600, height: 1600 },
-  { src: "/portfolio/textile-fashion/15.webp", alt: "Rajendira's family clothing store hoarding campaign", categorySlug: "textile-fashion", width: 1600, height: 1600 },
 
   // website
   { src: "/portfolio/website/01.webp", alt: "RT magazine website design", categorySlug: "website", width: 945, height: 1293 },
   { src: "/portfolio/website/02.webp", alt: "Event website design", categorySlug: "website", width: 1181, height: 1489 },
-  { src: "/portfolio/website/03.webp", alt: "Vijay Homoeo Clinic website design", categorySlug: "website", width: 945, height: 1460 },
   { src: "/portfolio/website/04.webp", alt: "Relishpro website design", categorySlug: "website", width: 945, height: 1489 },
   { src: "/portfolio/website/05.webp", alt: "Lakshmi Silvers e-commerce website design", categorySlug: "website", width: 1032, height: 789 },
   { src: "/portfolio/website/06.webp", alt: "Silvers online jewellery store website design", categorySlug: "website", width: 1240, height: 947 },

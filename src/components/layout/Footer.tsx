@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SocialIcon } from "@/components/layout/SocialIcon";
-import { servicesMegaMenu } from "@/data/nav";
+import { pillarNav } from "@/data/nav";
 import { siteConfig } from "@/data/site";
 
 const socials = ["Facebook", "Instagram", "LinkedIn", "YouTube"] as const;
@@ -50,13 +50,13 @@ export function Footer() {
               Services
             </h4>
             <ul className="mt-6 space-y-3">
-              {servicesMegaMenu.map((group) => (
-                <li key={group.title}>
+              {pillarNav.map((pillar) => (
+                <li key={pillar.slug}>
                   <Link
-                    href={group.href}
+                    href={pillar.href}
                     className="text-[15px] text-white/60 transition-all hover:pl-1.5 hover:text-white"
                   >
-                    {group.title}
+                    {pillar.label}
                   </Link>
                 </li>
               ))}

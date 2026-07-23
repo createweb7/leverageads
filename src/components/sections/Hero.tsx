@@ -3,13 +3,21 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
+import { HeroCarousel } from "@/components/sections/HeroCarousel";
 import { whatsappHref } from "@/data/site";
 
 const proof = [
-  { value: 24, suffix: "+", label: "Years of Experience" },
-  { value: 500, suffix: "+", label: "Projects Delivered" },
+  { value: 26, suffix: "+", label: "Years of Experience" },
+  { value: 3200, suffix: "+", label: "Projects Delivered" },
   { value: 1000, suffix: "+", label: "Clients Served" },
   { value: 15, suffix: "+", label: "Industries" },
+];
+
+const heroCarouselImages = [
+  { src: "/hero/hero1.webp", alt: "Lakshmi Jewellery antique jewellery collection campaign photography" },
+  { src: "/hero/hero2.webp", alt: "Ripon Building heritage calendar design" },
+  { src: "/hero/hero3.webp", alt: "Celebrity saree campaign photography" },
+  { src: "/hero/hero4.webp", alt: "RelishPro beverage brand campaign photography" },
 ];
 
 export function Hero() {
@@ -87,7 +95,7 @@ export function Hero() {
 
         <Reveal
           delay={200}
-          className="relative h-full min-h-70 overflow-hidden sm:min-h-80 lg:min-h-110 lg:overflow-visible"
+          className="relative h-full min-h-70 overflow-hidden sm:min-h-80 lg:min-h-135 lg:overflow-visible"
           aria-hidden
         >
         <div className="absolute left-1/2 top-0 h-110 w-120 origin-top -translate-x-1/2 scale-[0.62] sm:scale-[0.72] lg:static lg:h-full lg:w-full lg:translate-x-0 lg:scale-100">
@@ -95,47 +103,7 @@ export function Hero() {
             <span className="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-brand-red" />
           </div>
 
-          {/* Browser mockup card */}
-          <div
-            className="animate-float absolute inset-y-[3%] left-0 right-[11%] flex flex-col rounded-3xl border border-brand-line bg-white p-7 short:p-5.5 shadow-brand-md"
-            style={{ animationDuration: "9s" }}
-          >
-            <div className="flex items-center gap-2 border-b border-brand-line pb-4.5 short:pb-3.5">
-              <i className="h-2.5 w-2.5 rounded-full bg-brand-red" />
-              <i className="h-2.5 w-2.5 rounded-full bg-brand-line" />
-              <i className="h-2.5 w-2.5 rounded-full bg-brand-line" />
-              <span className="ml-3 flex h-6.5 flex-1 items-center rounded-full border border-brand-line bg-brand-paper px-3.5 text-[11px] font-medium text-brand-gray-2">
-                yourbrand.com
-              </span>
-            </div>
-            <div className="mt-6 short:mt-5 h-4 short:h-3.5 w-[78%] rounded-md bg-brand-ink" />
-            <div className="mt-2.5 h-4 short:h-3.5 w-[52%] rounded-md bg-brand-ink" />
-            <div className="mt-4 short:mt-3 h-2 w-[88%] rounded bg-brand-line" />
-            <div className="mt-2 h-2 w-[70%] rounded bg-brand-line" />
-            <div className="mt-5 short:mt-4 flex gap-2.5">
-              <span className="h-8 short:h-7 w-28 rounded-full bg-brand-red" />
-              <span className="h-8 short:h-7 w-22 rounded-full border border-brand-line bg-brand-paper" />
-            </div>
-            <div className="relative mt-6 short:mt-4 flex-1 overflow-hidden rounded-xl border border-brand-line bg-linear-to-br from-[#F6F5F1] to-[#EFEDE8]">
-              <div
-                className="absolute inset-x-[-5%] bottom-[-12%] h-[70%]"
-                style={{
-                  background: "linear-gradient(to top, rgba(237,50,55,.12), transparent)",
-                  clipPath:
-                    "polygon(0 100%,0 78%,18% 62%,38% 70%,58% 42%,78% 30%,100% 8%,100% 100%)",
-                }}
-              />
-              <div className="absolute right-[14%] top-[22%] h-9.5 w-9.5 rounded-full border-2 border-brand-red/50 bg-brand-red/8" />
-            </div>
-            <div className="mt-5 short:mt-3.5 grid grid-cols-3 gap-3 short:gap-2.5">
-              {[0, 1, 2].map((i) => (
-                <div key={i} className="relative h-16 short:h-13 rounded-xl border border-brand-line bg-brand-paper">
-                  <span className="absolute left-2.5 top-2.5 h-4 w-4 rounded-[5px] bg-brand-red-tint" />
-                  <span className="absolute bottom-2.5 left-2.5 right-[35%] h-1.5 rounded bg-brand-line" />
-                </div>
-              ))}
-            </div>
-          </div>
+          <HeroCarousel images={heroCarouselImages} />
 
           {/* Growth stat card */}
           <div

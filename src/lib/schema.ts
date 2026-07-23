@@ -1,5 +1,6 @@
 import { siteConfig } from "@/data/site";
 import type { FAQ, ServicePage } from "@/data/services";
+import type { Pillar } from "@/data/pillars";
 import type { InsightPost } from "@/data/insights";
 
 export function serviceSchema(service: ServicePage) {
@@ -18,6 +19,25 @@ export function serviceSchema(service: ServicePage) {
       name: siteConfig.locality,
     },
     url: `${siteConfig.url}/services/${service.slug}`,
+  };
+}
+
+export function pillarSchema(pillar: Pillar) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: pillar.h1,
+    description: pillar.metaDescription,
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    areaServed: {
+      "@type": "City",
+      name: siteConfig.locality,
+    },
+    url: `${siteConfig.url}/${pillar.slug}`,
   };
 }
 

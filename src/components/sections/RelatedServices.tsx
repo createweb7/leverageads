@@ -5,7 +5,15 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { getServiceBySlug } from "@/data/services";
 
-export function RelatedServices({ slugs }: { slugs: string[] }) {
+export function RelatedServices({
+  slugs,
+  eyebrow = "Related",
+  title = "You May Also Need",
+}: {
+  slugs: string[];
+  eyebrow?: string;
+  title?: string;
+}) {
   const related = slugs.map(getServiceBySlug).filter((s): s is NonNullable<typeof s> => Boolean(s));
   if (!related.length) return null;
 
@@ -13,7 +21,7 @@ export function RelatedServices({ slugs }: { slugs: string[] }) {
     <section className="py-20 md:py-24 bg-white">
       <Container>
         <Reveal>
-          <SectionHeading eyebrow="Related" title="You May Also Need" align="center" className="mx-auto" />
+          <SectionHeading eyebrow={eyebrow} title={title} align="center" className="mx-auto" />
         </Reveal>
         <Reveal delay={100} className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
           {related.map((service) => (

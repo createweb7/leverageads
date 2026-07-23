@@ -148,8 +148,8 @@ export const services: ServicePage[] = [
     relatedSlugs: ["websites-technology", "creative-advertising", "media-planning-buying"],
     ctaLabel: "Plan My Digital Marketing Strategy",
     images: [
-      { src: "/portfolio/corporate/07.webp", alt: "Pulse72 fitness brand campaign", width: 945, height: 945 },
-      { src: "/portfolio/corporate/01.webp", alt: "Premier Voltage Stabilizer product campaign", width: 945, height: 946 },
+      { src: "/case-studies/meston-college/05.webp", alt: "Meston College Think Beyond Syllabus admissions campaign", width: 1067, height: 1893 },
+      { src: "/case-studies/meston-college/01.webp", alt: "Meston College admissions creative — Not Just Studying, I'm Becoming Industry-Ready", width: 1067, height: 1893 },
     ],
   },
   {
@@ -261,7 +261,7 @@ export const services: ServicePage[] = [
     ctaLabel: "Discuss Your Shoot",
     images: [
       { src: "/portfolio/photography/08.webp", alt: "Lakshmi Jewellery campaign model photography", width: 1456, height: 1322 },
-      { src: "/portfolio/photography/01.webp", alt: "Diamond and pearl necklace product photography", width: 827, height: 727 },
+      { src: "/portfolio/photography/04.webp", alt: "Gold pendant necklace with pearl detailing product photography", width: 583, height: 827 },
     ],
   },
   {
@@ -425,8 +425,8 @@ export const services: ServicePage[] = [
     ctaLabel: "Plan My Media Strategy",
     draft: true,
     images: [
-      { src: "/portfolio/magazine/06.webp", alt: "RT magazine travel feature cover", width: 922, height: 1314 },
-      { src: "/portfolio/cinema/01.webp", alt: "Tamil film release campaign creative", width: 983, height: 737 },
+      { src: "/portfolio/jewellery/05.webp", alt: "Sri Lakshmi Jewellery gold necklace campaign", width: 591, height: 984 },
+      { src: "/portfolio/website/06.webp", alt: "Lakshmi Silvers online silver jewellery store website design", width: 1240, height: 947 },
     ],
   },
   {

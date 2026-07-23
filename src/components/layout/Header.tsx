@@ -4,26 +4,27 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import clsx from "clsx";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { servicesMegaMenu } from "@/data/nav";
+import { SocialIcon } from "@/components/layout/SocialIcon";
+import { pillarNav } from "@/data/nav";
 import { siteConfig } from "@/data/site";
+
+const socials = ["Facebook", "Instagram", "LinkedIn", "YouTube"] as const;
 
 export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [openPillar, setOpenPillar] = useState<string | null>(null);
   const [prevPathname, setPrevPathname] = useState(pathname);
 
   if (pathname !== prevPathname) {
     setPrevPathname(pathname);
-    setServicesOpen(false);
+    setOpenPillar(null);
     setMobileOpen(false);
-    setMobileServicesOpen(false);
   }
 
   useEffect(() => {
@@ -43,14 +44,48 @@ export function Header() {
   const showSolid = scrolled || mobileOpen;
 
   return (
-    <header
-      className={clsx(
-        "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300",
-        showSolid
-          ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_0_var(--color-brand-line)]"
-          : "bg-transparent",
-      )}
-    >
+    <>
+      <div className="hidden border-b border-white/10 bg-brand-ink sm:block">
+        <Container className="flex h-10 items-center justify-between text-[13px]">
+          <div className="flex items-center gap-5">
+            <a
+              href={siteConfig.phoneHref}
+              className="flex items-center gap-1.5 text-white/70 transition-colors hover:text-white"
+            >
+              <Phone size={13} />
+              {siteConfig.phone}
+            </a>
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="hidden items-center gap-1.5 text-white/70 transition-colors hover:text-white lg:flex"
+            >
+              <Mail size={13} />
+              {siteConfig.email}
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            {socials.map((label) => (
+              <a
+                key={label}
+                href="#"
+                aria-label={label}
+                className="text-white/50 transition-colors hover:text-white"
+              >
+                <SocialIcon name={label} size={13} />
+              </a>
+            ))}
+          </div>
+        </Container>
+      </div>
+
+      <header
+        className={clsx(
+          "sticky top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300",
+          showSolid
+            ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_0_var(--color-brand-line)]"
+            : "bg-transparent",
+        )}
+      >
       <Container className="flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center shrink-0 z-10" onClick={() => setMobileOpen(false)}>
           <Image
@@ -68,84 +103,71 @@ export function Header() {
           <NavLink href="/">Home</NavLink>
           <NavLink href="/about">About</NavLink>
 
-          <div
-            className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
-            <button
-              type="button"
-              className="flex items-center gap-1 py-8 text-brand-ink transition-colors hover:text-brand-red"
-              onClick={() => setServicesOpen((v) => !v)}
-              aria-expanded={servicesOpen}
-            >
-              Services
-              <ChevronDown size={15} className={clsx("transition-transform", servicesOpen && "rotate-180")} />
-            </button>
-
+          {pillarNav.map((pillar) => (
             <div
-              onClick={() => setServicesOpen(false)}
-              className={clsx(
-                "fixed inset-x-0 top-20 bottom-0 z-40 bg-brand-ink/25 backdrop-blur-sm transition-opacity duration-200",
-                servicesOpen ? "visible opacity-100" : "invisible opacity-0",
-              )}
-            />
-
-            <div
-              onClick={() => setServicesOpen(false)}
-              className={clsx(
-                "absolute left-1/2 top-full z-50 w-210 -translate-x-1/2 whitespace-normal rounded-3xl border border-brand-line bg-white p-6 shadow-brand-lg transition-all duration-200",
-                servicesOpen ? "visible translate-y-0 opacity-100" : "invisible translate-y-1 opacity-0",
-              )}
+              key={pillar.slug}
+              className="relative"
+              onMouseEnter={() => setOpenPillar(pillar.slug)}
+              onMouseLeave={() => setOpenPillar((v) => (v === pillar.slug ? null : v))}
             >
-              <div className="grid grid-cols-3 gap-x-7 gap-y-6">
-                {servicesMegaMenu.map((group) => (
-                  <div key={group.title}>
-                    <Link
-                      href={group.href}
-                      className="mb-2 block text-sm font-bold leading-snug text-brand-ink hover:text-brand-red"
-                    >
-                      {group.title}
-                    </Link>
-                    <ul className="space-y-1.5">
-                      {group.links.map((link) => (
-                        <li key={link.label}>
-                          <Link
-                            href={link.href}
-                            className="block text-sm text-brand-gray transition-colors hover:text-brand-red"
-                          >
-                            {link.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 flex items-center justify-between rounded-xl bg-brand-paper px-4 py-3">
-                <p className="text-sm text-brand-gray">Not sure what your business needs?</p>
-                <Link href="/contact" className="text-sm font-semibold text-brand-red hover:text-brand-red-dark">
-                  Book a Consultation →
+              <span className="flex items-center gap-1 py-8">
+                <Link
+                  href={pillar.href}
+                  className="text-brand-ink transition-colors hover:text-brand-red"
+                >
+                  {pillar.label}
                 </Link>
-              </div>
-            </div>
-          </div>
+                {pillar.links.length > 0 && (
+                  <button
+                    type="button"
+                    aria-label={`Toggle ${pillar.label} menu`}
+                    aria-expanded={openPillar === pillar.slug}
+                    onClick={() => setOpenPillar((v) => (v === pillar.slug ? null : pillar.slug))}
+                  >
+                    <ChevronDown
+                      size={15}
+                      className={clsx("transition-transform", openPillar === pillar.slug && "rotate-180")}
+                    />
+                  </button>
+                )}
+              </span>
 
-          <NavLink href="/industries">Industries</NavLink>
+              {pillar.links.length > 0 && (
+                <div
+                  onClick={() => setOpenPillar(null)}
+                  className={clsx(
+                    "absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 whitespace-normal rounded-2xl border border-brand-line bg-white p-5 shadow-brand-lg transition-all duration-200",
+                    openPillar === pillar.slug ? "visible translate-y-0 opacity-100" : "invisible translate-y-1 opacity-0",
+                  )}
+                >
+                  <ul className="space-y-1.5">
+                    {pillar.links.map((link) => (
+                      <li key={link.label}>
+                        <Link
+                          href={link.href}
+                          className="block rounded-lg px-3 py-2 text-sm text-brand-gray transition-colors hover:bg-brand-paper hover:text-brand-red"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={pillar.href}
+                    className="mt-2 flex items-center justify-between rounded-xl bg-brand-paper px-3 py-2.5 text-sm font-semibold text-brand-red hover:text-brand-red-dark"
+                  >
+                    {pillar.label} Overview →
+                  </Link>
+                </div>
+              )}
+            </div>
+          ))}
+
           <NavLink href="/portfolio">Portfolio</NavLink>
           <NavLink href="/case-studies">Case Studies</NavLink>
-          <NavLink href="/insights">Insights</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
         </nav>
 
         <div className="hidden xl:flex items-center gap-5 z-10">
-          <a
-            href={siteConfig.phoneHref}
-            className="flex items-center gap-2 font-display text-sm font-semibold text-brand-ink transition-colors hover:text-brand-red"
-          >
-            <Phone size={15} className="text-brand-red" />
-            {siteConfig.phone}
-          </a>
           <Button href="/contact" size="md">
             Book a Consultation
           </Button>
@@ -160,10 +182,11 @@ export function Header() {
           {mobileOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </Container>
+      </header>
 
       {/* Mobile full-screen nav */}
       {mobileOpen && (
-        <div className="xl:hidden fixed inset-0 top-0 z-0 h-dvh overflow-y-auto bg-brand-paper px-6 pb-10 pt-24">
+        <div className="xl:hidden fixed inset-0 top-0 z-0 h-dvh overflow-y-auto bg-brand-paper px-6 pb-10 pt-24 sm:pt-36">
           <nav className="flex flex-col">
             <MobileLink href="/" index={0} onClick={() => setMobileOpen(false)}>
               Home
@@ -172,62 +195,22 @@ export function Header() {
               About
             </MobileLink>
 
-            <button
-              className="flex items-center justify-between gap-4 border-b border-brand-line py-4 text-left font-display text-2xl font-bold text-brand-ink"
-              onClick={() => setMobileServicesOpen((v) => !v)}
-            >
-              <span className="flex items-baseline gap-4">
-                <span className="text-xs font-bold tracking-wide text-brand-red">03</span>
-                Services
-              </span>
-              <ChevronDown
-                size={20}
-                className={clsx("transition-transform", mobileServicesOpen && "rotate-180")}
-              />
-            </button>
-            {mobileServicesOpen && (
-              <div className="flex flex-col gap-5 border-b border-brand-line py-5 pl-9">
-                {servicesMegaMenu.map((group) => (
-                  <div key={group.title}>
-                    <Link
-                      href={group.href}
-                      className="text-sm font-bold text-brand-red"
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {group.title}
-                    </Link>
-                    <ul className="mt-1.5 space-y-1.5">
-                      {group.links.map((link) => (
-                        <li key={link.label}>
-                          <Link
-                            href={link.href}
-                            className="block py-0.5 text-sm text-brand-gray"
-                            onClick={() => setMobileOpen(false)}
-                          >
-                            {link.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            )}
+            {pillarNav.map((pillar, i) => (
+              <MobileLink
+                key={pillar.slug}
+                href={pillar.href}
+                index={2 + i}
+                onClick={() => setMobileOpen(false)}
+              >
+                {pillar.label}
+              </MobileLink>
+            ))}
 
-            <MobileLink href="/industries" index={3} onClick={() => setMobileOpen(false)}>
-              Industries
-            </MobileLink>
-            <MobileLink href="/portfolio" index={4} onClick={() => setMobileOpen(false)}>
+            <MobileLink href="/portfolio" index={2 + pillarNav.length} onClick={() => setMobileOpen(false)}>
               Portfolio
             </MobileLink>
-            <MobileLink href="/case-studies" index={5} onClick={() => setMobileOpen(false)}>
+            <MobileLink href="/case-studies" index={3 + pillarNav.length} onClick={() => setMobileOpen(false)}>
               Case Studies
-            </MobileLink>
-            <MobileLink href="/insights" index={6} onClick={() => setMobileOpen(false)}>
-              Insights
-            </MobileLink>
-            <MobileLink href="/contact" index={7} onClick={() => setMobileOpen(false)}>
-              Contact
             </MobileLink>
           </nav>
 
@@ -236,7 +219,7 @@ export function Header() {
           </Button>
         </div>
       )}
-    </header>
+    </>
   );
 }
 
@@ -267,7 +250,9 @@ function MobileLink({
       className="flex transform-[translateY(1rem)] items-baseline gap-4 border-b border-brand-line py-4 font-display text-2xl font-bold text-brand-ink opacity-0 animate-[menuLink_.55s_var(--ease-brand)_forwards]"
       style={{ animationDelay: `${index * 60 + 50}ms` }}
     >
-      <span className="text-xs font-bold tracking-wide text-brand-red">0{index + 1}</span>
+      <span className="text-xs font-bold tracking-wide text-brand-red">
+        {String(index + 1).padStart(2, "0")}
+      </span>
       {children}
     </Link>
   );

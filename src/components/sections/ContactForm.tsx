@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { services } from "@/data/services";
+import { pillarNav } from "@/data/nav";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -68,10 +68,14 @@ export function ContactForm() {
             className="w-full rounded-lg border border-brand-line bg-white px-4 py-2.5 text-sm text-brand-ink outline-none focus:border-brand-red"
           >
             <option value="">Select a service</option>
-            {services.map((s) => (
-              <option key={s.slug} value={s.navLabel}>
-                {s.navLabel}
-              </option>
+            {pillarNav.map((pillar) => (
+              <optgroup key={pillar.slug} label={pillar.label}>
+                {pillar.links.map((link) => (
+                  <option key={link.href} value={link.label}>
+                    {link.label}
+                  </option>
+                ))}
+              </optgroup>
             ))}
             <option value="Not Sure – Need Guidance">Not Sure – Need Guidance</option>
           </select>
