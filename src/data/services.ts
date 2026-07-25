@@ -1,3 +1,5 @@
+import type { ServiceHeroGridCell } from "@/components/ui/ServiceHeroGrid";
+
 export type FAQ = { q: string; a: string };
 
 export type ServiceImage = { src: string; alt: string; width: number; height: number };
@@ -17,6 +19,7 @@ export type ServicePage = {
   relatedSlugs: string[];
   ctaLabel: string;
   images?: ServiceImage[];
+  heroGrid?: [ServiceHeroGridCell, ServiceHeroGridCell, ServiceHeroGridCell, ServiceHeroGridCell];
 };
 
 export const process = [
@@ -75,6 +78,32 @@ export const services: ServicePage[] = [
       { src: "/case-studies/relishpro/01-cover.webp", alt: "RelishPro beverage brand campaign photography", width: 911, height: 600 },
       { src: "/portfolio/logo-identity/01.webp", alt: "Challani Jewellery Mart brand identity and stationery", width: 3937, height: 4650 },
     ],
+    heroGrid: [
+      {
+        src: "/portfolio/logo-identity/01.webp",
+        alt: "Challani Jewellery Mart brand identity and stationery",
+        badgeLabel: "Brand Positioning",
+        badgeIcon: "strategy",
+      },
+      {
+        src: "/case-studies/relishpro/01-cover.webp",
+        alt: "RelishPro beverage brand campaign photography",
+        badgeLabel: "15+ · Years Experience",
+        badgeVariant: "dark",
+      },
+      {
+        src: "/portfolio/logo-identity/05.webp",
+        alt: "Logo design collection — Nidhish Krishnaa, Phoenix, Sudharma, MFM, Big Tree, Haco Tech",
+        badgeLabel: "Logo Design",
+        badgeIcon: "creative",
+      },
+      {
+        src: "/case-studies/hadron-homes/09-stationery-mockup.webp",
+        alt: "Hadron Homes stationery mockup — letterhead, envelopes and business cards",
+        badgeLabel: "Brand Guidelines",
+        badgeIcon: "layers",
+      },
+    ],
   },
   {
     slug: "creative-advertising",
@@ -110,6 +139,32 @@ export const services: ServicePage[] = [
     images: [
       { src: "/portfolio/jewellery/01.webp", alt: "Sovereign jewellery festive campaign", width: 827, height: 871 },
       { src: "/portfolio/jewellery/04.webp", alt: "Challani Jewellery Mart \"RARE!\" pearl bangles campaign", width: 1168, height: 1036 },
+    ],
+    heroGrid: [
+      {
+        src: "/insights/branding-photoshoot.webp",
+        alt: "Celebrity saree campaign photography",
+        badgeLabel: "Campaign Concepts",
+        badgeIcon: "creative",
+      },
+      {
+        src: "/case-studies/avira-diamonds/09-ring-campaign.webp",
+        alt: "\"Sparkle Spectrum\" AVIRA Diamonds ring campaign creative",
+        badgeLabel: "250+ · Campaigns Delivered",
+        badgeVariant: "dark",
+      },
+      {
+        src: "/case-studies/avira-diamonds/06-bracelet-campaign.webp",
+        alt: "\"Glitzy & Classy\" AVIRA Diamonds bracelet campaign creative",
+        badgeLabel: "Print & Outdoor",
+        badgeIcon: "media",
+      },
+      {
+        src: "/portfolio/jewellery/07.webp",
+        alt: "PGP gemstone jewellery macro product photography",
+        badgeLabel: "Product Styling",
+        badgeIcon: "studio",
+      },
     ],
   },
   {
@@ -149,6 +204,32 @@ export const services: ServicePage[] = [
     images: [
       { src: "/case-studies/meston-college/05.webp", alt: "Meston College Think Beyond Syllabus admissions campaign", width: 1067, height: 1893 },
       { src: "/case-studies/meston-college/01.webp", alt: "Meston College admissions creative — Not Just Studying, I'm Becoming Industry-Ready", width: 1067, height: 1893 },
+    ],
+    heroGrid: [
+      {
+        src: "/case-studies/meston-college/05.webp",
+        alt: "Meston College Think Beyond Syllabus admissions campaign",
+        badgeLabel: "Social Campaigns",
+        badgeIcon: "growth",
+      },
+      {
+        src: "/case-studies/flying-rainbow/06-online-classes-poster.webp",
+        alt: "Live Online Drawing Classes promotional poster",
+        badgeLabel: "3200+ · Ads Delivered",
+        badgeVariant: "dark",
+      },
+      {
+        src: "/portfolio/website/05.webp",
+        alt: "Lakshmi Silvers e-commerce website design",
+        badgeLabel: "Landing Pages",
+        badgeIcon: "code",
+      },
+      {
+        src: "/case-studies/meston-college/01.webp",
+        alt: "Meston College admissions creative — Not Just Studying, I'm Becoming Industry-Ready",
+        badgeLabel: "Lead Generation",
+        badgeIcon: "growth",
+      },
     ],
   },
   {
@@ -213,6 +294,32 @@ export const services: ServicePage[] = [
       { src: "/portfolio/website/05.webp", alt: "Lakshmi Silvers e-commerce website design", width: 1032, height: 789 },
       { src: "/portfolio/website/04.webp", alt: "Relishpro website design", width: 945, height: 1489 },
     ],
+    heroGrid: [
+      {
+        src: "/portfolio/website/04.webp",
+        alt: "Relishpro website design",
+        badgeLabel: "UI/UX Design",
+        badgeIcon: "code",
+      },
+      {
+        src: "/portfolio/website/06.webp",
+        alt: "Lakshmi Silvers online silver jewellery store website design",
+        badgeLabel: "100% · Mobile Responsive",
+        badgeVariant: "dark",
+      },
+      {
+        src: "/portfolio/website/01.webp",
+        alt: "RT magazine website design",
+        badgeLabel: "Web Development",
+        badgeIcon: "code",
+      },
+      {
+        src: "/portfolio/website/02.webp",
+        alt: "Event website design",
+        badgeLabel: "CRM & ERP Systems",
+        badgeIcon: "layers",
+      },
+    ],
   },
   {
     slug: "ad-films-photography",
@@ -261,6 +368,32 @@ export const services: ServicePage[] = [
     images: [
       { src: "/portfolio/photography/08.webp", alt: "Lakshmi Jewellery campaign model photography", width: 1456, height: 1322 },
       { src: "/portfolio/jewellery/07.webp", alt: "PGP gemstone jewellery macro product photography", width: 591, height: 591 },
+    ],
+    heroGrid: [
+      {
+        src: "/case-studies/avira-diamonds/04-model-portrait-03.webp",
+        alt: "AVIRA Diamonds bridal campaign model portrait",
+        badgeLabel: "Creative Direction",
+        badgeIcon: "creative",
+      },
+      {
+        src: "/case-studies/avira-diamonds/07-pendant-campaign.webp",
+        alt: "AVIRA Diamonds rose gold pendant necklace campaign creative",
+        badgeLabel: "4K · Ultra HD",
+        badgeVariant: "dark",
+      },
+      {
+        src: "/portfolio/jewellery/07.webp",
+        alt: "PGP gemstone jewellery macro product photography",
+        badgeLabel: "Studio Shoot",
+        badgeIcon: "studio",
+      },
+      {
+        src: "/case-studies/shanthi-jewellery/03-model-portrait.webp",
+        alt: "Shanthi Jewellers bridal jewellery campaign model portrait",
+        badgeLabel: "Retouching Expertise",
+        badgeIcon: "retouch",
+      },
     ],
   },
   {
@@ -319,6 +452,32 @@ export const services: ServicePage[] = [
       { src: "/portfolio/logo-identity/01.webp", alt: "Challani Jewellery Mart brand identity and stationery", width: 3937, height: 4650 },
       { src: "/portfolio/packaging/07.webp", alt: "Silk saree gift box packaging design", width: 1000, height: 1000 },
     ],
+    heroGrid: [
+      {
+        src: "/portfolio/logo-identity/03.webp",
+        alt: "Sudharma Foundation brand identity and stationery",
+        badgeLabel: "Brand Identity",
+        badgeIcon: "creative",
+      },
+      {
+        src: "/portfolio/packaging/07.webp",
+        alt: "Silk saree gift box packaging design",
+        badgeLabel: "1000+ · Designs Delivered",
+        badgeVariant: "dark",
+      },
+      {
+        src: "/portfolio/packaging/03.webp",
+        alt: "Premium gift box packaging design",
+        badgeLabel: "Packaging Design",
+        badgeIcon: "package",
+      },
+      {
+        src: "/portfolio/logo-identity/06.webp",
+        alt: "Logo design collection — CoolTrip, Tejaas, SS Shriman, IcorePro, RARS",
+        badgeLabel: "Logo Design",
+        badgeIcon: "creative",
+      },
+    ],
   },
   {
     slug: "print-production",
@@ -371,6 +530,32 @@ export const services: ServicePage[] = [
     images: [
       { src: "/portfolio/packaging/03.webp", alt: "Premium gift box packaging design", width: 1772, height: 1254 },
       { src: "/portfolio/logo-identity/04.webp", alt: "Surbharti brand identity and stationery", width: 1000, height: 750 },
+    ],
+    heroGrid: [
+      {
+        src: "/case-studies/meston-college/11-stationery-mockup.webp",
+        alt: "Meston College stationery mockup — letterhead, envelopes, business cards and folder",
+        badgeLabel: "Print-Ready Files",
+        badgeIcon: "print",
+      },
+      {
+        src: "/portfolio/packaging/03.webp",
+        alt: "Premium gift box packaging design",
+        badgeLabel: "100% · Print-Ready",
+        badgeVariant: "dark",
+      },
+      {
+        src: "/case-studies/hadron-homes/09-stationery-mockup.webp",
+        alt: "Hadron Homes stationery mockup — letterhead, envelopes and business cards",
+        badgeLabel: "Stationery & Collateral",
+        badgeIcon: "layers",
+      },
+      {
+        src: "/portfolio/packaging/07.webp",
+        alt: "Silk saree gift box packaging design",
+        badgeLabel: "Packaging Design",
+        badgeIcon: "package",
+      },
     ],
   },
   {
@@ -425,6 +610,32 @@ export const services: ServicePage[] = [
       { src: "/portfolio/jewellery/05.webp", alt: "Sri Lakshmi Jewellery gold necklace campaign", width: 591, height: 984 },
       { src: "/portfolio/website/06.webp", alt: "Lakshmi Silvers online silver jewellery store website design", width: 1240, height: 947 },
     ],
+    heroGrid: [
+      {
+        src: "/portfolio/textile-fashion/09.webp",
+        alt: "Rajendira's Women's Store \"What Women Want\" hoarding campaign",
+        badgeLabel: "Outdoor Advertising",
+        badgeIcon: "media",
+      },
+      {
+        src: "/case-studies/avira-diamonds/11-retail-outdoor-display.webp",
+        alt: "AVIRA Diamonds \"Found Sustainable Luxury\" retail outdoor display mockup",
+        badgeLabel: "100+ · Brands Reached",
+        badgeVariant: "dark",
+      },
+      {
+        src: "/portfolio/hospitality-food/08.webp",
+        alt: "Ocean Spray resort magazine advertisement",
+        badgeLabel: "Print & Magazine",
+        badgeIcon: "media",
+      },
+      {
+        src: "/portfolio/jewellery/09.webp",
+        alt: "Challani Jewellery Mart temple jewellery campaign",
+        badgeLabel: "Multi-Channel Reach",
+        badgeIcon: "growth",
+      },
+    ],
   },
   {
     slug: "corporate-training-consulting",
@@ -476,6 +687,32 @@ export const services: ServicePage[] = [
     ctaLabel: "Discuss a Training Programme",
     images: [
       { src: "/insights/theatre-workshop.webp", alt: "Emotional intelligence in theatre acting workshop in Kodaikanal", width: 906, height: 1280 },
+    ],
+    heroGrid: [
+      {
+        src: "/insights/theatre-workshop.webp",
+        alt: "Emotional intelligence in theatre acting workshop in Kodaikanal",
+        badgeLabel: "Team Workshops",
+        badgeIcon: "training",
+      },
+      {
+        src: "/case-studies/meston-college/11-stationery-mockup.webp",
+        alt: "Meston College stationery mockup — letterhead, envelopes, business cards and folder",
+        badgeLabel: "15+ · Years Experience",
+        badgeVariant: "dark",
+      },
+      {
+        src: "/case-studies/hadron-homes/09-stationery-mockup.webp",
+        alt: "Hadron Homes stationery mockup — letterhead, envelopes and business cards",
+        badgeLabel: "Training Materials",
+        badgeIcon: "layers",
+      },
+      {
+        src: "/portfolio/logo-identity/05.webp",
+        alt: "Logo design collection — Nidhish Krishnaa, Phoenix, Sudharma, MFM, Big Tree, Haco Tech",
+        badgeLabel: "Skill Development",
+        badgeIcon: "growth",
+      },
     ],
   },
 ];

@@ -19,16 +19,17 @@ export function HeroVisual({ images }: { images?: HeroVisualImage[] }) {
       />
       <div
         className={
-          secondary ? "relative mr-10 mb-10 max-w-[74%]" : "relative mx-auto max-w-[82%]"
+          secondary
+            ? "relative mr-10 mb-10 aspect-4/5 w-[74%] max-w-90"
+            : "relative mx-auto aspect-4/5 w-[82%] max-w-90"
         }
       >
         <Image
           src={primary.src}
           alt={primary.alt}
-          width={primary.width}
-          height={primary.height}
+          fill
           sizes="(min-width: 1024px) 40vw, 75vw"
-          className="relative z-10 h-auto max-h-105 w-auto max-w-full rounded-3xl object-contain shadow-brand-lg"
+          className="z-10 rounded-3xl object-cover shadow-brand-lg"
           priority
         />
         {secondary && (

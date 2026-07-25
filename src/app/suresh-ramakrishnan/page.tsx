@@ -5,25 +5,37 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { HeroVisual } from "@/components/ui/HeroVisual";
+import { ServiceHeroGrid, type ServiceHeroGridCell } from "@/components/ui/ServiceHeroGrid";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Button } from "@/components/ui/Button";
 import { GalleryLightbox } from "@/components/sections/GalleryLightbox";
 import { CTABand } from "@/components/sections/CTABand";
 import { whatsappHref } from "@/data/site";
 
-const heroImages = [
+const heroGrid: [ServiceHeroGridCell, ServiceHeroGridCell, ServiceHeroGridCell, ServiceHeroGridCell] = [
   {
     src: "/team/suresh/hero-primary.webp",
     alt: "Suresh Ramakrishnan, Founder and Creative Director of Leverage Advertising",
-    width: 640,
-    height: 640,
+    badgeLabel: "Founder & Director",
+    badgeIcon: "strategy",
   },
   {
     src: "/team/suresh/hero-secondary.webp",
     alt: "Suresh Ramakrishnan shooting a commercial photography campaign",
-    width: 2574,
-    height: 1881,
+    badgeLabel: "26+ · Years Experience",
+    badgeVariant: "dark",
+  },
+  {
+    src: "/team/suresh/leadership-01.webp",
+    alt: "Suresh Ramakrishnan being honoured at a Rotary Club event",
+    badgeLabel: "Community Leadership",
+    badgeIcon: "leadership",
+  },
+  {
+    src: "/team/suresh/gallery-03.webp",
+    alt: "Suresh Ramakrishnan reviewing a jewellery product photography shoot",
+    badgeLabel: "Product Photography",
+    badgeIcon: "studio",
   },
 ];
 
@@ -136,7 +148,7 @@ export default function SureshProfilePage() {
             </div>
 
             <Reveal delay={200}>
-              <HeroVisual images={heroImages} />
+              <ServiceHeroGrid cells={heroGrid} />
             </Reveal>
           </div>
         </Container>

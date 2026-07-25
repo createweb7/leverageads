@@ -4,15 +4,33 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { HeroVisual } from "@/components/ui/HeroVisual";
+import { ServiceHeroGrid, type ServiceHeroGridCell } from "@/components/ui/ServiceHeroGrid";
 import { CTABand } from "@/components/sections/CTABand";
 
-const heroImages = [
+const heroGrid: [ServiceHeroGridCell, ServiceHeroGridCell, ServiceHeroGridCell, ServiceHeroGridCell] = [
   {
     src: "/team/cam.webp",
-    alt: "Suresh Ramakrishnan, Founder of LeverageAds, leading a corporate training session",
-    width: 2560,
-    height: 1707,
+    alt: "Suresh Ramakrishnan directing a commercial ad film shoot",
+    badgeLabel: "Creative Direction",
+    badgeIcon: "creative",
+  },
+  {
+    src: "/team/suresh/gallery-05.webp",
+    alt: "Suresh Ramakrishnan briefing a celebrity model on set for a jewellery commercial",
+    badgeLabel: "1000+ · Brands Served",
+    badgeVariant: "dark",
+  },
+  {
+    src: "/team/suresh/training-01.webp",
+    alt: "Suresh Ramakrishnan leading a corporate training session",
+    badgeLabel: "Business Consulting",
+    badgeIcon: "training",
+  },
+  {
+    src: "/team/suresh/leadership-02.webp",
+    alt: "Suresh Ramakrishnan at a Rotary Club membership ceremony",
+    badgeLabel: "Community Leadership",
+    badgeIcon: "leadership",
   },
 ];
 
@@ -73,7 +91,7 @@ export default function AboutPage() {
             </div>
 
             <Reveal delay={200}>
-              <HeroVisual images={heroImages} />
+              <ServiceHeroGrid cells={heroGrid} />
             </Reveal>
           </div>
         </Container>

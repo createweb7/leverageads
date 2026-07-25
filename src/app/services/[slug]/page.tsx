@@ -67,6 +67,7 @@ export default async function ServicePageRoute({
         subcopy={service.heroSubcopy}
         ctaLabel={service.ctaLabel}
         images={service.images}
+        heroGrid={service.heroGrid}
       />
       <ServiceIntro service={service} />
       <ServiceIncluded service={service} />

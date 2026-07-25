@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Breadcrumbs, type Crumb } from "@/components/ui/Breadcrumbs";
 import { HeroVisual } from "@/components/ui/HeroVisual";
+import { ServiceHeroGrid, type ServiceHeroGridCell } from "@/components/ui/ServiceHeroGrid";
 import { whatsappHref } from "@/data/site";
 import type { ServiceImage } from "@/data/services";
 
@@ -14,6 +15,7 @@ export function ServiceHero({
   subcopy,
   ctaLabel,
   images,
+  heroGrid,
 }: {
   breadcrumb: Crumb[];
   eyebrow: string;
@@ -21,6 +23,7 @@ export function ServiceHero({
   subcopy: string;
   ctaLabel: string;
   images?: ServiceImage[];
+  heroGrid?: [ServiceHeroGridCell, ServiceHeroGridCell, ServiceHeroGridCell, ServiceHeroGridCell];
 }) {
   return (
     <section
@@ -66,7 +69,7 @@ export function ServiceHero({
           </div>
 
           <Reveal delay={200}>
-            <HeroVisual images={images} />
+            {heroGrid ? <ServiceHeroGrid cells={heroGrid} /> : <HeroVisual images={images} />}
           </Reveal>
         </div>
       </Container>
