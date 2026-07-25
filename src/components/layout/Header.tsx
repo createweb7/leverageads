@@ -186,7 +186,7 @@ export function Header() {
 
       {/* Mobile full-screen nav */}
       {mobileOpen && (
-        <div className="xl:hidden fixed inset-0 top-0 z-0 h-dvh overflow-y-auto bg-brand-paper px-6 pb-10 pt-24 sm:pt-36">
+        <div className="xl:hidden fixed inset-0 top-0 z-40 h-dvh overflow-y-auto bg-brand-paper px-6 pb-10 pt-24 sm:pt-36">
           <nav className="flex flex-col">
             <MobileLink href="/" index={0} onClick={() => setMobileOpen(false)}>
               Home

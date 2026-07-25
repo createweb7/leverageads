@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Info } from "lucide-react";
 import { JsonLd } from "@/components/JsonLd";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -69,17 +68,6 @@ export default async function ServicePageRoute({
         ctaLabel={service.ctaLabel}
         images={service.images}
       />
-      {service.draft && (
-        <div className="bg-brand-paper">
-          <Container>
-            <div className="flex items-start gap-3 border-b border-brand-line py-4 text-sm text-brand-gray">
-              <Info size={16} className="mt-0.5 shrink-0 text-brand-red" />
-              This page is a first draft, newly added to our service menu — content is still being
-              reviewed and will be refined.
-            </div>
-          </Container>
-        </div>
-      )}
       <ServiceIntro service={service} />
       <ServiceIncluded service={service} />
       <RelatedCaseStudies serviceSlug={service.slug} />

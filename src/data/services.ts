@@ -16,7 +16,6 @@ export type ServicePage = {
   faqs: FAQ[];
   relatedSlugs: string[];
   ctaLabel: string;
-  draft?: boolean;
   images?: ServiceImage[];
 };
 
@@ -261,7 +260,7 @@ export const services: ServicePage[] = [
     ctaLabel: "Discuss Your Shoot",
     images: [
       { src: "/portfolio/photography/08.webp", alt: "Lakshmi Jewellery campaign model photography", width: 1456, height: 1322 },
-      { src: "/portfolio/photography/04.webp", alt: "Gold pendant necklace with pearl detailing product photography", width: 583, height: 827 },
+      { src: "/portfolio/jewellery/07.webp", alt: "PGP gemstone jewellery macro product photography", width: 591, height: 591 },
     ],
   },
   {
@@ -317,8 +316,8 @@ export const services: ServicePage[] = [
     relatedSlugs: ["brand-strategy-consulting", "print-production", "creative-advertising"],
     ctaLabel: "Talk to a Design Expert",
     images: [
-      { src: "/portfolio/magazine/01.webp", alt: "RT magazine cover feature", width: 932, height: 1319 },
-      { src: "/portfolio/logo-identity/03.webp", alt: "Sudharma Foundation brand identity and stationery", width: 1181, height: 1571 },
+      { src: "/portfolio/logo-identity/01.webp", alt: "Challani Jewellery Mart brand identity and stationery", width: 3937, height: 4650 },
+      { src: "/portfolio/packaging/07.webp", alt: "Silk saree gift box packaging design", width: 1000, height: 1000 },
     ],
   },
   {
@@ -369,7 +368,6 @@ export const services: ServicePage[] = [
     ],
     relatedSlugs: ["creative-design", "brand-strategy-consulting"],
     ctaLabel: "Get a Print Quote",
-    draft: true,
     images: [
       { src: "/portfolio/packaging/03.webp", alt: "Premium gift box packaging design", width: 1772, height: 1254 },
       { src: "/portfolio/logo-identity/04.webp", alt: "Surbharti brand identity and stationery", width: 1000, height: 750 },
@@ -423,7 +421,6 @@ export const services: ServicePage[] = [
     ],
     relatedSlugs: ["creative-advertising", "digital-marketing"],
     ctaLabel: "Plan My Media Strategy",
-    draft: true,
     images: [
       { src: "/portfolio/jewellery/05.webp", alt: "Sri Lakshmi Jewellery gold necklace campaign", width: 591, height: 984 },
       { src: "/portfolio/website/06.webp", alt: "Lakshmi Silvers online silver jewellery store website design", width: 1240, height: 947 },
@@ -477,7 +474,6 @@ export const services: ServicePage[] = [
     ],
     relatedSlugs: ["brand-strategy-consulting"],
     ctaLabel: "Discuss a Training Programme",
-    draft: true,
     images: [
       { src: "/insights/theatre-workshop.webp", alt: "Emotional intelligence in theatre acting workshop in Kodaikanal", width: 906, height: 1280 },
     ],

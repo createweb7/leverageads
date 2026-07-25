@@ -80,7 +80,7 @@ export function Hero() {
 
           <Reveal
             delay={400}
-            className="mt-10 short:mt-6 flex flex-wrap gap-9 short:gap-6 border-t border-brand-line pt-6 short:pt-4"
+            className="mt-10 short:mt-6 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-brand-line pt-6 short:pt-4 sm:flex sm:flex-wrap sm:gap-9 short:gap-6"
           >
             {proof.map((item) => (
               <div key={item.label}>
@@ -95,10 +95,10 @@ export function Hero() {
 
         <Reveal
           delay={200}
-          className="relative h-full min-h-70 overflow-hidden sm:min-h-80 lg:min-h-135 lg:overflow-visible"
+          className="relative h-full min-h-83 overflow-hidden sm:min-h-90 lg:min-h-135 lg:overflow-visible"
           aria-hidden
         >
-        <div className="absolute left-1/2 top-0 h-110 w-120 origin-top -translate-x-1/2 scale-[0.62] sm:scale-[0.72] lg:static lg:h-full lg:w-full lg:translate-x-0 lg:scale-100">
+        <div className="absolute left-1/2 top-0 h-110 w-120 origin-top -translate-x-1/2 scale-[0.75] sm:scale-[0.82] lg:static lg:h-full lg:w-full lg:translate-x-0 lg:scale-100">
           <div className="absolute left-[38%] top-[2%] h-30 w-30 short:h-22 short:w-22 rounded-full border border-dashed border-brand-red/35 animate-spin-slow">
             <span className="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-brand-red" />
           </div>

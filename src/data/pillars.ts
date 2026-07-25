@@ -109,7 +109,7 @@ export const pillars: Pillar[] = [
     relatedSlugs: ["media-planning-buying"],
     ctaLabel: "Talk to a Media Planner",
     images: [
-      { src: "/portfolio/textile-fashion/15.webp", alt: "Outdoor hoarding advertising campaign", width: 1600, height: 1600 },
+      { src: "/portfolio/textile-fashion/09.webp", alt: "Rajendira's Women's Store outdoor hoarding advertising campaign", width: 1000, height: 1000 },
     ],
   },
   {
