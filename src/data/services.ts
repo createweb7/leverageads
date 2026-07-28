@@ -15,6 +15,7 @@ export type ServicePage = {
   whyItMatters: string;
   included: { title: string; items: string[] }[];
   idealFor?: string[];
+  framework?: { title: string; steps: { title: string; body: string }[] };
   faqs: FAQ[];
   relatedSlugs: string[];
   ctaLabel: string;
@@ -47,61 +48,136 @@ export const services: ServicePage[] = [
     navLabel: "Brand Strategy & Consulting",
     h1: "Brand Strategy & Business Consulting in Chennai",
     metaTitle:
-      "Brand Strategy & Business Consulting in Chennai | Positioning, Architecture & Rebranding | LeverageAds",
+      "Brand Strategy & Business Consulting in Chennai | Positioning, Marketing & Business Transformation | LeverageAds",
     metaDescription:
-      "LeverageAds offers brand strategy and business consulting in Chennai — brand positioning, brand architecture, rebranding, marketing strategy and business consulting.",
-    heroSubcopy:
-      "A thoughtful, commercially grounded outside perspective on how your business is positioned, communicated and experienced.",
+      "Leverage Branding & Consultancy offers brand strategy and business consulting in Chennai — brand positioning, marketing strategy, customer experience and business transformation, led by Suresh Ramakrishnan (SRK).",
+    heroSubcopy: "Helping Businesses Build Stronger Brands, Better Systems and Sustainable Growth",
     intro: [
-      "Not every business problem is a design problem. Sometimes the real challenge lies in unclear positioning, scattered communication, weak customer experience, unstructured enquiry handling, inconsistent service delivery or a lack of alignment between the business model and the way the brand is being presented.",
-      "LeverageAds offers business consultancy and brand strategy support for businesses that need a more thoughtful, practical and commercially grounded outside perspective. This may include brand positioning discussions, brand architecture for businesses with multiple products or divisions, rebranding for companies that have outgrown their original identity, customer experience review, marketing strategy or strategic input on how to present and structure the business more effectively.",
+      "Building a successful business requires more than great products or creative advertising. It requires a clear strategy, a compelling brand, consistent customer experiences and business systems that support long-term growth. Many organisations struggle not because of poor products or services, but because their brand positioning, marketing communication, customer journey and internal processes fail to work together.",
+      "At Leverage Branding & Consultancy, we help businesses transform the way they are positioned, perceived and experienced. We provide practical, commercially focused business consulting that aligns your brand, marketing, sales and operations with your long-term business objectives. Whether you are launching a new venture, repositioning an established business or preparing for the next stage of growth, we bring an independent perspective backed by real business experience.",
+      "Unlike traditional advertising agencies, we don't measure success by creative awards—we measure it by the growth of our clients' businesses. Every engagement begins with an ownership mindset. We work as strategic partners, analysing your business from every angle to identify opportunities, remove bottlenecks and create practical solutions that generate measurable business results.",
+      "Our consulting covers Brand Strategy, Brand Positioning, Brand Revamping, Rebranding, Business Strategy, Marketing Strategy, Sales Strategy, Customer Experience, Brand Architecture, Advertising Strategy, Communication Planning, Digital Marketing Direction and Organisational Development. We don't believe in one-size-fits-all solutions or template-driven recommendations. Every strategy is developed specifically for your business, your market and your customers.",
+      "Original thinking is at the heart of everything we do. While many agencies depend heavily on generic templates and AI-generated ideas, our recommendations are built on deep market understanding, creative thinking and practical business insight. Led by Suresh Ramakrishnan (SRK), with nearly three decades of experience in branding, advertising, marketing and business consulting, Leverage Branding & Consultancy combines creativity with commercial thinking to develop brands that are memorable, profitable and built for long-term success.",
+      "Our expertise extends across founder-led businesses, family-owned enterprises, retail brands, educational institutions, healthcare organisations, hospitality businesses, manufacturing companies, service industries and startups. Whether your challenge is weak market positioning, declining sales, inconsistent branding, ineffective marketing or business expansion, we help you develop a clear roadmap for sustainable growth.",
     ],
     whyItMatters:
-      "This service is especially valuable for founder-led businesses, family-run enterprises, retail businesses, educational institutions, hospitality brands and clinics that want to improve the way the business is perceived, communicated and experienced.",
+      "We don't simply build brands—we build businesses. By integrating Brand Strategy, Marketing Strategy, Customer Experience, Sales Enablement, Organisational Development and Business Consulting, we help organisations create stronger market positioning, improve customer trust, increase revenue opportunities and achieve lasting competitive advantage.",
+    framework: {
+      title: "Our Business Consulting Framework",
+      steps: [
+        {
+          title: "Brand Discovery",
+          body: "Understand your business, customers, competitors, strengths, opportunities and market potential.",
+        },
+        {
+          title: "Brand Strategy",
+          body: "Develop a distinctive brand positioning, value proposition and competitive advantage.",
+        },
+        {
+          title: "Marketing & Sales Strategy",
+          body: "Create practical marketing systems and sales strategies that generate quality enquiries and business growth.",
+        },
+        {
+          title: "Customer Experience",
+          body: "Improve every customer touchpoint to build trust, loyalty and long-term relationships.",
+        },
+        {
+          title: "Business Transformation",
+          body: "Align branding, marketing, operations and organisational development to create a scalable and sustainable business.",
+        },
+      ],
+    },
     included: [
       {
-        title: "Brand Strategy & Consulting Includes",
+        title: "Brand Strategy & Business Consulting Includes",
         items: [
           "Brand Strategy",
           "Brand Positioning",
           "Brand Architecture",
           "Branding & Rebranding",
+          "Business Strategy",
           "Marketing Strategy",
-          "Business Consulting",
+          "Sales Strategy",
+          "Customer Experience",
+          "Advertising Strategy",
+          "Communication Planning",
+          "Digital Marketing Direction",
+          "Organisational Development",
         ],
       },
     ],
-    faqs: [],
-    relatedSlugs: ["creative-design", "creative-advertising"],
+    faqs: [
+      {
+        q: "What is Brand Strategy Consulting?",
+        a: "Brand Strategy Consulting helps businesses define their market position, clarify their value proposition, differentiate themselves from competitors and build a brand that customers trust and remember.",
+      },
+      {
+        q: "How is Leverage Branding & Consultancy different from a traditional advertising agency?",
+        a: "Most agencies focus on advertising campaigns and creative execution. We begin with understanding your business model, customers, market positioning and growth objectives before recommending branding, marketing or communication solutions.",
+      },
+      {
+        q: "Do you provide Business Consulting as well as Branding?",
+        a: "Yes. Our consulting combines Business Strategy, Brand Strategy, Marketing Strategy, Sales Strategy, Customer Experience and Organisational Development to improve overall business performance.",
+      },
+      {
+        q: "Can you help reposition an existing business?",
+        a: "Absolutely. We help businesses refresh their identity, redefine their market positioning, modernise their communication and strengthen their competitive advantage without losing the trust they have already built.",
+      },
+      {
+        q: "What industries do you work with?",
+        a: "We work with educational institutions, healthcare organisations, retail businesses, jewellery brands, hospitality companies, manufacturing firms, startups, service providers, family-owned businesses and SMEs across diverse industries.",
+      },
+      {
+        q: "Do you help improve marketing performance?",
+        a: "Yes. We review your existing marketing activities, customer journey, enquiry handling, digital presence and advertising strategy to identify opportunities that improve lead generation and conversions.",
+      },
+      {
+        q: "Can you help increase sales?",
+        a: "Yes. While sales depend on several factors, we strengthen the foundations that influence sales—including positioning, branding, customer experience, communication, sales processes and marketing strategy.",
+      },
+      {
+        q: "Do you offer consulting for startups?",
+        a: "Yes. We help startups build a strong brand foundation, define their positioning, develop marketing strategies and establish scalable business systems from the beginning.",
+      },
+      {
+        q: "Why choose Leverage Branding & Consultancy?",
+        a: "Led by Suresh Ramakrishnan (SRK), our consulting is built on nearly 30 years of practical business experience in branding, advertising, marketing and organisational development. We combine strategic thinking with creative excellence and an ownership mindset to help businesses achieve measurable, sustainable growth.",
+      },
+      {
+        q: "How do we begin?",
+        a: "Every engagement starts with a consultation to understand your business, challenges, opportunities and growth ambitions. Based on this assessment, we recommend a customised roadmap that aligns your brand strategy with your business objectives.",
+      },
+    ],
+    relatedSlugs: ["creative-design", "creative-advertising", "corporate-training-consulting"],
     ctaLabel: "Request a Brand Consultation",
     images: [
-      { src: "/case-studies/relishpro/01-cover.webp", alt: "RelishPro beverage brand campaign photography", width: 911, height: 600 },
-      { src: "/portfolio/logo-identity/01.webp", alt: "Challani Jewellery Mart brand identity and stationery", width: 3937, height: 4650 },
+      { src: "/insights/brand-strategy-packaging.webp", alt: "Pure Ultra Aqua steel water bottle packaging design and branding", width: 1311, height: 1000 },
+      { src: "/insights/brand-strategy-insurance-ad.webp", alt: "Cholamandalam MS General Insurance advertising campaign", width: 1100, height: 495 },
     ],
     heroGrid: [
       {
-        src: "/portfolio/logo-identity/01.webp",
-        alt: "Challani Jewellery Mart brand identity and stationery",
+        src: "/insights/brand-strategy-packaging.webp",
+        alt: "Pure Ultra Aqua steel water bottle packaging design and branding",
+        badgeLabel: "Packaging Design",
+        badgeIcon: "package",
+      },
+      {
+        src: "/insights/brand-strategy-jewellery-ad.webp",
+        alt: "GRT Jewellers print advertising campaign",
+        badgeLabel: "25+ · Years Experience",
+        badgeVariant: "dark",
+      },
+      {
+        src: "/insights/brand-strategy-corporate-ad.webp",
+        alt: "TPCS enterprise software print advertisement design",
         badgeLabel: "Brand Positioning",
         badgeIcon: "strategy",
       },
       {
-        src: "/case-studies/relishpro/01-cover.webp",
-        alt: "RelishPro beverage brand campaign photography",
-        badgeLabel: "15+ · Years Experience",
-        badgeVariant: "dark",
-      },
-      {
-        src: "/portfolio/logo-identity/05.webp",
-        alt: "Logo design collection — Nidhish Krishnaa, Phoenix, Sudharma, MFM, Big Tree, Haco Tech",
-        badgeLabel: "Logo Design",
+        src: "/insights/brand-strategy-insurance-ad.webp",
+        alt: "Cholamandalam MS General Insurance advertising campaign",
+        badgeLabel: "Advertising Strategy",
         badgeIcon: "creative",
-      },
-      {
-        src: "/case-studies/hadron-homes/09-stationery-mockup.webp",
-        alt: "Hadron Homes stationery mockup — letterhead, envelopes and business cards",
-        badgeLabel: "Brand Guidelines",
-        badgeIcon: "layers",
       },
     ],
   },
@@ -639,78 +715,139 @@ export const services: ServicePage[] = [
   },
   {
     slug: "corporate-training-consulting",
-    navLabel: "Corporate Training & Consulting",
-    h1: "Corporate Training & Consulting in Chennai",
-    metaTitle: "Corporate Training Company in Chennai | Workshops, SOPs & Leadership Development | LeverageAds",
+    navLabel: "Organisational Development Consulting",
+    h1: "Organisational Development Consulting",
+    metaTitle:
+      "Organisational Development Consulting in Chennai | People, Process & Brand | LeverageAds",
     metaDescription:
-      "LeverageAds offers corporate training and consulting in Chennai — SOP development, employee induction, branding and marketing workshops, soft skills and leadership development.",
-    heroSubcopy:
-      "Practical training and consulting that helps teams communicate, perform and lead with more confidence.",
+      "Leverage Branding & Consultancy offers Organisational Development Consulting in Chennai — TQM, leadership development, SOPs, emotional intelligence and brand strategy, led by Suresh Ramakrishnan (SRK).",
+    heroSubcopy: "Transforming Organisations Through People, Process, Performance & Brand",
     intro: [
-      "A business can have a strong brand and a capable team, and still underperform if day-to-day processes are undocumented, new employees are inducted informally, or teams have never been trained on how to represent the brand consistently in front of a customer.",
-      "LeverageAds offers corporate training and consulting for businesses that want to strengthen how their teams operate and communicate — from SOP development and structured employee induction, to branding and marketing workshops that help internal teams understand and apply the brand correctly, to customer service, soft skills and leadership development training.",
-      "This work draws on the same experience-led, workshop-based approach we bring to our own training sessions — including sessions run on communication, expression and emotional intelligence — adapted to the practical needs of a business team rather than a classroom.",
+      "An organisation's success is not determined solely by its products or services, but by the people who represent its brand every day. Every employee interaction with customers, clients, vendors and stakeholders influences how the organisation is perceived. Sustainable growth happens when the brand promise is consistently delivered through empowered people, efficient processes and a culture of excellence.",
+      "At Leverage Branding & Consultancy, we help organisations strengthen both their external brand and their internal foundation. Our Organisational Development Consulting focuses on aligning people, processes and performance with business objectives, enabling organisations to grow with confidence, consistency and clarity.",
+      "Led by Suresh Ramakrishnan (SRK), we work with organisations that typically have 25 or more employees, helping them build high-performing teams, develop effective leadership, improve customer experience and create collaborative work environments. Our consulting goes beyond traditional training by identifying organisational gaps and implementing practical solutions that deliver measurable business outcomes.",
+      "Our services include Brand Strategy Workshops, Organisational Development, Total Quality Management (TQM), Leadership Development, Soft Skills Training, Customer Service Excellence, Team Building, Employee Induction Systems, Standard Operating Procedures (SOPs), Departmental Integration, Business Communication, Emotional Intelligence and Performance Improvement Programmes.",
+      "A key strength of our consulting is TQM-based organisational transformation, where employees gain a deeper understanding of how every department contributes to the company's success. By breaking communication barriers, improving cross-functional collaboration and creating shared accountability, organisations experience stronger teamwork, better customer service, improved productivity and sustainable growth.",
+      "Emotional Intelligence is at the heart of organisational success. Technical skills may secure a job, but emotional intelligence determines how effectively people communicate, lead, collaborate and manage relationships. Through practical EI workshops, employees learn self-awareness, self-management, empathy, active listening, conflict resolution, stress management and relationship building. These skills improve teamwork, enhance customer interactions, strengthen leadership and create a healthier workplace culture where people perform at their best.",
+      "We believe that every employee is a Brand Ambassador. When people understand the organisation's vision, values and expectations, they naturally communicate better, take ownership of their responsibilities and contribute to a positive workplace culture. This transformation creates lasting value for employees, customers and the organisation alike.",
     ],
     whyItMatters:
-      "Our focus is on training that is practical and grounded in real day-to-day work, not generic theory — so teams leave with something they can actually apply.",
+      "Every consulting engagement is customised to the organisation's culture, industry and business goals. Our practical, experience-driven approach ensures that learning is immediately applicable, resulting in stronger leadership, connected teams, streamlined processes and measurable organisational performance.",
+    framework: {
+      title: "Our Organisational Development Framework",
+      steps: [
+        {
+          title: "Brand Strategy",
+          body: "Build a strong organisational identity, clarify your value proposition and align your brand promise with customer expectations.",
+        },
+        {
+          title: "People Development",
+          body: "Develop confident leaders, customer-focused employees and engaged teams through practical behavioural and professional development programmes.",
+        },
+        {
+          title: "Process Improvement",
+          body: "Establish clear systems, Standard Operating Procedures (SOPs), TQM practices and structured workflows that improve efficiency and accountability.",
+        },
+        {
+          title: "Organisational Growth",
+          body: "Create a high-performance culture where people, processes and purpose work together to achieve sustainable business success.",
+        },
+      ],
+    },
     included: [
       {
-        title: "Corporate Training & Consulting Includes",
+        title: "Organisational Development Consulting Includes",
         items: [
-          "SOP Development",
-          "Employee Induction",
-          "Corporate Training",
-          "Branding Workshops",
-          "Marketing Workshops",
-          "Customer Service Training",
-          "Soft Skills",
+          "Brand Strategy Workshops",
+          "Organisational Development",
+          "Total Quality Management (TQM)",
           "Leadership Development",
-          "Entrepreneurship Development",
+          "Soft Skills Training",
+          "Customer Service Excellence",
+          "Team Building",
+          "Employee Induction Systems",
+          "Standard Operating Procedures (SOPs)",
+          "Departmental Integration",
+          "Business Communication",
+          "Emotional Intelligence",
+          "Performance Improvement Programmes",
         ],
       },
     ],
     faqs: [
       {
-        q: "Can training be customised to our industry and team size?",
-        a: "Yes, every training or workshop is planned around your team's size, role mix and industry rather than delivered as a fixed generic module.",
+        q: "What is Organisational Development Consulting?",
+        a: "Organisational Development (OD) Consulting is a structured approach to improving an organisation's people, processes, culture and performance. It helps businesses become more efficient, collaborative and customer-focused.",
       },
       {
-        q: "Do you help document SOPs, or only deliver training?",
-        a: "Both. We can help document SOPs and processes as well as deliver the training that goes with them.",
+        q: "How is your approach different from regular corporate training?",
+        a: "Traditional training focuses on individual skills. Our consulting addresses the entire organisation by improving leadership, employee behaviour, teamwork, business processes, customer experience and organisational culture.",
       },
       {
-        q: "Can you run branding or marketing workshops for our internal team?",
-        a: "Yes, these workshops are designed to help internal teams understand and apply brand guidelines and marketing thinking consistently in their day-to-day work.",
+        q: "Which organisations do you typically work with?",
+        a: "We primarily work with organisations employing 25 or more people, including SMEs, educational institutions, manufacturing companies, service businesses, healthcare organisations and family-owned enterprises.",
+      },
+      {
+        q: "What is TQM, and why is it important?",
+        a: "Total Quality Management (TQM) is a management philosophy that encourages continuous improvement across the organisation. It connects departments, improves communication, enhances accountability and creates a culture focused on quality and customer satisfaction.",
+      },
+      {
+        q: "Can TQM improve employee relationships?",
+        a: "Yes. TQM helps employees understand how each department contributes to organisational success. This improves mutual respect, collaboration and cross-functional teamwork while reducing internal conflicts.",
+      },
+      {
+        q: "Why is Emotional Intelligence important in the workplace?",
+        a: "Emotional Intelligence helps employees understand and manage their own emotions while responding appropriately to others. It improves communication, teamwork, leadership, customer service, decision-making and conflict resolution, resulting in stronger relationships and a more productive work environment.",
+      },
+      {
+        q: "Do you customise every programme?",
+        a: "Absolutely. Every consulting assignment begins with understanding your organisation's challenges, objectives and culture before designing a tailored development roadmap.",
+      },
+      {
+        q: "What outcomes can organisations expect?",
+        a: "Organisations typically experience stronger leadership, improved employee engagement, better departmental coordination, enhanced customer service, clearer processes, increased productivity and a more positive organisational culture.",
+      },
+      {
+        q: "Do you provide SOP development and employee induction systems?",
+        a: "Yes. We help organisations document processes, create Standard Operating Procedures (SOPs), design structured induction programmes and establish systems that ensure operational consistency.",
+      },
+      {
+        q: "Can you support long-term organisational transformation?",
+        a: "Yes. In addition to workshops, we offer ongoing consulting, mentoring and implementation support to ensure lasting organisational improvement.",
+      },
+      {
+        q: "Why choose Leverage Branding & Consultancy?",
+        a: "With over two decades of experience in branding, marketing, organisational consulting and behavioural development, Suresh Ramakrishnan (SRK) brings a unique perspective that integrates Brand Strategy, People Development, Process Improvement and Organisational Growth — helping organisations build not just better teams, but better businesses.",
       },
     ],
     relatedSlugs: ["brand-strategy-consulting"],
-    ctaLabel: "Discuss a Training Programme",
+    ctaLabel: "Discuss an Organisational Development Programme",
     images: [
-      { src: "/insights/theatre-workshop.webp", alt: "Emotional intelligence in theatre acting workshop in Kodaikanal", width: 906, height: 1280 },
+      { src: "/insights/od-team-photo.webp", alt: "Corporate team celebrating after an organisational development workshop", width: 1333, height: 1000 },
     ],
     heroGrid: [
       {
-        src: "/insights/theatre-workshop.webp",
-        alt: "Emotional intelligence in theatre acting workshop in Kodaikanal",
+        src: "/insights/od-training-session.webp",
+        alt: "Corporate boardroom training session with employees taking notes",
         badgeLabel: "Team Workshops",
         badgeIcon: "training",
       },
       {
-        src: "/case-studies/meston-college/11-stationery-mockup.webp",
-        alt: "Meston College stationery mockup — letterhead, envelopes, business cards and folder",
-        badgeLabel: "15+ · Years Experience",
+        src: "/insights/od-team-huddle.webp",
+        alt: "Suresh Ramakrishnan (SRK) coaching frontline staff in a team huddle",
+        badgeLabel: "20+ · Years Experience",
         badgeVariant: "dark",
       },
       {
-        src: "/case-studies/hadron-homes/09-stationery-mockup.webp",
-        alt: "Hadron Homes stationery mockup — letterhead, envelopes and business cards",
-        badgeLabel: "Training Materials",
-        badgeIcon: "layers",
+        src: "/insights/od-ei-workshop.webp",
+        alt: "Emotional intelligence workshop session on workplace scenarios",
+        badgeLabel: "EI & Leadership",
+        badgeIcon: "leadership",
       },
       {
-        src: "/portfolio/logo-identity/05.webp",
-        alt: "Logo design collection — Nidhish Krishnaa, Phoenix, Sudharma, MFM, Big Tree, Haco Tech",
-        badgeLabel: "Skill Development",
+        src: "/insights/od-team-photo.webp",
+        alt: "Corporate team celebrating after an organisational development workshop",
+        badgeLabel: "Culture Building",
         badgeIcon: "growth",
       },
     ],

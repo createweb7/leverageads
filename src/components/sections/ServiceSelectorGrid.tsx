@@ -66,8 +66,8 @@ const cards = [
   },
   {
     icon: GraduationCap,
-    title: "Want to Train or Upskill Your Team?",
-    body: "SOPs, induction, branding workshops and leadership or soft-skills training.",
+    title: "Want to Strengthen Your People and Processes?",
+    body: "Organisational development consulting — TQM, leadership, SOPs and emotional intelligence.",
     href: "/services/corporate-training-consulting",
   },
 ];

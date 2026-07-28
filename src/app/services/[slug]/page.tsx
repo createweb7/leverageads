@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { ServiceHero } from "@/components/sections/ServiceHero";
 import { ServiceIntro, ServiceIncluded, ServiceIdealFor } from "@/components/sections/ServiceContent";
+import { ServiceFramework } from "@/components/sections/ServiceFramework";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { RelatedServices } from "@/components/sections/RelatedServices";
@@ -71,6 +72,7 @@ export default async function ServicePageRoute({
       />
       <ServiceIntro service={service} />
       <ServiceIncluded service={service} />
+      <ServiceFramework framework={service.framework} />
       <RelatedCaseStudies serviceSlug={service.slug} />
       <ServiceIdealFor service={service} />
       <ProcessSteps />
