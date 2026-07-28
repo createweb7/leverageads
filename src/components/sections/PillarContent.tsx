@@ -8,10 +8,17 @@ export function PillarIntro({ pillar }: { pillar: Pillar }) {
   return (
     <section className="py-20 md:py-24 bg-white">
       <Container>
-        <Reveal className="max-w-3xl mx-auto">
-          <p className="text-brand-ink font-semibold leading-relaxed text-base md:text-lg">
-            {pillar.intro}
-          </p>
+        <Reveal className="max-w-3xl mx-auto space-y-5">
+          {pillar.intro.map((paragraph, i) => (
+            <p key={i} className="text-brand-gray leading-relaxed text-base md:text-lg">
+              {paragraph}
+            </p>
+          ))}
+          {pillar.whyItMatters && (
+            <p className="text-brand-ink font-semibold leading-relaxed text-base md:text-lg pt-2">
+              {pillar.whyItMatters}
+            </p>
+          )}
         </Reveal>
       </Container>
     </section>
