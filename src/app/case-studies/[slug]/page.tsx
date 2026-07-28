@@ -9,10 +9,11 @@ import { Check } from "lucide-react";
 import { CTABand } from "@/components/sections/CTABand";
 import { RelatedServices } from "@/components/sections/RelatedServices";
 import { GalleryLightbox } from "@/components/sections/GalleryLightbox";
+import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { caseStudies, getCaseStudyBySlug } from "@/data/caseStudies";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return caseStudies.map((cs) => ({ slug: cs.slug }));
@@ -50,6 +51,7 @@ export default async function CaseStudyPage({
 
   return (
     <>
+      {cs.faqs && cs.faqs.length > 0 && <JsonLd data={faqSchema(cs.faqs)} />}
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
@@ -173,6 +175,11 @@ export default async function CaseStudyPage({
                     ))}
                   </ul>
                 )}
+                {section.note && (
+                  <p className="mt-5 text-brand-gray leading-relaxed text-base md:text-lg">
+                    {section.note}
+                  </p>
+                )}
               </Reveal>
             ))}
           </div>
@@ -191,6 +198,10 @@ export default async function CaseStudyPage({
           )}
         </Container>
       </section>
+
+      {cs.faqs && cs.faqs.length > 0 && (
+        <FAQAccordion faqs={cs.faqs} title={`FAQs — ${cs.client}`} />
+      )}
 
       <RelatedServices slugs={cs.relatedSlugs} />
 

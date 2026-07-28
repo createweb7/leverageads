@@ -1,7 +1,10 @@
+import type { FAQ } from "@/data/services";
+
 export type CaseStudySection = {
   heading: string;
   paragraphs: string[];
   list?: string[];
+  note?: string;
 };
 
 export type CaseStudy = {
@@ -17,6 +20,7 @@ export type CaseStudy = {
   sections: CaseStudySection[];
   closing?: string[];
   gallery: { src: string; alt: string }[];
+  faqs?: FAQ[];
   relatedSlugs: string[];
 };
 
@@ -299,87 +303,81 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "branding-photography-celebrity-campaigns",
-    client: "Branding Photography & Celebrity Campaigns",
-    category: "Commercial Photography & Celebrity Branding",
+    client: "Commercial Photography & Celebrity Branding in Chennai",
+    category: "Commercial Photography • Corporate Photography • Product Photography • Industrial Photography • Celebrity Brand Campaigns",
     logo: "/case-studies/logos/branding.webp",
     coverImage: "/case-studies/branding-photography-celebrity/01-cover.webp",
     summary:
       "How 26 years of commercial photography and celebrity branding campaigns have helped Leverage clients build trust before a single conversation begins.",
-    subtitle: "Building Brands Through Powerful Visual Storytelling",
+    subtitle: "Professional Brand Photography That Builds Trust, Creates Influence and Drives Business Growth",
     intro: [
-      "Over the past 26 years, Leverage has planned, directed and executed hundreds of branding and commercial photoshoots for businesses across industries. From startups and SMEs to leading corporate brands, educational institutions, healthcare, hospitality, retail and manufacturing, our work has always been driven by one belief: people see your brand before they experience it.",
-      "A powerful visual can build trust long before a conversation begins.",
+      "In today's competitive marketplace, customers often see your business long before they speak to you. Your website, social media, brochures, advertisements and digital campaigns create the first impression of your brand. High-quality, professionally planned photography isn't just about aesthetics—it's about building credibility, communicating your brand values and influencing buying decisions.",
+      "At Leverage Branding & Consultancy, we specialise in Commercial Photography, Corporate Photography, Product Photography, Industrial Photography, Hospitality Photography, Educational Institution Photography and Celebrity Branding Campaigns that help businesses stand out in a crowded market. Every image is created with a clear business objective—to strengthen your brand, attract customers and support your marketing efforts across every platform.",
+      "Led by Suresh Ramakrishnan (SRK), with over 26 years of experience in advertising, branding and creative direction, our photography goes far beyond capturing attractive images. Every assignment begins with understanding your business, your customers, your brand personality and your communication goals. We believe that powerful visuals are created through strategy, planning and creative direction—not by chance.",
     ],
     sections: [
       {
-        heading: "The Challenge",
+        heading: "Original Photography. Professionally Planned. Strategically Executed.",
         paragraphs: [
-          "In today's digital-first world, brands are producing more content than ever before. Yet many rely on smartphone photography, stock images or AI-generated visuals to represent their business.",
-          "While these options may be quick and inexpensive, they often fail to communicate authenticity, quality and brand personality. The result is a visual identity that looks generic, lacks consistency and struggles to create a lasting impression.",
-          "For brands investing in advertising, websites, social media, brochures and digital marketing, weak imagery can significantly reduce the impact of every marketing effort.",
-        ],
-      },
-      {
-        heading: "Our Approach",
-        paragraphs: [
-          "At Leverage, every branding photoshoot begins long before the camera is switched on.",
-          "We invest time in understanding the business, its audience, brand personality, communication objectives and the emotions it wants to create.",
-          "Our creative team carefully plans every element of the shoot, including:",
+          "Every project is carefully planned to ensure that the final visuals communicate authenticity, professionalism and trust. Rather than relying on generic stock photographs, businesses benefit from original commercial photography that reflects their unique identity and creates a consistent brand experience across every customer touchpoint.",
+          "Our commercial photography services include:",
         ],
         list: [
-          "Concept development",
-          "Art direction",
-          "Styling and wardrobe",
-          "Location selection",
-          "Lighting design",
-          "Product presentation",
-          "Model and talent coordination",
-          "Visual storytelling",
-          "Post-production and image enhancement",
+          "Corporate Branding Photography",
+          "Product Photography",
+          "Industrial & Manufacturing Photography",
+          "Architecture & Interior Photography",
+          "Hospitality & Hotel Photography",
+          "Educational Institution Photography",
+          "Healthcare & Medical Photography",
+          "Food & Beverage Photography",
+          "Fashion & Lifestyle Photography",
+          "Jewellery Photography",
+          "Executive & Leadership Portraits",
+          "Annual Report Photography",
+          "Advertising Campaign Photography",
+        ],
+        note: "Every shoot includes strategic planning, creative direction, concept development, art direction, location planning, lighting design, styling, talent coordination, photography, image enhancement and production supervision to ensure outstanding visual consistency.",
+      },
+      {
+        heading: "Celebrity Branding That Creates Lasting Brand Recall",
+        paragraphs: [
+          "Celebrity endorsements create value only when they align with the brand's personality and business objectives. At Leverage Branding & Consultancy, we don't simply organise celebrity appearances—we conceptualise complete brand campaigns that connect the celebrity with your brand story.",
+          "Over the years, we have worked with hundreds of film personalities, television artists, sports personalities, business leaders, influencers and public figures across multiple industries. From concept creation and campaign planning to celebrity coordination, creative direction, photography and production management, we ensure every campaign strengthens brand credibility and creates meaningful customer engagement.",
         ],
       },
       {
-        heading: "Celebrity Branding That Creates Influence",
+        heading: "Photography with a Business Purpose",
         paragraphs: [
-          "Every photograph is created with a purpose — to strengthen the brand across every customer touchpoint.",
-          "Over the years, Leverage has also conceptualised and executed numerous celebrity branding campaigns, working with hundreds of celebrities, film personalities, television artists, sports personalities, public figures and brand ambassadors across diverse industries.",
-          "A celebrity is far more than a familiar face. When strategically aligned with a brand, they can accelerate recognition, build trust and create instant recall.",
-          "Our role extends beyond arranging celebrity participation. We develop the creative concept, direct the shoot, manage production, coordinate styling, oversee photography and ensure every visual aligns with the client's brand strategy.",
-          "The objective is not simply to feature a celebrity — it is to create communication that feels authentic, memorable and commercially effective.",
-        ],
-      },
-      {
-        heading: "The Impact",
-        paragraphs: [
-          "Professionally planned branding photography continues to deliver value long after the shoot is complete.",
-          "The same visual assets are repurposed across:",
+          "Our photographs are designed to work across every marketing platform, including:",
         ],
         list: [
-          "Corporate websites",
-          "Digital marketing campaigns",
-          "Social media",
-          "Print advertisements",
-          "Outdoor advertising",
-          "Product catalogues",
-          "Company profiles",
-          "Brochures",
-          "Annual reports",
-          "Exhibitions and trade shows",
-          "PR and media communication",
+          "Corporate Websites",
+          "Brand Brochures & Company Profiles",
+          "Product Catalogues",
+          "Social Media Marketing",
+          "Digital Advertising",
+          "Print Campaigns",
+          "Outdoor Advertising",
+          "Exhibition & Trade Show Displays",
+          "PR & Media Publications",
+          "Annual Reports",
+          "Investor Presentations",
+          "Sales & Marketing Collateral",
         ],
+        note: "Every image becomes a long-term marketing asset that continues to generate value long after the photoshoot is complete.",
       },
       {
-        heading: "The Leverage Difference",
+        heading: "Why Businesses Choose Leverage Branding & Consultancy",
         paragraphs: [
-          "A single well-executed photoshoot becomes a long-term marketing investment.",
-          "For more than 26 years, Leverage has combined advertising strategy, creative direction, commercial photography and brand thinking to create visuals that do more than look beautiful — they communicate, persuade and sell.",
-          "Our portfolio includes thousands of creative assignments, including hundreds of branding photoshoots and celebrity campaigns, each designed to strengthen brand perception and support measurable business growth.",
+          "Photography is only one part of what we do. Our strength lies in combining Brand Strategy, Advertising, Marketing, Creative Direction and Commercial Photography into one integrated solution. This ensures every visual communicates the right message, strengthens your brand identity and supports measurable business growth.",
+          "Whether you are launching a new product, building a corporate brand, promoting a hospitality business, marketing an educational institution or planning a celebrity campaign, we create visual assets that inspire confidence, influence customer decisions and elevate your brand.",
         ],
       },
     ],
     closing: [
-      "Because great branding is never accidental. It is carefully planned, professionally executed and strategically positioned to leave a lasting impression.",
-      "At Leverage, we don't just capture photographs. We create visual assets that build brands.",
+      "We don't simply take photographs.",
+      "We create visual communication that builds brands, earns trust and delivers business results.",
     ],
     gallery: [
       { src: "/case-studies/branding-photography-celebrity/02-antique-jewellery-dancer.webp", alt: "Antique jewellery collection campaign photography with a classical dance pose" },
@@ -396,6 +394,50 @@ export const caseStudies: CaseStudy[] = [
       { src: "/case-studies/branding-photography-celebrity/13-akshaya-kaalam-offer.webp", alt: "Akshaya Kaalam festive offer jewellery campaign photography" },
       { src: "/case-studies/branding-photography-celebrity/14-kajal-agarwal-jewellery.webp", alt: "Celebrity jewellery campaign photography featuring actress Kajal Agarwal" },
       { src: "/case-studies/branding-photography-celebrity/15-krt-celebrity-campaign.webp", alt: "Celebrity campaign photography for KRT Thanga Maaligai jewellers" },
+      { src: "/case-studies/branding-photography-celebrity/16-lakshmi-jewelery-78-years.webp", alt: "Sri Lakshmi Jewelery 78 years of trust celebrity campaign photography" },
+      { src: "/case-studies/branding-photography-celebrity/17-lakshmi-jewelery-75-year-anniversary.webp", alt: "Sri Lakshmi Jewelery 75 year anniversary celebrity campaign photography" },
+    ],
+    faqs: [
+      {
+        q: "Why is professional commercial photography important for a business?",
+        a: "Professional photography creates a strong first impression, builds trust, enhances brand credibility and significantly improves the effectiveness of websites, advertising, brochures and digital marketing campaigns.",
+      },
+      {
+        q: "What industries do you work with?",
+        a: "We work with manufacturing companies, educational institutions, healthcare organisations, hotels, restaurants, retail brands, jewellery businesses, real estate companies, corporate organisations, startups and service industries.",
+      },
+      {
+        q: "Do you provide product photography?",
+        a: "Yes. We provide professional product photography for e-commerce, catalogues, advertising campaigns, brochures, websites and social media marketing.",
+      },
+      {
+        q: "Can you handle large corporate photography projects?",
+        a: "Absolutely. We have extensive experience managing large-scale commercial photography assignments involving multiple locations, departments, products, manufacturing facilities and corporate teams.",
+      },
+      {
+        q: "What is included in a commercial photography project?",
+        a: "Our services include concept development, creative direction, art direction, location planning, lighting design, styling, photography, image enhancement and production management to deliver visually compelling and brand-aligned results.",
+      },
+      {
+        q: "Do you organise celebrity branding campaigns?",
+        a: "Yes. We conceptualise and execute complete celebrity branding campaigns, including campaign strategy, celebrity coordination, creative direction, commercial photography and production management.",
+      },
+      {
+        q: "How do celebrity endorsements benefit a brand?",
+        a: "When strategically planned, celebrity endorsements enhance brand recognition, improve credibility, increase customer trust and create stronger market recall.",
+      },
+      {
+        q: "Can the photographs be used across different marketing platforms?",
+        a: "Yes. Every photograph is created as a long-term marketing asset suitable for websites, social media, brochures, advertising campaigns, annual reports, exhibitions, presentations and digital marketing.",
+      },
+      {
+        q: "What makes Leverage Branding & Consultancy different from a photography studio?",
+        a: "Unlike conventional photography studios, we approach every assignment from a branding and marketing perspective. Every visual is planned to communicate your brand story, strengthen customer perception and support measurable business growth.",
+      },
+      {
+        q: "Why choose Leverage Branding & Consultancy for commercial photography?",
+        a: "With over 26 years of experience in advertising, branding, creative direction and commercial photography, Suresh Ramakrishnan (SRK) and the Leverage team create original, professionally directed visual content that combines creativity with business strategy to help brands stand out and grow.",
+      },
     ],
     relatedSlugs: ["ad-films-photography", "creative-advertising"],
   },
