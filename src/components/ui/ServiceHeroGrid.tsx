@@ -79,15 +79,17 @@ function Cell({
   badgePosition: "bottom-left" | "top-right";
 }) {
   return (
-    <div className={`relative overflow-hidden rounded-3xl shadow-brand-lg ${className}`}>
-      <Image
-        src={cell.src}
-        alt={cell.alt}
-        fill
-        sizes="(min-width: 1024px) 24vw, 45vw"
-        className="object-cover object-top"
-      />
-      <Badge cell={cell} position={badgePosition} />
+    <div className={`overflow-hidden rounded-[28px] bg-white p-2.5 shadow-brand-lg ${className}`}>
+      <div className="relative h-full w-full overflow-hidden rounded-2xl">
+        <Image
+          src={cell.src}
+          alt={cell.alt}
+          fill
+          sizes="(min-width: 1024px) 24vw, 45vw"
+          className="object-cover object-top"
+        />
+        <Badge cell={cell} position={badgePosition} />
+      </div>
     </div>
   );
 }
