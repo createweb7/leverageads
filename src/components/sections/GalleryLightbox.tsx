@@ -37,24 +37,26 @@ export function GalleryLightbox({ images }: { images: GalleryImage[] }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
         {images.map((img, i) => (
-          <Reveal key={img.src} delay={(i % 3) * 80}>
+          <Reveal key={img.src} delay={(i % 4) * 70}>
             <button
               type="button"
               onClick={() => setActiveIndex(i)}
-              className="group relative block aspect-4/5 w-full overflow-hidden rounded-2xl shadow-brand-sm"
+              className="group relative block aspect-square w-full overflow-hidden rounded-2xl border border-brand-line bg-brand-paper p-2 shadow-brand-sm"
             >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover transition-transform duration-500 ease-brand group-hover:scale-105"
-              />
+              <div className="relative h-full w-full overflow-hidden rounded-xl bg-white">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(min-width: 1024px) 22vw, (min-width: 640px) 30vw, 45vw"
+                  className="object-contain transition-transform duration-500 ease-brand group-hover:scale-105"
+                />
+              </div>
               <div className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 ease-brand group-hover:bg-black/25 group-hover:opacity-100">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-brand-ink">
-                  <ZoomIn size={20} />
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-brand-ink">
+                  <ZoomIn size={18} />
                 </span>
               </div>
             </button>

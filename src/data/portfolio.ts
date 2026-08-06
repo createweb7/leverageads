@@ -33,8 +33,6 @@ export const portfolioItems: PortfolioItem[] = [
   { src: "/portfolio/jewellery/01.webp", alt: "Sovereign jewellery festive campaign", categorySlug: "jewellery", width: 827, height: 871 },
   { src: "/portfolio/jewellery/02.webp", alt: "GRT Jewellers campaign creative", categorySlug: "jewellery", width: 591, height: 984 },
   { src: "/portfolio/jewellery/03.webp", alt: "Hayagrivas \"Elegance Intact\" saree campaign", categorySlug: "jewellery", width: 827, height: 878 },
-  { src: "/portfolio/jewellery/04.webp", alt: "Challani Jewellery Mart \"RARE!\" pearl bangles", categorySlug: "jewellery", width: 1168, height: 1036 },
-  { src: "/portfolio/jewellery/05.webp", alt: "Sri Lakshmi Jewellery gold necklace campaign", categorySlug: "jewellery", width: 591, height: 984 },
   { src: "/portfolio/jewellery/06.webp", alt: "Challani Jewellery Mart brand campaign portrait", categorySlug: "jewellery", width: 591, height: 835 },
   { src: "/portfolio/jewellery/07.webp", alt: "PGP gemstone jewellery flatlay", categorySlug: "jewellery", width: 591, height: 591 },
   { src: "/portfolio/jewellery/08.webp", alt: "KRT gold antique jewellery campaign", categorySlug: "jewellery", width: 1167, height: 1096 },
@@ -52,8 +50,11 @@ export const portfolioItems: PortfolioItem[] = [
   { src: "/portfolio/logo-identity/06.webp", alt: "Logo design collection — CoolTrip, Tejaas, SS Shriman, IcorePro, RARS", categorySlug: "logo-identity", width: 2267, height: 2993 },
 
   // product-photography
-  { src: "/portfolio/photography/03.webp", alt: "Diamond necklace product photography", categorySlug: "product-photography", width: 827, height: 583 },
-  { src: "/portfolio/photography/04.webp", alt: "Gold necklace product photography on colour backdrop", categorySlug: "product-photography", width: 583, height: 827 },
+  { src: "/portfolio/photography/05.webp", alt: "Gold kundan necklace and earrings set product photography", categorySlug: "product-photography", width: 900, height: 1273 },
+  { src: "/portfolio/photography/06.webp", alt: "Diamond and emerald pendant necklace product photography", categorySlug: "product-photography", width: 900, height: 1273 },
+  { src: "/portfolio/photography/07.webp", alt: "Gold pendant necklace with pearl drops and matching earrings product photography", categorySlug: "product-photography", width: 900, height: 1273 },
+  { src: "/portfolio/photography/09.webp", alt: "Gold antique jewellery necklace set close-up product photography", categorySlug: "product-photography", width: 900, height: 1349 },
+  { src: "/portfolio/photography/10.webp", alt: "Gold kundan bangles product photography", categorySlug: "product-photography", width: 900, height: 1349 },
 
   // model-photography
   { src: "/portfolio/photography/08.webp", alt: "Lakshmi Jewellery campaign model photography", categorySlug: "model-photography", width: 1456, height: 1322 },

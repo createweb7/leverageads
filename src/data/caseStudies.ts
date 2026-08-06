@@ -197,6 +197,19 @@ export const caseStudies: CaseStudy[] = [
           "Social media, reels, FM jingles and AVs across channels",
         ],
       },
+      {
+        heading: "Why Educational Institutions Trust Leverage Branding",
+        paragraphs: [],
+        list: [
+          "26+ Years of Experience",
+          "Trusted by Leading Schools, Colleges & Universities",
+          "Complete Branding & Admissions Marketing Solutions",
+          "Strategy-First Approach",
+          "Creative Excellence with Measurable Outcomes",
+          "Web, Digital, Print, Films & Automation Under One Roof",
+          "Dedicated Partner for Long-Term Institutional Growth",
+        ],
+      },
     ],
     closing: [
       "The launch of a college today requires far more than advertising. It requires a clear brand identity, a strong educational proposition, high-conversion digital infrastructure, lead capture and follow-up systems, and communication that connects aspiration with trust.",
@@ -214,6 +227,88 @@ export const caseStudies: CaseStudy[] = [
       { src: "/case-studies/meston-college/09.webp", alt: "Meston College B.Sc Computer Science admissions creative" },
       { src: "/case-studies/meston-college/10.webp", alt: "Meston College 3 Years of Practical Training admissions creative" },
       { src: "/case-studies/meston-college/11-stationery-mockup.webp", alt: "Meston College stationery mockup — letterhead, envelopes, business cards and folder" },
+    ],
+    faqs: [
+      {
+        q: "Why is branding important for schools and colleges?",
+        a: "A strong brand builds credibility, creates trust among parents and students, differentiates your institution from competitors, and improves admission enquiries. Today, branding is not just about visibility — it's about creating a lasting reputation.",
+      },
+      {
+        q: "Why should we choose Leverage Branding for our institution?",
+        a: "With 26 years of experience, Leverage Branding has partnered with leading schools, colleges, and universities to create impactful brands, admission campaigns, websites, digital marketing strategies, and communication systems that deliver measurable results.",
+      },
+      {
+        q: "Which educational institutions have you worked with?",
+        a: "Our portfolio includes renowned institutions such as Vels University, Vels Srinivasa Engineering College, Vels Billabong High International School, Gateway International School, Vijay Vidyashram, Akshara Vidyashram, Lords International School, Monarch International School, ARRS International School and Meston College of Arts & Science, among several other educational institutions across South India.",
+      },
+      {
+        q: "Do you work only with schools?",
+        a: "No. We work with schools, colleges, universities, educational trusts, training institutes, and higher education institutions, helping them build stronger brands and attract more admissions.",
+      },
+      {
+        q: "What services do you provide for educational institutions?",
+        a: "We offer end-to-end branding and admissions marketing services, including brand strategy & positioning, logo & brand identity design, school & college website development, admission landing pages, SEO & search marketing, Google Ads & digital advertising, social media management, photography & videography, TV commercials & ad films, radio jingles, brochure/prospectus & application form design, campus branding, WhatsApp API & chatbot automation, CRM & lead management, and admission campaign strategy.",
+      },
+      {
+        q: "Can you help us increase student admissions?",
+        a: "Yes. Our approach focuses on building a complete admissions ecosystem that attracts prospective students, generates quality enquiries, nurtures leads, and improves conversion through strategic branding and digital marketing.",
+      },
+      {
+        q: "What makes your approach different from other agencies?",
+        a: "Most agencies focus on advertisements. We focus on building brands. We begin with understanding your institution, identifying its unique strengths, developing a compelling positioning strategy, and then creating integrated campaigns across print, digital, video, website, and admissions communication.",
+      },
+      {
+        q: "Do you create a unique brand positioning for every institution?",
+        a: "Absolutely. Every institution has its own vision, strengths, and audience. We develop a distinctive brand positioning that helps your institution stand apart in a competitive education market. For example, for Meston College of Arts & Science, we developed the strategic positioning \"Beyond Syllabus\", highlighting industry readiness and practical learning.",
+      },
+      {
+        q: "Can you design a modern admissions-focused website?",
+        a: "Yes. We build websites that function as admissions platforms — not just information portals — with mobile-friendly design, course-specific landing pages, SEO optimisation, lead capture forms, WhatsApp integration, fast-loading pages, user-friendly navigation and a conversion-focused architecture.",
+      },
+      {
+        q: "Do you offer SEO and digital marketing?",
+        a: "Yes. We help educational institutions improve their online visibility through Search Engine Optimisation (SEO), Google Ads, social media campaigns, content marketing, landing pages, performance marketing and lead generation campaigns.",
+      },
+      {
+        q: "Can you automate admission enquiries?",
+        a: "Yes. We implement WhatsApp Business API, AI-powered chatbots, CRM integration, automated enquiry management, and follow-up systems to ensure faster responses and better lead conversion.",
+      },
+      {
+        q: "Do you create admission brochures and prospectuses?",
+        a: "Yes. We design professional prospectuses, admission brochures, course catalogues, application forms, flyers, banners, standees, annual reports and event branding materials — all aligned with your institution's brand identity.",
+      },
+      {
+        q: "Do you produce professional videos for schools and colleges?",
+        a: "Yes. Our creative team produces TV commercials, admission campaign videos, campus tour films, student testimonials, faculty interviews, corporate films, social media reels, promotional videos and drone videography.",
+      },
+      {
+        q: "Do you manage social media for educational institutions?",
+        a: "Yes. We create content calendars, admission campaigns, reels, student success stories, event coverage, and engaging creatives that keep your institution active and visible throughout the year.",
+      },
+      {
+        q: "Can you manage both online and offline marketing?",
+        a: "Absolutely. We provide integrated marketing solutions including newspaper advertisements, outdoor advertising, hoardings, bus branding, FM radio campaigns, TV advertising, digital campaigns, social media marketing, and events & campus branding.",
+      },
+      {
+        q: "Can you help rebrand an existing institution?",
+        a: "Yes. Whether you're modernising your image, launching new courses, improving admissions, or repositioning your institution, we help create a refreshed brand while preserving your legacy and values.",
+      },
+      {
+        q: "How does your branding process work?",
+        a: "Our process typically includes brand discovery & consultation, market & competitor analysis, brand strategy & positioning, visual identity development, website & digital infrastructure, admissions campaign planning, content creation, digital & offline marketing, lead generation & automation, and performance monitoring & optimisation.",
+      },
+      {
+        q: "Can you work as our institution's extended marketing team?",
+        a: "Yes. Many educational institutions partner with us as their strategic branding and marketing partner. We work alongside management teams to plan, execute, and continuously improve branding, admissions marketing, digital communication, and promotional campaigns.",
+      },
+      {
+        q: "Do you customise your services based on our institution's needs?",
+        a: "Yes. Every institution is unique. We create customised branding and marketing solutions based on your goals, target audience, location, academic offerings, competition, and admissions objectives.",
+      },
+      {
+        q: "How do we get started with Leverage Branding?",
+        a: "Simply get in touch with our team for an initial consultation. We'll understand your institution's objectives, assess your current branding and marketing efforts, and recommend a tailored roadmap to strengthen your brand and improve admissions.",
+      },
     ],
     relatedSlugs: ["creative-design", "ad-films-photography", "websites-technology"],
   },
@@ -846,6 +941,396 @@ export const caseStudies: CaseStudy[] = [
     relatedSlugs: ["brand-strategy-consulting", "creative-advertising", "creative-design"],
   },
   {
+    slug: "pondicherry-sri-lakshmi-jewellery",
+    client: "Pondicherry Sri Lakshmi Jewellery",
+    category: "Long-Term Brand Partnership — Jewellery Retail & Celebrity Campaigns",
+    logo: "/case-studies/logos/lakshmi.webp",
+    coverImage: "/case-studies/branding-photography-celebrity/11-anushka-pride-of-pondicherry.webp",
+    teaserImage: "/case-studies/branding-photography-celebrity/16-lakshmi-jewelery-78-years.webp",
+    summary:
+      "How a sixteen-year creative partnership helped build and protect the trust behind one of Puducherry's most respected jewellery brands.",
+    subtitle: "Sixteen Years. One Brand. One Trusted Creative Partner.",
+    intro: [
+      "Most agency-client relationships last for a campaign.",
+      "Some last for a year.",
+      "Very few last for sixteen years.",
+      "Our association with Pondicherry Sri Lakshmi Jewellery is not just a story of advertising. It is a story of trust, consistency and a shared commitment to building one of Puducherry's respected jewellery brands.",
+      "When businesses continue working with the same creative partner for over a decade, it says more than any award or testimonial ever could.",
+    ],
+    sections: [
+      {
+        heading: "The Challenge",
+        paragraphs: [
+          "Jewellery retail is one of the most competitive industries.",
+          "Every festive season brings new offers. Every competitor launches new campaigns. Customer expectations keep evolving.",
+          "The challenge was not simply to create attractive advertisements.",
+          "It was to ensure that every campaign strengthened the brand while maintaining the trust that generations of customers had placed in Sri Lakshmi Jewellery.",
+        ],
+      },
+      {
+        heading: "Our Approach",
+        paragraphs: [
+          "Instead of working campaign by campaign, we became an extension of the brand.",
+          "Every creative decision was guided by a simple principle: protect the trust, strengthen the brand.",
+          "Over sixteen years, we helped maintain a consistent brand identity while continually refreshing its communication to remain relevant in an evolving market.",
+          "Every advertisement, photograph, commercial and campaign reflected the values the brand had earned over decades.",
+        ],
+      },
+      {
+        heading: "Our Engagement",
+        paragraphs: ["Leverage provided end-to-end branding and creative support, including:"],
+        list: [
+          "Brand Consultancy",
+          "Brand Strategy & Communication",
+          "Advertising Campaigns",
+          "Newspaper & Magazine Advertisements",
+          "Commercial Photography",
+          "Jewellery Product Photography",
+          "Television Commercials & Ad Film Production",
+          "Campaign Concept Development",
+          "Festival & Seasonal Campaigns",
+          "Outdoor Advertising",
+          "In-Store Branding",
+          "Marketing Communication",
+          "Creative Design Support",
+          "Brand Refresh Initiatives",
+        ],
+        note: "Rather than treating every campaign as an isolated assignment, we ensured every piece of communication added value to the brand built over years.",
+      },
+      {
+        heading: "Bringing Celebrity Influence to the Brand",
+        paragraphs: [
+          "Over the course of our sixteen-year association with Pondicherry Sri Lakshmi Jewellery, we had the privilege of conceptualising and executing advertising campaigns featuring several well-known film personalities and celebrities. From campaign planning and creative direction to commercial photography and ad film production, every celebrity association was carefully aligned with the brand's identity rather than used merely for glamour.",
+          "Our focus was always on ensuring that the celebrity enhanced the brand story, strengthened customer trust and elevated the overall perception of Sri Lakshmi Jewellery. These campaigns helped the brand remain contemporary, aspirational and memorable while preserving the credibility it had earned over the years.",
+        ],
+      },
+      {
+        heading: "Beyond Advertising",
+        paragraphs: [
+          "Good advertising attracts attention. Good branding builds trust.",
+          "Over the years, our role evolved from a creative agency to a strategic partner—offering ideas, direction and creative solutions that supported the brand's long-term growth.",
+          "Every campaign carried the responsibility of protecting a reputation that customers already believed in.",
+        ],
+      },
+      {
+        heading: "A Partnership Built on Trust",
+        paragraphs: [
+          "The greatest compliment an agency can receive is not applause after a campaign. It is being invited back, year after year.",
+          "For sixteen years, Pondicherry Sri Lakshmi Jewellery entrusted Leverage with one of its most valuable assets—its public image. We never took that responsibility lightly.",
+          "Every advertisement, every commercial, every photograph and every campaign was created with the understanding that we were representing not just a jewellery showroom, but a legacy.",
+        ],
+      },
+      {
+        heading: "The Outcome",
+        paragraphs: [
+          "Strong brands are built through consistency.",
+          "Sixteen years of creative partnership helped establish a unified visual identity, consistent communication and memorable campaigns that reinforced the brand's credibility in the minds of customers.",
+          "The relationship itself stands as the strongest proof of the confidence the brand placed in our work.",
+        ],
+      },
+    ],
+    closing: [
+      "At Leverage, we believe successful branding isn't measured by the number of campaigns produced. It is measured by the number of years a client chooses to stay with you.",
+      "Sixteen years is a relationship we remain deeply grateful for—and proud to have honoured.",
+      "Campaigns create visibility. Consistency creates reputation. Trust creates legacy.",
+      "That is what sixteen years with Pondicherry Sri Lakshmi Jewellery taught us.",
+    ],
+    gallery: [
+      { src: "/portfolio/jewellery/01.webp", alt: "Lakshmi Sovereign festive campaign photography for Pondicherry Sri Lakshmi Jewellery" },
+      { src: "/portfolio/jewellery/05.webp", alt: "Pondicherry Sri Lakshmi Jewellery diamond jewellery campaign creative" },
+      { src: "/case-studies/branding-photography-celebrity/07-lakshmi-sovereign.webp", alt: "Lakshmi Sovereign light jewellery collection campaign photography" },
+      { src: "/case-studies/branding-photography-celebrity/16-lakshmi-jewelery-78-years.webp", alt: "Pondicherry Sri Lakshmi Jewellery 78 years of trust celebrity campaign photography" },
+      { src: "/case-studies/branding-photography-celebrity/17-lakshmi-jewelery-75-year-anniversary.webp", alt: "Pondicherry Sri Lakshmi Jewellery 75 year anniversary celebrity campaign photography" },
+    ],
+    faqs: [
+      {
+        q: "Why is a long-term branding partner valuable for a jewellery brand?",
+        a: "Consistency builds recognition. When customers repeatedly experience the same quality of communication, photography, advertising and storytelling, the brand becomes more familiar, more trustworthy and easier to remember.",
+      },
+      {
+        q: "What services did Leverage provide to Pondicherry Sri Lakshmi Jewellery?",
+        a: "Our engagement covered the brand's complete creative ecosystem, including brand consultancy, advertising campaigns, commercial photography, jewellery photography, television commercials, ad film production, creative design, campaign planning and ongoing marketing communication.",
+      },
+      {
+        q: "How long did Leverage work with the brand?",
+        a: "Leverage had the privilege of serving Pondicherry Sri Lakshmi Jewellery for sixteen years, making it one of our longest-standing client relationships.",
+      },
+      {
+        q: "Did Leverage only create advertisements?",
+        a: "No. We worked as a strategic creative partner, contributing to brand communication, creative direction, visual identity, campaign planning and marketing consultancy across multiple years.",
+      },
+      {
+        q: "Why is trust so important in jewellery branding?",
+        a: "Jewellery is an emotional purchase. Customers invest in trust before they invest in gold or diamonds — every advertisement, photograph and campaign should reinforce that confidence rather than simply promote offers.",
+      },
+      {
+        q: "What made this partnership successful?",
+        a: "Mutual trust. The client trusted our thinking, we respected the brand they had built, and that shared commitment allowed us to create communication that remained consistent over sixteen years.",
+      },
+      {
+        q: "Can Leverage support jewellery brands beyond advertising?",
+        a: "Absolutely. We provide complete branding support — from brand strategy and positioning to advertising, ad films, photography, websites, digital marketing and long-term brand consultancy.",
+      },
+      {
+        q: "What does this project say about Leverage?",
+        a: "Awards recognise creativity; long-term client relationships recognise reliability. Serving a respected jewellery brand continuously for sixteen years reflects our commitment to consistency, accountability and creating work that delivers lasting value.",
+      },
+    ],
+    relatedSlugs: ["creative-advertising", "ad-films-photography", "brand-strategy-consulting"],
+  },
+  {
+    slug: "lakshmi-silvers-pondicherry",
+    client: "Lakshmi Silvers, Pondicherry",
+    category: "Brand Launch — Silver Jewellery Retail & Integrated Campaigns",
+    logo: "/case-studies/logos/lakshmi-silvers.webp",
+    coverImage: "/portfolio/website/06.webp",
+    summary:
+      "How Leverage built the Lakshmi Silvers brand from launch — positioning a dedicated silver jewellery destination with the confidence of a gold legacy behind it.",
+    subtitle: "Launching a Silver Brand with the Confidence of a Gold Legacy.",
+    intro: [
+      "Launching a jewellery brand is challenging.",
+      "Launching a dedicated silver jewellery brand in a market traditionally dominated by gold is even more demanding.",
+      "When the promoters of Lakshmi Silvers envisioned creating a premium destination exclusively for silver jewellery, they partnered with Leverage Branding & Consultancy to transform that vision into a brand customers would recognise, admire and trust.",
+      "Our assignment was never limited to creating advertisements.",
+      "It was to build an identity that would position Lakshmi Silvers as a modern, aspirational and credible jewellery brand from the very first day.",
+    ],
+    sections: [
+      {
+        heading: "The Challenge",
+        paragraphs: [
+          "Silver jewellery was evolving.",
+          "Customers were no longer buying silver only as a traditional necessity. They were beginning to see it as fashion, gifting, daily wear and premium lifestyle jewellery.",
+          "The opportunity was clear.",
+          "The brand needed to communicate purity, craftsmanship and affordability without compromising on elegance or aspiration.",
+          "Every customer interaction—from the showroom launch to advertising, photography and digital communication—had to reinforce that promise.",
+        ],
+      },
+      {
+        heading: "Our Strategy",
+        paragraphs: [
+          "Every successful launch begins with a simple question: \"What should customers remember after seeing the brand?\"",
+          "Our answer was simple — create a brand that looked premium, felt contemporary and remained rooted in trust.",
+          "Rather than producing disconnected advertisements, we developed a unified communication strategy that ensured consistency across every platform.",
+        ],
+      },
+      {
+        heading: "What Leverage Delivered",
+        paragraphs: [],
+        list: [
+          "Brand Launch Strategy",
+          "Brand Positioning",
+          "Brand Consultancy",
+          "Creative Direction",
+          "Brand Identity Support",
+          "Advertising Campaigns",
+          "Newspaper & Magazine Advertisements",
+          "Commercial Photography",
+          "Silver Jewellery Product Photography",
+          "Ad Film Production",
+          "Campaign Concepts",
+          "Social Media Creatives",
+          "Outdoor Advertising",
+          "Showroom Branding",
+          "Festival Campaigns",
+          "Marketing Communication",
+        ],
+        note: "Every visual was designed to strengthen one thing — the identity of Lakshmi Silvers.",
+      },
+      {
+        heading: "From Launch to Brand Building",
+        paragraphs: [
+          "A launch campaign creates awareness. Consistent communication creates a brand.",
+          "Following the successful launch, Leverage continued supporting Lakshmi Silvers with creative campaigns and brand communication that reflected changing customer preferences while preserving a consistent brand identity.",
+          "Every campaign built upon the previous one. That consistency became one of the brand's greatest strengths.",
+        ],
+      },
+      {
+        heading: "Commercial Photography & Ad Films",
+        paragraphs: [
+          "Jewellery cannot be sold through words alone. It must be experienced visually.",
+          "Our team planned and executed commercial photography, jewellery product photography and advertising films that showcased the craftsmanship, elegance and versatility of the collections.",
+          "Every frame was designed not merely to display jewellery, but to express the personality of the brand.",
+        ],
+      },
+      {
+        heading: "Celebrity Campaigns",
+        paragraphs: [
+          "Brand ambassadors can create visibility. The right campaign creates credibility.",
+          "Over the course of our association, we conceptualised and executed advertising campaigns featuring popular film personalities and celebrity ambassadors. From creative concepts and styling to photography and ad film production, every celebrity collaboration was carefully aligned with the brand's identity.",
+          "The objective was never to rely on celebrity appeal alone, but to strengthen the brand's premium image and create memorable campaigns that customers could connect with.",
+        ],
+      },
+      {
+        heading: "The Outcome",
+        paragraphs: [
+          "A successful launch is measured not by opening day. It is measured by how consistently the brand is remembered afterwards.",
+          "Through strategic branding, integrated creative communication, commercial photography and advertising, Lakshmi Silvers established itself as a distinctive destination for premium silver jewellery in Pondicherry.",
+        ],
+      },
+    ],
+    closing: [
+      "At Leverage, we don't simply launch brands.",
+      "We help them begin with clarity, communicate with consistency and grow with confidence.",
+      "A successful launch introduces a business. Consistent branding builds a reputation. Great strategy creates a brand customers return to.",
+    ],
+    gallery: [
+      { src: "/portfolio/website/06.webp", alt: "Lakshmi Silvers \"Galaxy of Silver\" e-commerce website design" },
+    ],
+    faqs: [
+      {
+        q: "Why was a specialised branding strategy important for Lakshmi Silvers?",
+        a: "Silver jewellery attracts a different customer mindset from traditional gold jewellery. The brand required a fresh identity that balanced affordability, elegance and contemporary appeal while maintaining trust.",
+      },
+      {
+        q: "What was Leverage's role in the launch?",
+        a: "Leverage partnered with Lakshmi Silvers from the brand launch, providing strategic branding, creative direction and integrated marketing support across multiple communication channels.",
+      },
+      {
+        q: "What services did Leverage provide?",
+        a: "Our engagement included brand consultancy, launch strategy, advertising campaigns, commercial photography, jewellery product photography, ad film production, showroom branding, outdoor advertising, newspaper campaigns, social media creatives and ongoing marketing communication.",
+      },
+      {
+        q: "Did Leverage produce advertising films for Lakshmi Silvers?",
+        a: "Yes. We conceptualised and produced advertising films along with commercial photography that highlighted the craftsmanship, design excellence and premium positioning of the brand.",
+      },
+      {
+        q: "Were celebrity campaigns part of the branding strategy?",
+        a: "Yes. We developed campaigns featuring well-known personalities where every creative decision was aligned with the brand's positioning, ensuring that celebrity endorsements enhanced the brand rather than overshadowed it.",
+      },
+      {
+        q: "What makes Leverage different from a traditional advertising agency?",
+        a: "We begin with strategy. Advertising is only one part of the process — we integrate brand positioning, creative communication, photography, films and marketing consultancy to build brands that remain consistent and memorable over time.",
+      },
+      {
+        q: "Can Leverage help launch a new jewellery brand today?",
+        a: "Absolutely. With over 26 years of experience, Leverage has helped launch, reposition and grow jewellery brands through brand strategy, advertising, photography, ad films, digital marketing and long-term creative consulting.",
+      },
+    ],
+    relatedSlugs: ["creative-advertising", "ad-films-photography", "brand-strategy-consulting"],
+  },
+  {
+    slug: "challani-jewellery-mart",
+    client: "Challani Jewellery Mart, Chennai",
+    category: "Brand Launch — Jewellery Retail & 3-Year Creative Partnership",
+    logo: "/case-studies/logos/challani-jewellery.webp",
+    coverImage: "/portfolio/jewellery/11.webp",
+    teaserImage: "/portfolio/jewellery/06.webp",
+    summary:
+      "How Leverage built the Challani Jewellery Mart brand from launch and stayed on as their creative partner for three years, turning a new entrant into a recognised T. Nagar jewellery destination.",
+    subtitle: "Launching a Jewellery Brand. Building a Lasting Identity.",
+    intro: [
+      "Some jewellery brands are built over generations.",
+      "Others are built from a clear vision, consistent branding and the courage to enter a competitive market with confidence.",
+      "When Challani Jewellery approached Leverage Branding & Consultancy, the objective was not simply to design advertisements. The assignment was far more significant—to create a premium jewellery brand from the ground up and establish a visual identity that customers would instantly recognise and trust.",
+    ],
+    sections: [
+      {
+        heading: "The Challenge",
+        paragraphs: [
+          "Launching a new jewellery brand is never easy.",
+          "Customers don't buy jewellery because they see an advertisement. They buy from brands they trust.",
+          "For a new entrant, every communication matters—the logo, the photography, the showroom branding, the launch campaign, festive promotions, newspaper advertisements, outdoor campaigns and every social media creative.",
+          "The challenge was to create a brand that looked established from day one.",
+        ],
+      },
+      {
+        heading: "Our Approach",
+        paragraphs: [
+          "Instead of treating the launch as a one-time campaign, we developed a long-term branding strategy.",
+          "Our focus was consistency.",
+          "Every advertisement, every visual, every campaign and every customer touchpoint was designed to reinforce the same premium brand personality.",
+          "We worked closely with the management team to ensure that the brand spoke with one voice across every medium.",
+        ],
+      },
+      {
+        heading: "What Leverage Delivered",
+        paragraphs: [],
+        list: [
+          "Complete Brand Launch Strategy",
+          "Brand Identity Development",
+          "Campaign Concepts & Creative Direction",
+          "Print Advertisements",
+          "Newspaper Campaigns",
+          "Outdoor Advertising",
+          "In-Store Branding",
+          "Festive Campaigns",
+          "Product Promotion Creatives",
+          "Social Media Creatives",
+          "Marketing Communication",
+          "Brand Design Support",
+        ],
+      },
+      {
+        heading: "A Three-Year Creative Partnership",
+        paragraphs: [
+          "Launching a brand is only the beginning.",
+          "For the next three years, Leverage continued as Challani Jewellery's creative partner, developing campaigns and communication that kept the brand fresh, relevant and visually consistent.",
+          "This long-term association allowed the brand to build familiarity with customers while maintaining a premium image across every season and every campaign.",
+        ],
+      },
+      {
+        heading: "The Result",
+        paragraphs: [
+          "A successful brand launch is not measured by one advertisement.",
+          "It is measured by consistency over time.",
+          "Through disciplined branding, strategic communication and continuous creative support, Challani Jewellery established a strong market presence and a professional identity that reflected the quality of its jewellery.",
+          "The project remains an example of how thoughtful branding can help transform a new business into a recognised retail brand.",
+        ],
+      },
+      {
+        heading: "Our Philosophy",
+        paragraphs: [
+          "Beautiful jewellery deserves beautiful branding.",
+          "But beautiful branding alone is not enough.",
+          "A successful jewellery brand requires strategy, consistency and patience. That is exactly what we delivered for Challani Jewellery.",
+        ],
+      },
+    ],
+    closing: [
+      "At Leverage, we don't create campaigns that disappear after a festival. We build brands that customers remember.",
+      "A jewellery brand is not built by one grand opening. It is built by every promise the brand keeps thereafter.",
+      "That is the difference between advertising a showroom and building a jewellery brand.",
+    ],
+    gallery: [
+      { src: "/portfolio/jewellery/04.webp", alt: "\"RARE!\" exclusive jewellery exhibition creative for Challani Jewellery Mart" },
+      { src: "/portfolio/jewellery/06.webp", alt: "Challani Jewellery Mart \"Vintage Inspirations\" Jadau Polki campaign photography" },
+      { src: "/portfolio/jewellery/09.webp", alt: "Challani Jewellery Mart temple jewellery campaign creative" },
+      { src: "/portfolio/jewellery/10.webp", alt: "Challani Jewellery Mart bridal jewellery campaign photography" },
+      { src: "/portfolio/packaging/05.webp", alt: "Challani Jewellery Mart desk calendar design" },
+    ],
+    faqs: [
+      {
+        q: "Why was branding important during the launch of Challani Jewellery?",
+        a: "Launching a jewellery showroom requires more than announcing an opening. Customers need to trust a new brand before they consider purchasing high-value jewellery. Strong branding helps build that trust from day one.",
+      },
+      {
+        q: "Did Leverage only design advertisements?",
+        a: "No. Our involvement extended beyond advertising — we helped shape the overall brand identity, communication style and creative direction to ensure every customer interaction reflected a premium jewellery brand.",
+      },
+      {
+        q: "How long did Leverage work with Challani Jewellery?",
+        a: "Leverage partnered with Challani Jewellery from its launch and continued providing creative support for three years, developing campaigns and marketing creatives across multiple platforms.",
+      },
+      {
+        q: "What creative services were provided?",
+        a: "Our work included launch campaigns, newspaper advertisements, outdoor creatives, festive promotions, showroom branding, product campaigns, social media creatives and ongoing marketing communication.",
+      },
+      {
+        q: "Why is consistency so important in jewellery branding?",
+        a: "Customers invest emotionally and financially in jewellery. A consistent visual identity builds familiarity, strengthens trust and makes the brand easier to remember in a highly competitive market.",
+      },
+      {
+        q: "Can Leverage help launch a new jewellery brand today?",
+        a: "Absolutely. With over 26 years of branding experience, Leverage helps jewellery businesses develop their brand strategy, launch campaigns, advertising, photography, websites, digital marketing and long-term brand communication.",
+      },
+      {
+        q: "What makes Leverage different from other agencies?",
+        a: "Most agencies create advertisements — Leverage creates businesses that customers remember. Every campaign is backed by strategic thinking, creative excellence and practical business experience accumulated over nearly three decades.",
+      },
+    ],
+    relatedSlugs: ["creative-advertising", "brand-strategy-consulting", "print-production"],
+  },
+  {
     slug: "shanthi-jewellery-rebrand",
     client: "Shanthi Jewellery, Chennai",
     category: "Brand Repositioning & Integrated Retail Marketing",
@@ -1026,6 +1511,7 @@ export const caseStudies: CaseStudy[] = [
       { src: "/case-studies/shanthi-jewellery/03-model-portrait.webp", alt: "Shanthi Jewellers bridal jewellery campaign model portrait with gold necklace and bangles" },
       { src: "/case-studies/shanthi-jewellery/04-invitation-inner.webp", alt: "Shanthi Jewellers showroom inauguration invitation inner spread with special offers" },
       { src: "/case-studies/shanthi-jewellery/05-product-photography.webp", alt: "Shanthi Jewellers temple-design gold pendant necklace product photography" },
+      { src: "/case-studies/shanthi-jewellery/06-chain-mela-campaign.webp", alt: "Shanthi Jewellers Chain Mela celebrity model campaign creative" },
     ],
     relatedSlugs: ["brand-strategy-consulting", "creative-advertising", "ad-films-photography"],
   },

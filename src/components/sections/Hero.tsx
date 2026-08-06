@@ -7,16 +7,16 @@ import { HeroCarousel } from "@/components/sections/HeroCarousel";
 import { whatsappHref } from "@/data/site";
 
 const proof = [
-  { value: 26, suffix: "+", label: "Years of Experience" },
+  { value: 26, suffix: "+", label: "Years Trusted" },
   { value: 3200, suffix: "+", label: "Projects Delivered" },
   { value: 1000, suffix: "+", label: "Clients Served" },
   { value: 15, suffix: "+", label: "Industries" },
 ];
 
 const heroCarouselImages = [
+  { src: "/hero/hero3.webp", alt: "Celebrity saree campaign photography" },
   { src: "/hero/hero1.webp", alt: "Lakshmi Jewellery antique jewellery collection campaign photography" },
   { src: "/hero/hero2.webp", alt: "Ripon Building heritage calendar design" },
-  { src: "/hero/hero3.webp", alt: "Celebrity saree campaign photography" },
   { src: "/hero/hero4.webp", alt: "RelishPro beverage brand campaign photography" },
 ];
 
@@ -57,7 +57,7 @@ export function Hero() {
 
           <Reveal delay={300} className="mt-9 short:mt-6 flex flex-wrap gap-3.5 short:gap-2.5">
             <Button href="/contact" size="lg" className="short:px-5.5 short:py-3 short:text-sm">
-              Talk to a Branding Expert
+              Talk to our Branding Expert
               <ArrowRight size={18} />
             </Button>
             <Button

@@ -101,7 +101,56 @@ export function Header() {
         {/* Desktop nav */}
         <nav className="hidden xl:flex items-center gap-5 font-display text-[14px] font-medium whitespace-nowrap">
           <NavLink href="/">Home</NavLink>
-          <NavLink href="/about">About</NavLink>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setOpenPillar("about")}
+            onMouseLeave={() => setOpenPillar((v) => (v === "about" ? null : v))}
+          >
+            <span className="flex items-center gap-1 py-8">
+              <Link href="/about" className="text-brand-ink transition-colors hover:text-brand-red">
+                About
+              </Link>
+              <button
+                type="button"
+                aria-label="Toggle About menu"
+                aria-expanded={openPillar === "about"}
+                onClick={() => setOpenPillar((v) => (v === "about" ? null : "about"))}
+              >
+                <ChevronDown
+                  size={15}
+                  className={clsx("transition-transform", openPillar === "about" && "rotate-180")}
+                />
+              </button>
+            </span>
+
+            <div
+              onClick={() => setOpenPillar(null)}
+              className={clsx(
+                "absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 whitespace-normal rounded-2xl border border-brand-line bg-white p-5 shadow-brand-lg transition-all duration-200",
+                openPillar === "about" ? "visible translate-y-0 opacity-100" : "invisible translate-y-1 opacity-0",
+              )}
+            >
+              <ul className="space-y-1.5">
+                <li>
+                  <Link
+                    href="/about"
+                    className="block rounded-lg px-3 py-2 text-sm text-brand-gray transition-colors hover:bg-brand-paper hover:text-brand-red"
+                  >
+                    About Leverage
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/suresh-ramakrishnan"
+                    className="block rounded-lg px-3 py-2 text-sm text-brand-gray transition-colors hover:bg-brand-paper hover:text-brand-red"
+                  >
+                    About SRK
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
 
           {pillarNav.map((pillar) => (
             <div
@@ -192,24 +241,27 @@ export function Header() {
               Home
             </MobileLink>
             <MobileLink href="/about" index={1} onClick={() => setMobileOpen(false)}>
-              About
+              About Leverage
+            </MobileLink>
+            <MobileLink href="/suresh-ramakrishnan" index={2} onClick={() => setMobileOpen(false)}>
+              About SRK
             </MobileLink>
 
             {pillarNav.map((pillar, i) => (
               <MobileLink
                 key={pillar.slug}
                 href={pillar.href}
-                index={2 + i}
+                index={3 + i}
                 onClick={() => setMobileOpen(false)}
               >
                 {pillar.label}
               </MobileLink>
             ))}
 
-            <MobileLink href="/portfolio" index={2 + pillarNav.length} onClick={() => setMobileOpen(false)}>
+            <MobileLink href="/portfolio" index={3 + pillarNav.length} onClick={() => setMobileOpen(false)}>
               Portfolio
             </MobileLink>
-            <MobileLink href="/case-studies" index={3 + pillarNav.length} onClick={() => setMobileOpen(false)}>
+            <MobileLink href="/case-studies" index={4 + pillarNav.length} onClick={() => setMobileOpen(false)}>
               Case Studies
             </MobileLink>
           </nav>

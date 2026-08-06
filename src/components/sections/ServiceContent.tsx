@@ -38,25 +38,69 @@ export function ServiceIncluded({ service }: { service: ServicePage }) {
           className={
             service.included.length > 1
               ? "mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
-              : "mt-12 grid grid-cols-1 gap-6 max-w-md mx-auto"
+              : service.included[0].items.length >= 15
+                ? "mt-12 grid grid-cols-1 gap-6 max-w-3xl mx-auto"
+                : "mt-12 grid grid-cols-1 gap-6 max-w-md mx-auto"
           }
         >
-          {service.included.map((group) => (
+          {service.included.map((group) => {
+            const isLarge = group.items.length >= 15;
+            return (
+              <div
+                key={group.title}
+                className={`rounded-2xl border border-brand-line bg-white p-7 transition-all duration-300 ease-brand hover:-translate-y-1 hover:shadow-brand-md ${
+                  isLarge ? "md:col-span-2" : ""
+                }`}
+              >
+                <h3 className="font-display text-lg font-bold text-brand-ink mb-4">{group.title}</h3>
+                <ul
+                  className={
+                    isLarge
+                      ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-3"
+                      : "space-y-3"
+                  }
+                >
+                  {group.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-red-tint text-brand-red">
+                        <Check size={13} strokeWidth={3} />
+                      </span>
+                      <span className="text-sm text-brand-gray leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </Reveal>
+      </Container>
+    </section>
+  );
+}
+
+export function ServiceWhyChoose({ service }: { service: ServicePage }) {
+  if (!service.whyChoose?.length) return null;
+  return (
+    <section className="py-20 md:py-24 bg-white">
+      <Container>
+        <Reveal>
+          <SectionHeading
+            eyebrow="Why Choose Us"
+            title={`Why Choose LeverageAds for ${service.navLabel}?`}
+            align="center"
+            className="mx-auto"
+          />
+        </Reveal>
+        <Reveal delay={100} className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          {service.whyChoose.map((item) => (
             <div
-              key={group.title}
-              className="rounded-2xl border border-brand-line bg-white p-7 transition-all duration-300 ease-brand hover:-translate-y-1 hover:shadow-brand-md"
+              key={item}
+              className="flex items-start gap-3 rounded-2xl border border-brand-line bg-brand-paper p-4 transition-all duration-300 ease-brand hover:-translate-y-1 hover:shadow-brand-sm"
             >
-              <h3 className="font-display text-lg font-bold text-brand-ink mb-4">{group.title}</h3>
-              <ul className="space-y-3">
-                {group.items.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-red-tint text-brand-red">
-                      <Check size={13} strokeWidth={3} />
-                    </span>
-                    <span className="text-sm text-brand-gray leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-red-tint text-brand-red">
+                <Check size={13} strokeWidth={3} />
+              </span>
+              <span className="text-sm font-medium text-brand-ink leading-relaxed">{item}</span>
             </div>
           ))}
         </Reveal>

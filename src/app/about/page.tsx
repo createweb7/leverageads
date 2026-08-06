@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Check } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -85,6 +86,14 @@ const campaignGallery = [
   { src: "/about/campaigns/06-tpcs-erp.webp", alt: "TPCS ERP enterprise software advertising campaign" },
   { src: "/about/campaigns/07-cholams-healthy-heart.webp", alt: "Chola MS healthy heart preventive care campaign" },
   { src: "/about/campaigns/08-neyveli-lignite.webp", alt: "Neyveli Lignite Corporation corporate advertising campaign" },
+  { src: "/about/spotlights/jenixcloud-styleshare.webp", alt: "JenixCloud style-sharing platform campaign creative" },
+  { src: "/about/spotlights/alphasystems-erp.webp", alt: "AlphaSystems ERP and PLM solutions campaign creative" },
+  { src: "/about/spotlights/tpcs-office.webp", alt: "TPCS ERP enterprise software campaign creative" },
+  { src: "/about/spotlights/sai-travel-solutions-poster.webp", alt: "Sai Travel Solutions corporate transport campaign creative" },
+  { src: "/about/spotlights/cholams-personal-accident.webp", alt: "Chola MS Personal Accident insurance campaign creative" },
+  { src: "/about/spotlights/cholams-murugappa.webp", alt: "Chola MS and Murugappa Group brand campaign creative" },
+  { src: "/about/spotlights/cholams-healthy-heart.webp", alt: "Chola MS Healthy Heart preventive care campaign creative" },
+  { src: "/about/spotlights/neyveli-lignite-balance.webp", alt: "Neyveli Lignite Corporation corporate campaign creative" },
 ];
 
 const faqs: FAQ[] = [
@@ -98,7 +107,7 @@ const faqs: FAQ[] = [
   },
   {
     q: "Who is Suresh Ramakrishnan (SRK)?",
-    a: "Suresh Ramakrishnan (SRK) is the Founder and Principal Consultant of Leverage Branding & Consultancy. With nearly three decades of experience, he has helped businesses across multiple industries strengthen their brands, improve business performance and build sustainable growth strategies.",
+    a: "Suresh Ramakrishnan (SRK) is the Founder and Principal Consultant of Leverage Branding & Consultancy, bringing over 26 years of experience in branding, advertising, marketing and business consulting. He has partnered with 1,000+ businesses across diverse industries, helping organisations build stronger brands, improve business performance and achieve sustainable growth through strategic branding, marketing and business transformation. A creative strategist, ad film director and commercial photographer, he has worked on numerous cinema projects, collaborating with and directing many renowned film personalities in advertising and media productions — his portfolio includes 200+ commercial films, 800+ commercial photography assignments and 3,500+ product shoots. Beyond consulting, SRK is a corporate trainer, mentor and speaker, empowering entrepreneurs, business leaders and students through programmes on branding, leadership, communication and business excellence.",
   },
   {
     q: "What industries do you work with?",
@@ -189,6 +198,13 @@ export default function AboutPage() {
                   Sustainable growth happens when Brand Strategy, Marketing, People, Processes and
                   Technology work together towards a common business objective.
                 </p>
+                <p className="text-brand-gray leading-relaxed text-base md:text-lg">
+                  Over the years, we have partnered with startups, SMEs, family-owned businesses,
+                  educational institutions, healthcare organisations, hospitality brands,
+                  manufacturing companies, retail businesses and corporate organisations across
+                  diverse industries. Every engagement is driven by one objective—to help
+                  businesses grow with clarity, confidence and measurable results.
+                </p>
               </Reveal>
             </div>
 
@@ -199,46 +215,46 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-24 bg-white">
-        <Container>
-          <Reveal className="max-w-3xl mx-auto">
-            <p className="text-brand-gray leading-relaxed text-base md:text-lg">
-              Over the years, we have partnered with startups, SMEs, family-owned businesses,
-              educational institutions, healthcare organisations, hospitality brands,
-              manufacturing companies, retail businesses and corporate organisations across
-              diverse industries. Every engagement is driven by one objective—to help businesses
-              grow with clarity, confidence and measurable results.
-            </p>
-          </Reveal>
-        </Container>
-      </section>
-
       <section className="py-20 md:py-24 bg-brand-paper">
         <Container>
-          <Reveal>
-            <SectionHeading
-              eyebrow="Our Journey"
-              title="Nearly Three Decades of Business Transformation"
-            />
-          </Reveal>
-          <Reveal delay={100} className="mt-6 max-w-2xl">
-            <p className="text-brand-gray leading-relaxed text-base md:text-lg">
-              Our experience extends far beyond advertising. We have worked on thousands of
-              creative and strategic assignments that have helped businesses strengthen their
-              market presence, improve customer engagement and build lasting brand value.
-            </p>
-          </Reveal>
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+            <div>
+              <Reveal>
+                <SectionHeading
+                  eyebrow="Our Journey"
+                  title="Nearly Three Decades of Business Transformation"
+                />
+              </Reveal>
+              <Reveal delay={100} className="mt-6 max-w-2xl">
+                <p className="text-brand-gray leading-relaxed text-base md:text-lg">
+                  Our experience extends far beyond advertising. We have worked on thousands of
+                  creative and strategic assignments that have helped businesses strengthen their
+                  market presence, improve customer engagement and build lasting brand value.
+                </p>
+              </Reveal>
 
-          <Reveal delay={150} className="mt-12 grid grid-cols-3 gap-6 border-t border-brand-line pt-10 max-w-xl">
-            {stats.map((item) => (
-              <div key={item.label}>
-                <strong className="block font-display text-3xl font-extrabold tracking-tight text-brand-ink">
-                  <AnimatedCounter target={item.value} suffix={item.suffix} />
-                </strong>
-                <span className="text-sm text-brand-gray">{item.label}</span>
-              </div>
-            ))}
-          </Reveal>
+              <Reveal delay={150} className="mt-12 grid grid-cols-3 gap-6 border-t border-brand-line pt-10 max-w-xl">
+                {stats.map((item) => (
+                  <div key={item.label}>
+                    <strong className="block font-display text-3xl font-extrabold tracking-tight text-brand-ink">
+                      <AnimatedCounter target={item.value} suffix={item.suffix} />
+                    </strong>
+                    <span className="text-sm text-brand-gray">{item.label}</span>
+                  </div>
+                ))}
+              </Reveal>
+            </div>
+
+            <Reveal delay={120} className="relative h-80 overflow-hidden rounded-3xl shadow-brand-lg md:h-100">
+              <Image
+                src="/team/suresh/portrait-studio.webp"
+                alt="Suresh Ramakrishnan (SRK), Founder and Principal Consultant of Leverage Branding & Consultancy"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </Reveal>
+          </div>
 
           <Reveal
             delay={100}
