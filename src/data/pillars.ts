@@ -50,7 +50,7 @@ export const pillars: Pillar[] = [
       "Copywriting",
       "Campaign Planning",
     ],
-    relatedSlugs: ["creative-advertising", "creative-design", "ad-films-photography", "print-production"],
+    relatedSlugs: ["creative-advertising", "ad-films-photography", "print-production"],
     ctaLabel: "Talk to a Branding Expert",
     images: [
       { src: "/portfolio/jewellery/01.webp", alt: "Sovereign jewellery festive campaign photography", width: 827, height: 871 },

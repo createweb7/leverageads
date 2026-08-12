@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { ClientLogos } from "@/components/sections/ClientLogos";
+import { PortfolioShowcase } from "@/components/sections/PortfolioShowcase";
+import { CampaignHighlights } from "@/components/sections/CampaignHighlights";
+import { PortfolioExplore } from "@/components/sections/PortfolioExplore";
+import { FilmShowcase } from "@/components/sections/FilmShowcase";
 import { ServiceSelectorGrid } from "@/components/sections/ServiceSelectorGrid";
 import { AboutSnapshot } from "@/components/sections/AboutSnapshot";
 import { CoreServicesGrid } from "@/components/sections/CoreServicesGrid";
@@ -21,7 +25,11 @@ export default function Home() {
     <>
       <Hero />
       <ClientLogos />
+      <PortfolioShowcase />
       <FeaturedWork />
+      <CampaignHighlights />
+      <PortfolioExplore />
+      <FilmShowcase />
       <ServiceSelectorGrid />
       <AboutSnapshot />
       <CoreServicesGrid />

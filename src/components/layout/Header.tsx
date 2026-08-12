@@ -19,12 +19,14 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openPillar, setOpenPillar] = useState<string | null>(null);
+  const [mobileSubOpen, setMobileSubOpen] = useState<string | null>(null);
   const [prevPathname, setPrevPathname] = useState(pathname);
 
   if (pathname !== prevPathname) {
     setPrevPathname(pathname);
     setOpenPillar(null);
     setMobileOpen(false);
+    setMobileSubOpen(null);
   }
 
   useEffect(() => {
@@ -201,12 +203,6 @@ export function Header() {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href={pillar.href}
-                    className="mt-2 flex items-center justify-between rounded-xl bg-brand-paper px-3 py-2.5 text-sm font-semibold text-brand-red hover:text-brand-red-dark"
-                  >
-                    {pillar.label} Overview →
-                  </Link>
                 </div>
               )}
             </div>
@@ -248,14 +244,67 @@ export function Header() {
             </MobileLink>
 
             {pillarNav.map((pillar, i) => (
-              <MobileLink
+              <div
                 key={pillar.slug}
-                href={pillar.href}
-                index={3 + i}
-                onClick={() => setMobileOpen(false)}
+                className="transform-[translateY(1rem)] border-b border-brand-line opacity-0 animate-[menuLink_.55s_var(--ease-brand)_forwards]"
+                style={{ animationDelay: `${(3 + i) * 60 + 50}ms` }}
               >
-                {pillar.label}
-              </MobileLink>
+                <div className="flex items-center justify-between gap-4 py-4">
+                  <Link
+                    href={pillar.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-baseline gap-4 font-display text-2xl font-bold text-brand-ink"
+                  >
+                    <span className="text-xs font-bold tracking-wide text-brand-red">
+                      {String(3 + i + 1).padStart(2, "0")}
+                    </span>
+                    {pillar.label}
+                  </Link>
+                  {pillar.links.length > 0 && (
+                    <button
+                      type="button"
+                      aria-label={`Toggle ${pillar.label} submenu`}
+                      aria-expanded={mobileSubOpen === pillar.slug}
+                      onClick={() =>
+                        setMobileSubOpen((v) => (v === pillar.slug ? null : pillar.slug))
+                      }
+                      className="flex h-9 w-9 shrink-0 items-center justify-center text-brand-ink"
+                    >
+                      <ChevronDown
+                        size={20}
+                        className={clsx(
+                          "transition-transform duration-300 ease-brand",
+                          mobileSubOpen === pillar.slug && "rotate-180",
+                        )}
+                      />
+                    </button>
+                  )}
+                </div>
+
+                {pillar.links.length > 0 && (
+                  <div
+                    className={clsx(
+                      "grid overflow-hidden transition-all duration-300 ease-brand",
+                      mobileSubOpen === pillar.slug
+                        ? "grid-rows-[1fr] pb-4 opacity-100"
+                        : "grid-rows-[0fr] opacity-0",
+                    )}
+                  >
+                    <div className="flex flex-col gap-1 overflow-hidden pl-11">
+                      {pillar.links.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="rounded-lg py-2 text-base font-medium text-brand-gray transition-colors hover:text-brand-red"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
 
             <MobileLink href="/portfolio" index={3 + pillarNav.length} onClick={() => setMobileOpen(false)}>

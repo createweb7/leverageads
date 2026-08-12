@@ -3,11 +3,18 @@
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import clsx from "clsx";
+import { useSearchParams } from "next/navigation";
 import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
 import { portfolioCategories, portfolioItems } from "@/data/portfolio";
 
 export function PortfolioGrid() {
-  const [active, setActive] = useState("all");
+  const searchParams = useSearchParams();
+  const initialCategory = searchParams.get("category");
+  const [active, setActive] = useState(
+    initialCategory && portfolioCategories.some((cat) => cat.slug === initialCategory)
+      ? initialCategory
+      : "all",
+  );
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const filtered =

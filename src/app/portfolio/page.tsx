@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -32,7 +33,9 @@ export default function PortfolioPage() {
 
       <section className="py-14 md:py-16 bg-white">
         <Container>
-          <PortfolioGrid />
+          <Suspense fallback={null}>
+            <PortfolioGrid />
+          </Suspense>
         </Container>
       </section>
 

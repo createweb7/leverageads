@@ -206,7 +206,7 @@ export const services: ServicePage[] = [
   },
   {
     slug: "creative-advertising",
-    navLabel: "Creative & Advertising",
+    navLabel: "Creative Advertising",
     h1: "Creative & Advertising Agency in Chennai",
     metaTitle: "Creative & Advertising Agency in Chennai | Campaigns, Print, Outdoor & Retail | LeverageAds",
     metaDescription:
