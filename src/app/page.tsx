@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { ClientLogos } from "@/components/sections/ClientLogos";
 import { PortfolioShowcase } from "@/components/sections/PortfolioShowcase";
+import { JingleShowcase } from "@/components/sections/JingleShowcase";
 import { CampaignHighlights } from "@/components/sections/CampaignHighlights";
 import { PortfolioExplore } from "@/components/sections/PortfolioExplore";
 import { FilmShowcase } from "@/components/sections/FilmShowcase";
@@ -26,6 +27,7 @@ export default function Home() {
       <Hero />
       <ClientLogos />
       <PortfolioShowcase />
+      <JingleShowcase />
       <FeaturedWork />
       <CampaignHighlights />
       <PortfolioExplore />
