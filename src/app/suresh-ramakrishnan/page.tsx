@@ -19,27 +19,28 @@ import type { FAQ } from "@/data/services";
 const heroGrid: [ServiceHeroGridCell, ServiceHeroGridCell, ServiceHeroGridCell, ServiceHeroGridCell] = [
   {
     src: "/team/suresh/hero-primary.webp",
-    alt: "Suresh Ramakrishnan (SRK), Founder of Leverage Branding & Consultancy",
-    badgeLabel: "Founder & Director",
+    alt: "Suresh Ramakrishnan (SRK), Founder & Creative Director of Leverage Advertising",
+    badgeLabel: "Founder & Creative Director",
     badgeIcon: "strategy",
   },
   {
-    src: "/team/suresh/hero-secondary.webp",
+    src: "/team/suresh/commercial-photography-camera.webp",
     alt: "Suresh Ramakrishnan shooting a commercial photography campaign",
-    badgeLabel: "30+ · Years Experience",
-    badgeVariant: "dark",
+    badgeLabel: "Ad Film Director",
+    badgeIcon: "media",
+    badgePosition: "bottom-right",
   },
   {
     src: "/team/suresh/leadership-01.webp",
     alt: "Suresh Ramakrishnan being honoured at a Rotary Club event",
-    badgeLabel: "Community Leadership",
-    badgeIcon: "leadership",
+    badgeLabel: "Corporate Trainer",
+    badgeIcon: "training",
   },
   {
-    src: "/team/suresh/gallery-03.webp",
-    alt: "Suresh Ramakrishnan reviewing a jewellery product photography shoot",
-    badgeLabel: "Product Photography",
-    badgeIcon: "studio",
+    src: "/team/suresh/leadership-02.webp",
+    alt: "Suresh Ramakrishnan at a Rotary Club membership event",
+    badgeLabel: "Business Consultant",
+    badgeIcon: "strategy",
   },
 ];
 
@@ -407,8 +408,8 @@ export default function SureshProfilePage() {
             </Reveal>
             <Reveal delay={150} className="relative h-80 overflow-hidden rounded-3xl shadow-brand-lg md:h-[420px]">
               <Image
-                src="/team/suresh/commercial-photography-camera.webp"
-                alt="Suresh Ramakrishnan shooting a commercial photography campaign on a cinema camera"
+                src="/team/suresh/hero-secondary.webp"
+                alt="Suresh Ramakrishnan shooting a commercial photography campaign"
                 fill
                 sizes="(min-width: 1024px) 45vw, 90vw"
                 className="object-cover"

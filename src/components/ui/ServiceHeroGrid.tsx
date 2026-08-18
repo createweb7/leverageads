@@ -32,6 +32,7 @@ export type ServiceHeroGridCell = {
     | "layers"
     | "leadership";
   badgeVariant?: "light" | "dark";
+  badgePosition?: "bottom-left" | "top-right" | "bottom-right";
 };
 
 const iconMap = {
@@ -76,7 +77,7 @@ function Cell({
 }: {
   cell: ServiceHeroGridCell;
   className: string;
-  badgePosition: "bottom-left" | "top-right";
+  badgePosition: "bottom-left" | "top-right" | "bottom-right";
 }) {
   return (
     <div className={`overflow-hidden rounded-[28px] bg-white p-2.5 shadow-brand-lg ${className}`}>
@@ -88,7 +89,7 @@ function Cell({
           sizes="(min-width: 1024px) 24vw, 45vw"
           className="object-cover object-top"
         />
-        <Badge cell={cell} position={badgePosition} />
+        <Badge cell={cell} position={cell.badgePosition ?? badgePosition} />
       </div>
     </div>
   );
@@ -99,9 +100,14 @@ function Badge({
   position,
 }: {
   cell: ServiceHeroGridCell;
-  position: "bottom-left" | "top-right";
+  position: "bottom-left" | "top-right" | "bottom-right";
 }) {
-  const positionClass = position === "bottom-left" ? "bottom-4 left-4" : "top-4 right-4";
+  const positionClass =
+    position === "bottom-left"
+      ? "bottom-4 left-4"
+      : position === "bottom-right"
+        ? "bottom-4 right-4"
+        : "top-4 right-4";
 
   if (cell.badgeVariant === "dark") {
     const [big, small] = cell.badgeLabel.split(" · ");
