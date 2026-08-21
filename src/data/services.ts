@@ -221,7 +221,7 @@ export const services: ServicePage[] = [
       },
       {
         q: "What does a Brand Consultation include?",
-        a: "A typical consultation covers brand positioning, market & competitor analysis, customer insights, marketing strategy, sales strategy, customer experience, business process review, growth opportunities and an action plan with recommendations.",
+        a: "A typical consultation covers: Brand Positioning • Market & Competitor Analysis • Customer Insights • Marketing Strategy • Sales Strategy • Customer Experience • Business Process Review • Growth Opportunities • Action Plan & Recommendations.",
       },
       {
         q: "Do you provide marketing strategy along with branding?",
