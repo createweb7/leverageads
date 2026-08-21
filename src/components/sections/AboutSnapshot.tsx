@@ -19,12 +19,11 @@ export function AboutSnapshot() {
         <Reveal className="relative">
           <div className="relative aspect-4/5 overflow-hidden rounded-3xl shadow-brand-lg">
             <Image
-              src="/team/suresh-ramakrishnan.jpeg"
-              alt="Suresh Ramakrishnan, Founder of LeverageAds"
+              src="/team/leverage-clients-wall.webp"
+              alt="Wall of client logos LeverageAds has worked with"
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"
-              style={{ objectPosition: "64% 25%" }}
               priority
             />
             <div
@@ -33,23 +32,9 @@ export function AboutSnapshot() {
                 background: "radial-gradient(circle, rgba(237,50,55,.28), transparent 65%)",
               }}
             />
-            <div
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3"
-              style={{
-                background: "linear-gradient(to top, rgba(12,13,16,.92) 0%, rgba(12,13,16,.35) 55%, transparent 100%)",
-              }}
-            />
-            <div className="absolute inset-x-10 bottom-11 text-white">
-              <div className="font-display text-2xl font-bold leading-tight sm:text-[28px]">
-                Suresh Ramakrishnan
-              </div>
-              <div className="mt-2 text-xs font-semibold uppercase tracking-[.25em] text-brand-red">
-                Founder, LeverageAds
-              </div>
-            </div>
           </div>
           <div className="absolute -right-4 top-11 animate-float rounded-2xl border border-brand-line bg-white px-6 py-4.5 shadow-brand-md">
-            <strong className="block font-display text-2xl font-extrabold text-brand-red">24+</strong>
+            <strong className="block font-display text-2xl font-extrabold text-brand-red">26+</strong>
             <span className="text-[13px] text-brand-gray">Years of Brand Building</span>
           </div>
         </Reveal>
