@@ -29,9 +29,9 @@ export default function Home() {
       <PortfolioShowcase />
       <JingleShowcase />
       <FeaturedWork />
+      <FilmShowcase />
       <CampaignHighlights />
       <PortfolioExplore />
-      <FilmShowcase />
       <ServiceSelectorGrid />
       <AboutSnapshot />
       <CoreServicesGrid />

@@ -792,163 +792,14 @@ export const caseStudies: CaseStudy[] = [
     relatedSlugs: ["creative-design", "print-production"],
   },
   {
-    slug: "avira-diamonds",
-    client: "Sri Lakshmi Jewellery",
-    category: "Brand Launch — Retail Jewellery & Integrated Campaign",
-    logo: "/case-studies/logos/lakshmi.webp",
-    coverImage: "/case-studies/avira-diamonds/01-cover.webp",
-    teaserImage: "/case-studies/avira-diamonds/16-model-portrait-06.webp",
-    summary:
-      "How we built and launched AVIRA, a premium lab-grown diamond brand, with a unified creative campaign across print, digital, retail and outdoor.",
-    subtitle: "Building a Modern Diamond Brand for Sri Lakshmi Jewellery",
-    intro: [
-      "Sri Lakshmi Jewellery, one of the region's trusted jewellery brands, envisioned introducing AVIRA, a premium lab-grown diamond brand that would appeal to today's conscious, design-oriented consumers.",
-      "Unlike launching a new jewellery collection, this project involved introducing an entirely new brand and product category to the market. The objective was to build awareness, establish credibility, and create a premium brand experience that would inspire customer confidence from day one.",
-      "Leverage Advertising was entrusted with developing the creative communication strategy and executing the launch across multiple customer touchpoints, ensuring a seamless and memorable brand introduction.",
-    ],
-    sections: [
-      {
-        heading: "Project Overview",
-        paragraphs: [],
-        list: [
-          "Client: Sri Lakshmi Jewellery",
-          "Industry: Retail Jewellery",
-          "Project: Brand Launch — AVIRA Lab-Grown Diamonds",
-          "Duration: Brand Launch Campaign",
-          "Agency: Leverage Advertising",
-        ],
-      },
-      {
-        heading: "The Challenge",
-        paragraphs: [
-          "Launching a new jewellery brand presents unique challenges. In addition to creating visual appeal, the communication must educate customers, build trust, and differentiate the brand in a highly competitive marketplace.",
-          "For AVIRA, the primary challenges included:",
-        ],
-        list: [
-          "Introducing a completely new premium jewellery brand.",
-          "Creating awareness around lab-grown diamonds.",
-          "Building customer confidence in an emerging product category.",
-          "Positioning AVIRA as a modern luxury brand while leveraging the trust associated with Sri Lakshmi Jewellery.",
-          "Maintaining consistency across every communication platform.",
-        ],
-      },
-      {
-        heading: "Our Strategic Approach",
-        paragraphs: [
-          "Rather than developing isolated advertisements, Leverage Advertising approached the assignment as a comprehensive brand-building initiative.",
-          "Our strategy focused on creating a unified brand experience that would communicate luxury, authenticity, and contemporary elegance across every customer interaction. The approach included:",
-        ],
-        list: [
-          "Brand Positioning — positioning AVIRA as a premium, contemporary diamond brand designed for modern lifestyles while reinforcing quality, trust, and sophistication.",
-          "Consistent Brand Language — developing a cohesive visual identity that maintained consistency across print, digital, outdoor, and retail environments.",
-          "Customer-Centric Communication — creating messaging that balanced aspiration with education, helping customers understand the value and beauty of lab-grown diamonds.",
-          "Integrated Campaign Execution — ensuring every customer touchpoint, from newspaper advertisements to social media and retail branding, worked together to reinforce a single, memorable brand story.",
-        ],
-      },
-      {
-        heading: "Creative Execution",
-        paragraphs: [
-          "Leverage Advertising managed the creative development and production of a wide range of marketing assets to support the launch.",
-        ],
-        list: [
-          "Brand Communication — launch campaign concepts, creative direction, brand messaging, campaign visual language.",
-          "Print Advertising — newspaper advertisements, magazine advertisements, promotional campaigns, launch announcements.",
-          "Digital Communication — social media campaigns, digital advertisements, promotional creatives, WhatsApp marketing creatives.",
-          "Retail Branding — in-store branding, display panels, standees, point-of-sale materials, window graphics.",
-          "Outdoor Advertising — hoardings, outdoor campaign creatives, transit branding.",
-          "Marketing Collateral — brochures, invitation cards, promotional leaflets, product catalogues.",
-          "Photography & Visual Content — product photography, creative art direction, campaign imagery.",
-        ],
-      },
-      {
-        heading: "Business Impact",
-        paragraphs: [
-          "The AVIRA launch successfully established a distinctive premium identity for the new brand while maintaining strong alignment with the heritage and credibility of Sri Lakshmi Jewellery.",
-          "Through a carefully planned integrated communication strategy, the campaign achieved:",
-        ],
-        list: [
-          "A strong and consistent premium brand identity.",
-          "High visibility across multiple communication platforms.",
-          "Effective introduction of a new product category.",
-          "Enhanced customer awareness and engagement.",
-          "A seamless brand experience across online and offline channels.",
-          "A scalable creative framework for future marketing campaigns.",
-        ],
-      },
-      {
-        heading: "Our Contribution",
-        paragraphs: [
-          "At Leverage Advertising, we believe that successful brands are built through consistent strategy, compelling storytelling, and disciplined execution.",
-          "The AVIRA launch exemplifies our ability to transform a business vision into a market-ready brand by combining strategic thinking with creative excellence.",
-          "From concept to campaign execution, every element was designed to build recognition, inspire trust, and create lasting customer engagement.",
-        ],
-      },
-      {
-        heading: "Project Snapshot",
-        paragraphs: [],
-        list: [
-          "Client: Sri Lakshmi Jewellery",
-          "Brand: AVIRA Lab-Grown Diamonds",
-          "Industry: Jewellery Retail",
-          "Project Type: Brand Launch",
-          "Agency Role: Brand Strategy, Creative Direction & Integrated Campaign Development",
-          "Deliverables: Print, Digital, Retail Branding, Outdoor, Photography, Marketing Collateral",
-          "Campaign Objective: Launch a premium lab-grown diamond brand with a unified communication strategy",
-        ],
-      },
-      {
-        heading: "Services Delivered",
-        paragraphs: [],
-        list: [
-          "Brand Strategy",
-          "Creative Direction",
-          "Campaign Concept Development",
-          "Print Advertising",
-          "Digital Marketing Creatives",
-          "Retail Branding",
-          "Outdoor Advertising",
-          "Product Photography",
-          "Marketing Collateral",
-          "Integrated Brand Communication",
-        ],
-      },
-    ],
-    closing: [
-      "Every successful brand begins with a story worth telling.",
-      "For AVIRA, the challenge was not simply to launch a new jewellery brand, but to introduce a new way of thinking about diamonds. Through a strategic blend of branding, storytelling, and integrated marketing communication, Leverage Advertising helped transform an idea into a distinctive premium brand with a compelling market presence.",
-    ],
-    gallery: [
-      { src: "/case-studies/avira-diamonds/16-model-portrait-06.webp", alt: "AVIRA Diamonds bridal campaign model portrait with diamond necklace and chandelier earrings" },
-      { src: "/case-studies/avira-diamonds/17-model-portrait-07.webp", alt: "AVIRA Diamonds bridal campaign model portrait in emerald-embellished saree with diamond necklace" },
-      { src: "/case-studies/avira-diamonds/02-model-portrait-01.webp", alt: "AVIRA Diamonds brand campaign model portrait with diamond rings" },
-      { src: "/case-studies/avira-diamonds/03-model-portrait-02.webp", alt: "AVIRA Diamonds brand campaign model portrait with diamond necklace" },
-      { src: "/case-studies/avira-diamonds/04-model-portrait-03.webp", alt: "AVIRA Diamonds brand campaign model portrait in traditional saree with diamond jewellery" },
-      { src: "/case-studies/avira-diamonds/05-model-portrait-04.webp", alt: "AVIRA Diamonds brand campaign model portrait with gold necklace" },
-      { src: "/case-studies/avira-diamonds/15-model-portrait-05.webp", alt: "AVIRA Diamonds campaign model portrait showing layered diamond rings" },
-      { src: "/case-studies/avira-diamonds/18-model-portrait-08.webp", alt: "AVIRA Diamonds editorial campaign model portrait with diamond necklace and bracelet" },
-      { src: "/case-studies/avira-diamonds/01-cover.webp", alt: "\"Why Choose Lab-Grown Diamond Jewelry\" AVIRA Diamonds social media campaign creative" },
-      { src: "/case-studies/avira-diamonds/06-bracelet-campaign.webp", alt: "\"Glitzy & Classy\" AVIRA Diamonds bracelet campaign creative" },
-      { src: "/case-studies/avira-diamonds/07-pendant-campaign.webp", alt: "AVIRA Diamonds rose gold pendant necklace campaign creative" },
-      { src: "/case-studies/avira-diamonds/08-why-choose-avira.webp", alt: "\"Why Choose AVIRA Diamonds\" campaign creative with brand trust icons" },
-      { src: "/case-studies/avira-diamonds/09-ring-campaign.webp", alt: "\"Sparkle Spectrum\" AVIRA Diamonds ring campaign creative" },
-      { src: "/case-studies/avira-diamonds/10-4cs-education.webp", alt: "\"4C's of Diamonds\" AVIRA Diamonds educational campaign creative" },
-      { src: "/case-studies/avira-diamonds/11-retail-outdoor-display.webp", alt: "AVIRA Diamonds \"Found Sustainable Luxury\" retail outdoor display mockup" },
-      { src: "/case-studies/avira-diamonds/19-showroom-storefront.webp", alt: "AVIRA Diamonds Pondicherry showroom storefront and launch invitation back panel" },
-      { src: "/case-studies/avira-diamonds/13-invitation-outer-spread.webp", alt: "AVIRA Diamonds showroom launch invitation, outer spread" },
-      { src: "/case-studies/avira-diamonds/14-invitation-inner-spread.webp", alt: "AVIRA Diamonds showroom launch invitation, inner spread with directors and model" },
-      { src: "/case-studies/avira-diamonds/12-launch-invitation-front.webp", alt: "AVIRA Diamonds showroom launch invitation featuring brand ambassador and store front" },
-    ],
-    relatedSlugs: ["brand-strategy-consulting", "creative-advertising", "creative-design"],
-  },
-  {
     slug: "pondicherry-sri-lakshmi-jewellery",
     client: "Pondicherry Sri Lakshmi Jewellery",
-    category: "Long-Term Brand Partnership — Jewellery Retail & Celebrity Campaigns",
+    category: "Long-Term Brand Partnership — Jewellery Retail, Celebrity Campaigns & Brand Launches",
     logo: "/case-studies/logos/lakshmi.webp",
     coverImage: "/case-studies/branding-photography-celebrity/11-anushka-pride-of-pondicherry.webp",
     teaserImage: "/case-studies/branding-photography-celebrity/16-lakshmi-jewelery-78-years.webp",
     summary:
-      "How a sixteen-year creative partnership helped build and protect the trust behind one of Puducherry's most respected jewellery brands.",
+      "How a sixteen-year creative partnership helped build and protect the trust behind one of Puducherry's most respected jewellery brands — including the launch of its premium lab-grown diamond brand, AVIRA.",
     subtitle: "Sixteen Years. One Brand. One Trusted Creative Partner.",
     intro: [
       "Most agency-client relationships last for a campaign.",
@@ -1005,6 +856,26 @@ export const caseStudies: CaseStudy[] = [
         ],
       },
       {
+        heading: "Launching AVIRA — A New Diamond Brand for a New Generation",
+        paragraphs: [
+          "Sixteen years in, the partnership took on a new dimension: introducing AVIRA, a premium lab-grown diamond brand, to appeal to today's conscious, design-oriented consumers. Unlike a new jewellery collection, this meant introducing an entirely new brand and product category — building awareness, establishing credibility and creating a premium brand experience from day one.",
+          "Rather than developing isolated advertisements, we approached it as a comprehensive brand-building initiative, focused on a unified experience that communicated luxury, authenticity and contemporary elegance across every touchpoint:",
+        ],
+        list: [
+          "Brand Positioning — positioning AVIRA as a premium, contemporary diamond brand designed for modern lifestyles while reinforcing quality, trust and sophistication.",
+          "Consistent Brand Language — a cohesive visual identity maintained across print, digital, outdoor and retail environments.",
+          "Customer-Centric Communication — messaging that balanced aspiration with education, helping customers understand the value and beauty of lab-grown diamonds.",
+          "Integrated Campaign Execution — every touchpoint, from newspaper advertisements to social media and retail branding, working together to reinforce a single, memorable brand story.",
+        ],
+      },
+      {
+        heading: "AVIRA Creative Execution & Impact",
+        paragraphs: [
+          "We managed the creative development and production of a wide range of marketing assets to support the launch — brand communication and campaign concepts, print and digital advertising, retail branding (in-store displays, standees, window graphics), outdoor advertising, marketing collateral and product photography.",
+          "The launch established a distinctive premium identity for AVIRA while maintaining strong alignment with the heritage and credibility of Sri Lakshmi Jewellery — achieving a consistent premium brand identity, high visibility across every platform, and a seamless brand experience across online and offline channels.",
+        ],
+      },
+      {
         heading: "Beyond Advertising",
         paragraphs: [
           "Good advertising attracts attention. Good branding builds trust.",
@@ -1041,8 +912,31 @@ export const caseStudies: CaseStudy[] = [
       { src: "/case-studies/branding-photography-celebrity/07-lakshmi-sovereign.webp", alt: "Lakshmi Sovereign light jewellery collection campaign photography" },
       { src: "/case-studies/branding-photography-celebrity/16-lakshmi-jewelery-78-years.webp", alt: "Pondicherry Sri Lakshmi Jewellery 78 years of trust celebrity campaign photography" },
       { src: "/case-studies/branding-photography-celebrity/17-lakshmi-jewelery-75-year-anniversary.webp", alt: "Pondicherry Sri Lakshmi Jewellery 75 year anniversary celebrity campaign photography" },
+      { src: "/case-studies/avira-diamonds/16-model-portrait-06.webp", alt: "AVIRA Diamonds bridal campaign model portrait with diamond necklace and chandelier earrings" },
+      { src: "/case-studies/avira-diamonds/17-model-portrait-07.webp", alt: "AVIRA Diamonds bridal campaign model portrait in emerald-embellished saree with diamond necklace" },
+      { src: "/case-studies/avira-diamonds/02-model-portrait-01.webp", alt: "AVIRA Diamonds brand campaign model portrait with diamond rings" },
+      { src: "/case-studies/avira-diamonds/03-model-portrait-02.webp", alt: "AVIRA Diamonds brand campaign model portrait with diamond necklace" },
+      { src: "/case-studies/avira-diamonds/04-model-portrait-03.webp", alt: "AVIRA Diamonds brand campaign model portrait in traditional saree with diamond jewellery" },
+      { src: "/case-studies/avira-diamonds/05-model-portrait-04.webp", alt: "AVIRA Diamonds brand campaign model portrait with gold necklace" },
+      { src: "/case-studies/avira-diamonds/15-model-portrait-05.webp", alt: "AVIRA Diamonds campaign model portrait showing layered diamond rings" },
+      { src: "/case-studies/avira-diamonds/18-model-portrait-08.webp", alt: "AVIRA Diamonds editorial campaign model portrait with diamond necklace and bracelet" },
+      { src: "/case-studies/avira-diamonds/01-cover.webp", alt: "\"Why Choose Lab-Grown Diamond Jewelry\" AVIRA Diamonds social media campaign creative" },
+      { src: "/case-studies/avira-diamonds/06-bracelet-campaign.webp", alt: "\"Glitzy & Classy\" AVIRA Diamonds bracelet campaign creative" },
+      { src: "/case-studies/avira-diamonds/07-pendant-campaign.webp", alt: "AVIRA Diamonds rose gold pendant necklace campaign creative" },
+      { src: "/case-studies/avira-diamonds/08-why-choose-avira.webp", alt: "\"Why Choose AVIRA Diamonds\" campaign creative with brand trust icons" },
+      { src: "/case-studies/avira-diamonds/09-ring-campaign.webp", alt: "\"Sparkle Spectrum\" AVIRA Diamonds ring campaign creative" },
+      { src: "/case-studies/avira-diamonds/10-4cs-education.webp", alt: "\"4C's of Diamonds\" AVIRA Diamonds educational campaign creative" },
+      { src: "/case-studies/avira-diamonds/11-retail-outdoor-display.webp", alt: "AVIRA Diamonds \"Found Sustainable Luxury\" retail outdoor display mockup" },
+      { src: "/case-studies/avira-diamonds/19-showroom-storefront.webp", alt: "AVIRA Diamonds Pondicherry showroom storefront and launch invitation back panel" },
+      { src: "/case-studies/avira-diamonds/13-invitation-outer-spread.webp", alt: "AVIRA Diamonds showroom launch invitation, outer spread" },
+      { src: "/case-studies/avira-diamonds/14-invitation-inner-spread.webp", alt: "AVIRA Diamonds showroom launch invitation, inner spread with directors and model" },
+      { src: "/case-studies/avira-diamonds/12-launch-invitation-front.webp", alt: "AVIRA Diamonds showroom launch invitation featuring brand ambassador and store front" },
     ],
     faqs: [
+      {
+        q: "Did the partnership include launching new sub-brands?",
+        a: "Yes. Sixteen years in, we introduced AVIRA, a premium lab-grown diamond brand, for Sri Lakshmi Jewellery — developing the brand positioning, visual identity and an integrated launch campaign across print, digital, retail and outdoor.",
+      },
       {
         q: "Why is a long-term branding partner valuable for a jewellery brand?",
         a: "Consistency builds recognition. When customers repeatedly experience the same quality of communication, photography, advertising and storytelling, the brand becomes more familiar, more trustworthy and easier to remember.",
@@ -1076,7 +970,7 @@ export const caseStudies: CaseStudy[] = [
         a: "Awards recognise creativity; long-term client relationships recognise reliability. Serving a respected jewellery brand continuously for sixteen years reflects our commitment to consistency, accountability and creating work that delivers lasting value.",
       },
     ],
-    relatedSlugs: ["creative-advertising", "ad-films-photography", "brand-strategy-consulting"],
+    relatedSlugs: ["creative-advertising", "ad-films-photography", "brand-strategy-consulting", "creative-design"],
   },
   {
     slug: "lakshmi-silvers-pondicherry",
@@ -1514,6 +1408,410 @@ export const caseStudies: CaseStudy[] = [
       { src: "/case-studies/shanthi-jewellery/06-chain-mela-campaign.webp", alt: "Shanthi Jewellers Chain Mela celebrity model campaign creative" },
     ],
     relatedSlugs: ["brand-strategy-consulting", "creative-advertising", "ad-films-photography"],
+  },
+  {
+    slug: "dakshin-capital",
+    client: "Dakshin Capital Private Limited",
+    category: "Workplace Branding — Office Graphics, Information Design & Motivational Communication",
+    logo: "/case-studies/logos/dakshin-capital.webp",
+    coverImage: "/case-studies/dakshin-capital/01-financial-freedom-wall-graphic.webp",
+    teaserImage: "/case-studies/dakshin-capital/12-poster-have-faith-maze.webp",
+    summary:
+      "How Leverage turned Dakshin Capital's office into a purposeful brand environment — using workplace branding, office graphics, information design and motivational communication to inform, educate and inspire employees every day.",
+    subtitle: "Building a Workplace That Communicates",
+    intro: [
+      "For a financial services organisation, communication cannot stop at customers. The people inside the organisation are equally important.",
+      "Dakshin Capital wanted its office environment to become more than a functional workspace. The objective was to create a workplace that communicated the organisation's values, encouraged employees and kept the larger purpose of the business visible every day.",
+      "Leverage approached the assignment as Workplace Branding & Visual Communication—using design, imagery, information graphics and motivational communication to transform ordinary office spaces into purposeful brand environments.",
+    ],
+    sections: [
+      {
+        heading: "The Challenge",
+        paragraphs: [
+          "Financial services can often be perceived as complex, technical and numbers-driven.",
+          "Investment. Insurance. Tax savings. Retirement planning. Child education. Home loans. Wealth creation.",
+          "The challenge was to communicate these subjects in a way that was:",
+        ],
+        list: [
+          "Easy to understand",
+          "Visually engaging",
+          "Relevant to employees and visitors",
+          "Consistent with the corporate identity",
+          "Positive and motivational",
+          "Suitable for an office environment",
+        ],
+        note: "At the same time, the workplace needed visual energy. The walls should not merely carry information. They should communicate something every time an employee walks past them.",
+      },
+      {
+        heading: "The Leverage Approach",
+        paragraphs: [
+          "Leverage developed a visual communication approach that combined corporate communication, information design and motivational messaging.",
+          "Instead of filling the office with conventional promotional posters, the communication was planned around different purposes.",
+        ],
+      },
+      {
+        heading: "1. Inform",
+        paragraphs: [
+          "Some posters were designed to simplify financial concepts and present information in a visually accessible manner.",
+          "For example, the Retirement Planning Challenges communication uses an illustrated central concept surrounded by key challenges such as increased life expectancy, medical insurance limitations, inflation, changing family structures and social security concerns.",
+          "Complex information was converted into an easy-to-understand visual story.",
+        ],
+      },
+      {
+        heading: "2. Educate",
+        paragraphs: [
+          "Financial concepts can become difficult to communicate when presented only through text.",
+          "Infographics were therefore used to break information into clear visual steps.",
+          "The \"4 Steps Towards Financial Freedom\" communication is an example of this approach. Instead of presenting financial planning as a complicated subject, the information was structured into four clear areas:",
+        ],
+        list: ["Adequate Life Insurance", "Adequate Health Insurance", "Contingency Planning", "Goal-Based Investments"],
+        note: "This made the communication easier to absorb at a glance.",
+      },
+      {
+        heading: "3. Motivate",
+        paragraphs: [
+          "One of the most important aspects of the project was the creation of motivational posters. These were not treated as generic \"office quotes\". The objective was to create visual messages that could contribute to the mindset and emotional environment of the workplace.",
+          "Messages such as \"Have faith in what you do. You'll find your way, in or out.\" and \"Your inner strength is far greater than you imagine.\" were paired with strong conceptual imagery.",
+          "The image and the message were designed to work together. The poster was not simply intended to be read. It was intended to make the employee pause, think and reconnect with a positive thought.",
+        ],
+      },
+      {
+        heading: "4. Create an Inspiring Workplace",
+        paragraphs: [
+          "A workplace is experienced visually every day. Employees repeatedly see the same corridors, walls, workstations and common areas. This creates an opportunity for continuous internal communication.",
+          "Well-designed motivational posters can therefore become a subtle form of employee engagement. Instead of conducting motivation as a one-time event, the organisation can create an environment where positive messages are constantly present in the employee's visual surroundings.",
+          "That was an important philosophy behind the Dakshin Capital workplace communication.",
+        ],
+      },
+      {
+        heading: "The Role of Motivational Posters",
+        paragraphs: [
+          "The motivational posters were developed around different psychological themes rather than repeating the same style of quote.",
+        ],
+        list: [
+          "Confidence — messages that remind employees of their own capabilities.",
+          "Resilience — visual stories that communicate the ability to overcome obstacles.",
+          "Purpose — messages that reconnect people with why their work matters.",
+          "Positive Thinking — simple thoughts that can influence the emotional tone of the workday.",
+          "Self-Belief — communication that encourages employees to recognise their own potential.",
+          "Perseverance — messages that reinforce the importance of continuing despite challenges.",
+        ],
+        note: "This created a library of visual motivation, rather than a collection of unrelated posters.",
+      },
+      {
+        heading: "Concept + Visual + Message",
+        paragraphs: [
+          "A key strength of the motivational communication was the relationship between the visual concept and the copy.",
+          "For example, a person standing before a much larger shadow communicates the idea that our perception of ourselves can sometimes be smaller than our actual potential. The message \"Your inner strength is far greater than you imagine.\" then completes the visual thought.",
+          "Similarly, the maze concept communicates uncertainty and finding one's own path. The accompanying message \"Have faith in what you do. You'll find your way, in or out.\" turns the image into a motivational narrative.",
+          "This approach makes the posters more memorable than simply placing a motivational quotation over a stock photograph.",
+        ],
+      },
+      {
+        heading: "Corporate Backdrops & Office Graphics",
+        paragraphs: [
+          "The workplace branding extended beyond posters. Corporate backdrops and office graphics were designed to maintain a consistent visual identity across the environment. These applications can include:",
+        ],
+        list: [
+          "Reception-area graphics",
+          "Meeting-room backdrops",
+          "Office wall graphics",
+          "Employee communication panels",
+          "Financial awareness graphics",
+          "Motivational wall posters",
+          "Corporate value statements",
+          "Brand communication panels",
+          "Event and programme backdrops",
+        ],
+        note: "Together, these elements create a more cohesive branded workplace environment.",
+      },
+      {
+        heading: "Why Workplace Branding Matters",
+        paragraphs: [
+          "A company's brand is not experienced only through advertisements. It is experienced through People + Place + Communication + Behaviour.",
+          "When employees enter an office where the organisation's purpose, values and positive messages are visible, the physical environment becomes part of the brand experience.",
+          "For Dakshin Capital, the office itself became another communication medium. The walls became communicators.",
+        ],
+      },
+      {
+        heading: "The Outcome",
+        paragraphs: [
+          "The Dakshin Capital assignment demonstrates how graphic design can move beyond conventional advertising and become part of an organisation's internal culture.",
+          "Through a combination of Workplace Branding, Office Graphics, Information Design, Motivational Communication and Corporate Backdrops, Leverage helped create a workplace environment that was not only visually branded but also informative, engaging and motivational.",
+          "The result was a collection of communication pieces designed to serve different purposes—from educating people about financial planning to encouraging employees through everyday motivational messages.",
+        ],
+      },
+      {
+        heading: "The Leverage Difference",
+        paragraphs: [
+          "Leverage believes workplace communication should not be treated as decoration. A poster should have a purpose. A wall graphic should communicate something. A backdrop should reinforce the brand. And a motivational message should make someone feel something.",
+          "For Dakshin Capital, the approach was therefore not \"Let us design some posters for the office.\" It was \"Let us make the workplace communicate.\"",
+        ],
+      },
+    ],
+    closing: [
+      "When the walls speak, the workplace becomes part of the brand.",
+    ],
+    gallery: [
+      { src: "/case-studies/dakshin-capital/01-financial-freedom-wall-graphic.webp", alt: "\"Financial Freedom for Everyone Is Our Mission\" large-format wall graphic for Dakshin Capital's MD room" },
+      { src: "/case-studies/dakshin-capital/02-confused-where-to-invest-hall-graphic.webp", alt: "\"Confused Where to Invest?\" investment options infographic wall graphic for Dakshin Capital's office hall" },
+      { src: "/case-studies/dakshin-capital/03-retirement-planning-challenges-infographic.webp", alt: "\"Retirement Planning Challenges\" information graphic for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/04-four-steps-financial-freedom-infographic.webp", alt: "\"4 Steps Towards Financial Freedom\" infographic for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/05-benefits-of-sip-investment-infographic.webp", alt: "\"Benefits of SIP Investment\" infographic for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/12-poster-have-faith-maze.webp", alt: "\"Have faith in what you do. You'll find your way, in or out.\" motivational poster with maze concept for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/14-poster-inner-strength-shadow.webp", alt: "\"Your inner strength is far greater than you imagine.\" motivational poster with shadow concept for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/06-poster-results-or-excuses.webp", alt: "\"You can have results or excuses, not both\" motivational poster for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/07-poster-secret-of-getting-ahead.webp", alt: "\"The secret of getting ahead is getting started\" motivational poster for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/08-poster-exercise-health.webp", alt: "\"1 hour of exercise = 23 hours of health\" motivational poster for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/09-poster-nation-flourishes.webp", alt: "\"The Nation flourishes when it is loved\" motivational poster for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/10-poster-self-first.webp", alt: "\"A gentle flame illuminates the path to inner peace\" self-first motivational poster for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/11-poster-find-a-new-mountain.webp", alt: "\"If you think you have peaked, find a new mountain\" motivational poster for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/13-poster-on-time-clock.webp", alt: "\"If you are on time, you needn't manage it\" motivational poster for Dakshin Capital" },
+      { src: "/case-studies/dakshin-capital/15-poster-gratitude.webp", alt: "\"Have gratitude for all that life bestows upon you\" motivational poster for Dakshin Capital" },
+    ],
+    faqs: [
+      {
+        q: "What is Workplace Branding?",
+        a: "Workplace Branding is the use of the organisation's brand identity, values, messages, graphics and visual communication within its physical work environment. It transforms an ordinary office into a branded and purposeful workplace.",
+      },
+      {
+        q: "Is workplace branding the same as interior decoration?",
+        a: "No. Interior decoration focuses primarily on the appearance of a space. Workplace branding focuses on what the space communicates. The two can work together, but workplace branding has a stronger communication and organisational-culture purpose.",
+      },
+      {
+        q: "Why use motivational posters in an office?",
+        a: "Employees spend a significant amount of their day in the workplace. Carefully created motivational communication can provide regular positive reminders about confidence, resilience, purpose, teamwork and personal potential. The objective is not to \"motivate people with posters\" by itself, but to create a positive visual environment that supports the organisation's culture.",
+      },
+      {
+        q: "Are these just motivational quotes with photographs?",
+        a: "No. Leverage's approach is to develop the visual concept and the message together. The image should communicate part of the idea, while the copy completes it. This creates stronger and more memorable communication.",
+      },
+      {
+        q: "Can motivational posters be customised for a company's culture?",
+        a: "Absolutely. Instead of using generic motivational quotations, posters can be developed around the organisation's vision, mission, values, leadership philosophy, employee culture, business objectives and customer promise.",
+      },
+      {
+        q: "What types of office graphics can Leverage create?",
+        a: "Depending on the organisation, these can include motivational posters, value statements, wall graphics, infographics, corporate backdrops, reception graphics, meeting room graphics, employee communication, brand story panels and financial awareness graphics.",
+      },
+      {
+        q: "Can workplace branding be used for financial companies?",
+        a: "Yes. In fact, financial organisations can particularly benefit from strong information design because many financial subjects are complex. Visual communication can make subjects such as investments, insurance, retirement planning and financial goals easier to understand.",
+      },
+      {
+        q: "Can the same approach be used in schools and colleges?",
+        a: "Yes. The approach can be adapted for educational institutions using inspirational graphics, student motivation, institution values, career communication, learning graphics, achievement walls and campus branding.",
+      },
+      {
+        q: "What makes Leverage different?",
+        a: "Leverage brings together branding, advertising, creative communication and visual storytelling. The objective is not merely to make the office attractive. It is to make the environment communicate, engage and reinforce the brand.",
+      },
+    ],
+    relatedSlugs: ["print-production", "creative-design", "creative-advertising"],
+  },
+  {
+    slug: "mark-zurich",
+    client: "Mark Zürich",
+    category: "Brand Identity Launch — Apparel Naming, Logo & Garment Branding",
+    logo: "/case-studies/logos/mark-zurich.webp",
+    coverImage: "/case-studies/mark-zurich/04-shirt-collar-garment-label.webp",
+    teaserImage: "/case-studies/mark-zurich/05-trouser-pocket-embroidered-symbol.webp",
+    summary:
+      "Building an international-standard clothing brand from Madurai — naming, logo, typography and garment branding created to give Mark Zürich the visual credibility of an established global apparel label.",
+    subtitle: "Building an International-Standard Clothing Brand from Madurai",
+    intro: [
+      "Mark Zürich was conceived as a clothing brand from Madurai with an ambition that went beyond being perceived as just another regional apparel label.",
+      "The challenge was to create a brand identity that could stand confidently alongside established national and international fashion brands—from its name and visual identity to its colours, typography, logo and overall brand expression.",
+      "At the early stage, Mark Zürich was not an international brand. But the ambition was international.",
+      "Leverage Advertising took up the challenge of transforming that ambition into a distinctive brand identity. The objective was simple: create a brand from Madurai that looked like it belonged anywhere in the world.",
+    ],
+    sections: [
+      {
+        heading: "The Leverage Approach",
+        paragraphs: [
+          "Leverage did not begin with a logo.",
+          "The branding exercise started by looking at the brand as a complete experience.",
+        ],
+      },
+      {
+        heading: "1. Naming the Brand",
+        paragraphs: [
+          "The name MARK ZÜRICH was developed to create a strong, sophisticated and contemporary perception.",
+          "The combination of the two words was intended to give the brand a cosmopolitan character while remaining distinctive and memorable in the Indian apparel market.",
+          "The name itself became an important part of the brand's positioning.",
+        ],
+      },
+      {
+        heading: "2. Creating the Brand Personality",
+        paragraphs: ["The brand needed to communicate:"],
+        list: [
+          "International quality",
+          "Contemporary fashion",
+          "Confidence",
+          "Sophistication",
+          "Youthfulness",
+          "Premium appeal",
+          "Strong visual individuality",
+        ],
+        note: "Every design decision was therefore evaluated against one question: Does this look like a local clothing label—or a brand with international aspirations?",
+      },
+      {
+        heading: "3. Logo Conceptualisation",
+        paragraphs: [
+          "The logo became the visual signature of Mark Zürich.",
+          "Rather than using a conventional fashion symbol, Leverage developed a distinctive geometric symbol that could work independently from the brand name.",
+          "The symbol was designed to be:",
+        ],
+        list: [
+          "Simple enough to be recognised",
+          "Distinctive enough to own",
+          "Strong enough for garment applications",
+          "Flexible enough for different sizes",
+          "Suitable for embroidery, printing and labels",
+          "Memorable even without the wordmark",
+        ],
+        note: "This was particularly important because a clothing brand needs an identity that can live comfortably on garments, tags, buttons, packaging, signage and communication material.",
+      },
+      {
+        heading: "Logo Rationale",
+        paragraphs: [
+          "The Mark Zürich symbol is built around a geometric, rhythmic structure.",
+          "The repeated angular forms create a sense of movement, energy and contemporary fashion, while the symmetrical construction gives the mark stability and balance.",
+          "The lower geometric element provides a distinctive finishing point, helping the symbol become more than a decorative pattern.",
+          "The overall construction deliberately avoids being overly illustrative. It is a symbol designed to become a brand signature.",
+          "This gives Mark Zürich the flexibility to use the symbol independently—for example, on a garment—while retaining a strong connection with the complete Mark Zürich identity.",
+        ],
+      },
+      {
+        heading: "Typography",
+        paragraphs: [
+          "The typography was selected to create a strong fashion-oriented presence.",
+          "The bold, condensed character of the wordmark gives the brand presence, confidence and modernity.",
+          "The distinctive treatment of ZÜRICH, including the umlaut, further contributes to the brand's visual personality and helps differentiate the name from conventional Indian apparel-brand naming.",
+          "The relationship between the symbol and typography was carefully explored through multiple configurations before arriving at a system that could work across different applications.",
+        ],
+      },
+      {
+        heading: "Colour Strategy",
+        paragraphs: [
+          "Colour was treated as an important part of the brand personality rather than simply a decorative choice.",
+          "The identity was explored in neutral, monochromatic and metallic-inspired treatments to ensure that the logo could adapt to different fabrics, garment colours and production methods.",
+          "A particularly important consideration was reproduction on clothing. A logo that looks good on a screen may not necessarily work well when:",
+        ],
+        list: [
+          "Embroidered",
+          "Screen printed",
+          "Woven into labels",
+          "Foil stamped",
+          "Printed on packaging",
+          "Applied at very small sizes",
+        ],
+        note: "The Mark Zürich identity was therefore developed with real-world apparel applications in mind.",
+      },
+      {
+        heading: "From Logo to Garment",
+        paragraphs: [
+          "The true test of an apparel identity is not a presentation board. It is the garment.",
+          "The Mark Zürich symbol was designed to become part of the product itself.",
+          "The example shown on the garment demonstrates how the identity can function as a small, premium brand signature, rather than overpowering the clothing.",
+          "This creates an important distinction: the brand does not have to shout to be noticed.",
+        ],
+      },
+      {
+        heading: "Creating Retail Confidence",
+        paragraphs: [
+          "For a new apparel brand, retailers need to believe that the brand has a future.",
+          "Packaging, garment branding, labels, visual consistency and professional presentation all contribute to that confidence.",
+          "Leverage therefore approached Mark Zürich not simply as a logo-design assignment, but as a brand-building exercise.",
+          "The intention was to create an identity that could help the brand enter the market with the confidence of a much more established label.",
+        ],
+      },
+      {
+        heading: "The Outcome",
+        paragraphs: [
+          "The branding exercise gave Mark Zürich a distinctive identity and a clear visual personality.",
+          "The brand was able to present itself to Indian retailers with a look and feel that communicated quality, sophistication and international aspirations.",
+          "The identity received a strong and encouraging response from Indian retailers, helping establish the brand with a level of visual credibility beyond its relatively young market presence.",
+          "More importantly, Mark Zürich demonstrated an important branding principle: a brand does not have to come from an international market to look international. It needs international thinking.",
+        ],
+      },
+      {
+        heading: "What Leverage Built",
+        paragraphs: [
+          "The Mark Zürich project involved much more than creating a logo. Leverage worked on:",
+        ],
+        list: [
+          "Brand Naming",
+          "Brand Positioning",
+          "Brand Personality",
+          "Logo Conceptualisation",
+          "Symbol Development",
+          "Typography Selection",
+          "Colour Direction",
+          "Logo Variations",
+          "Garment Branding",
+          "Brand Application Thinking",
+          "Retail Presentation",
+          "Overall Visual Identity",
+        ],
+        note: "The result was a brand identity created to give a Madurai-born clothing brand a national and international visual ambition.",
+      },
+      {
+        heading: "The Leverage Difference",
+        paragraphs: [
+          "Many branding projects begin with: \"What should the logo look like?\"",
+          "Leverage began with: \"What should the brand become?\"",
+          "That difference shaped the entire Mark Zürich exercise. From naming to typography, from symbol to garment application, every element was considered as part of one larger brand story.",
+          "The goal was never merely to make Mark Zürich look good. The goal was to make Mark Zürich look like a brand that could grow.",
+        ],
+      },
+    ],
+    closing: [
+      "Born in Madurai. Designed with a global ambition. Built to look beyond its geography.",
+      "We don't just create identities. We create brands with the ambition to go further.",
+    ],
+    gallery: [
+      { src: "/case-studies/mark-zurich/01-logo-exploration-grid.webp", alt: "Mark Zürich logo and symbol lockup exploration grid showing six variations" },
+      { src: "/case-studies/mark-zurich/04-shirt-collar-garment-label.webp", alt: "Mark Zürich woven garment label with logo on a shirt collar" },
+      { src: "/case-studies/mark-zurich/05-trouser-pocket-embroidered-symbol.webp", alt: "Mark Zürich geometric symbol embroidered on a trouser pocket" },
+      { src: "/case-studies/mark-zurich/03-trouser-waistband-woven-label.webp", alt: "Mark Zürich woven waistband label on tailored trousers" },
+      { src: "/case-studies/mark-zurich/02-symbol-wooden-button-mockup.webp", alt: "Mark Zürich symbol and wordmark mockup on a wooden garment button" },
+    ],
+    faqs: [
+      {
+        q: "Was Mark Zürich already an international brand?",
+        a: "No. Mark Zürich was an emerging clothing brand from Madurai. The branding objective was to create an identity with an international-standard look and feel and the potential to support future growth.",
+      },
+      {
+        q: "Did Leverage create only the logo?",
+        a: "No. The assignment went beyond logo design. Leverage was involved in the naming, brand thinking, visual identity, typography, colour direction, logo conceptualisation and application strategy.",
+      },
+      {
+        q: "Why was the name \"Mark Zürich\" chosen?",
+        a: "The name was developed to create a contemporary, sophisticated and cosmopolitan brand perception, helping the clothing brand differentiate itself in a competitive market.",
+      },
+      {
+        q: "What is the thinking behind the symbol?",
+        a: "The symbol uses a geometric and rhythmic structure to create a distinctive visual signature. Its simplicity allows it to work effectively across garments, labels, embroidery, packaging and other brand applications.",
+      },
+      {
+        q: "Why is the logo suitable for a clothing brand?",
+        a: "An apparel logo needs to work in many environments—from a large storefront to a tiny garment label. Mark Zürich's symbol was designed to retain its identity even when reproduced at small sizes or through different production techniques.",
+      },
+      {
+        q: "What was the biggest branding challenge?",
+        a: "The biggest challenge was to make a new regional brand appear established, sophisticated and credible without making it look artificial or over-designed.",
+      },
+      {
+        q: "What was the result?",
+        a: "The brand developed a distinctive visual identity and received an encouraging response from Indian retailers, giving Mark Zürich a stronger foundation for market development.",
+      },
+      {
+        q: "What does this project demonstrate about Leverage?",
+        a: "It demonstrates that Leverage approaches branding as business-building rather than simply graphic design. The work starts with the brand's ambition and translates that ambition into a visual identity that can work in the real marketplace.",
+      },
+    ],
+    relatedSlugs: ["creative-design", "brand-strategy-consulting", "creative-advertising"],
   },
 ];
 
