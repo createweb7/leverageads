@@ -32,7 +32,6 @@ export const portfolioItems: PortfolioItem[] = [
   // jewellery
   { src: "/portfolio/jewellery/01.webp", alt: "Sovereign jewellery festive campaign", categorySlug: "jewellery", width: 827, height: 871 },
   { src: "/portfolio/jewellery/02.webp", alt: "GRT Jewellers campaign creative", categorySlug: "jewellery", width: 591, height: 984 },
-  { src: "/portfolio/jewellery/03.webp", alt: "Hayagrivas \"Elegance Intact\" saree campaign", categorySlug: "jewellery", width: 827, height: 878 },
   { src: "/portfolio/jewellery/06.webp", alt: "Challani Jewellery Mart brand campaign portrait", categorySlug: "jewellery", width: 591, height: 835 },
   { src: "/portfolio/jewellery/07.webp", alt: "PGP gemstone jewellery flatlay", categorySlug: "jewellery", width: 591, height: 591 },
   { src: "/portfolio/jewellery/08.webp", alt: "KRT gold antique jewellery campaign", categorySlug: "jewellery", width: 1167, height: 1096 },
