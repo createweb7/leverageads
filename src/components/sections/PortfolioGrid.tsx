@@ -5,9 +5,10 @@ import Image from "next/image";
 import clsx from "clsx";
 import { useSearchParams } from "next/navigation";
 import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
-import { portfolioCategories, portfolioItems } from "@/data/portfolio";
+import { portfolioCategories } from "@/data/portfolio";
+import type { PortfolioItem } from "@/lib/data/portfolio";
 
-export function PortfolioGrid() {
+export function PortfolioGrid({ items: portfolioItems }: { items: PortfolioItem[] }) {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get("category");
   const [active, setActive] = useState(
@@ -76,7 +77,7 @@ export function PortfolioGrid() {
       <div className="columns-2 gap-4 sm:columns-3 lg:columns-4">
         {filtered.map((item, i) => (
           <button
-            key={item.src}
+            key={item.id}
             type="button"
             onClick={() => setActiveIndex(i)}
             className="group relative mb-4 block w-full break-inside-avoid rounded-2xl bg-brand-line p-1.5 shadow-brand-sm [clip-path:inset(0_round_1rem)]"

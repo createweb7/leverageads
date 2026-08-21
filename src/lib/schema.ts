@@ -1,7 +1,11 @@
 import { siteConfig } from "@/data/site";
 import type { FAQ, ServicePage } from "@/data/services";
 import type { Pillar } from "@/data/pillars";
-import type { InsightPost } from "@/data/insights";
+import type { InsightPost } from "@/lib/data/insights";
+
+function absoluteUrl(path: string) {
+  return path.startsWith("http") ? path : `${siteConfig.url}${path}`;
+}
 
 export function serviceSchema(service: ServicePage) {
   return {
@@ -62,7 +66,7 @@ export function blogPostingSchema(post: InsightPost) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    image: `${siteConfig.url}${post.image}`,
+    image: absoluteUrl(post.image),
     datePublished: post.date,
     author: {
       "@type": "Person",

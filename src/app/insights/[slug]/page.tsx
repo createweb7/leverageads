@@ -8,7 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CTABand } from "@/components/sections/CTABand";
 import { JsonLd } from "@/components/JsonLd";
-import { insightPosts, getInsightBySlug } from "@/data/insights";
+import { getPublishedInsightPosts, getInsightBySlug } from "@/lib/data/insights";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
 const dateFormatter = new Intl.DateTimeFormat("en-IN", {
@@ -17,8 +17,11 @@ const dateFormatter = new Intl.DateTimeFormat("en-IN", {
   year: "numeric",
 });
 
-export function generateStaticParams() {
-  return insightPosts.map((post) => ({ slug: post.slug }));
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  const posts = await getPublishedInsightPosts();
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -27,7 +30,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getInsightBySlug(slug);
+  const post = await getInsightBySlug(slug);
   if (!post) return {};
 
   return {
@@ -48,7 +51,7 @@ export default async function InsightPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getInsightBySlug(slug);
+  const post = await getInsightBySlug(slug);
   if (!post) notFound();
 
   return (
@@ -118,34 +121,10 @@ export default async function InsightPage({
           </Reveal>
 
           <Reveal className="mx-auto mt-12 max-w-2xl">
-            {post.body.map((block, i) => {
-              if (block.type === "heading") {
-                return (
-                  <h2 key={i} className="mt-10 font-display text-xl font-bold text-brand-ink first:mt-0">
-                    {block.text}
-                  </h2>
-                );
-              }
-              if (block.type === "list") {
-                return (
-                  <ul key={i} className="mt-5 space-y-2.5">
-                    {block.items.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-red" />
-                        <span className="text-brand-gray leading-relaxed text-base md:text-lg">
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                );
-              }
-              return (
-                <p key={i} className="mt-5 text-brand-gray leading-relaxed text-base md:text-lg first:mt-0">
-                  {block.text}
-                </p>
-              );
-            })}
+            <div
+              className="prose prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-brand-ink prose-p:text-brand-gray prose-li:text-brand-gray prose-a:text-brand-red prose-a:no-underline hover:prose-a:underline prose-strong:text-brand-ink prose-blockquote:border-brand-red prose-blockquote:text-brand-gray marker:text-brand-red"
+              dangerouslySetInnerHTML={{ __html: post.body }}
+            />
           </Reveal>
         </Container>
       </section>

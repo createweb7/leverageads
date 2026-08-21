@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CTABand } from "@/components/sections/CTABand";
 import { PortfolioGrid } from "@/components/sections/PortfolioGrid";
+import { getPortfolioItems } from "@/lib/data/portfolio";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/portfolio" },
 };
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const items = await getPortfolioItems();
+
   return (
     <>
       <section className="border-b border-brand-line bg-white pt-8 pb-10 md:pt-10 md:pb-12">
@@ -34,7 +37,7 @@ export default function PortfolioPage() {
       <section className="py-14 md:py-16 bg-white">
         <Container>
           <Suspense fallback={null}>
-            <PortfolioGrid />
+            <PortfolioGrid items={items} />
           </Suspense>
         </Container>
       </section>

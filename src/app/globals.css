@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Compact treatment for short viewports (laptop windows with browser chrome) —
    lets the hero fit in one screen without scrolling, mirroring the reference design's

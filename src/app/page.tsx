@@ -14,6 +14,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { CTABand } from "@/components/sections/CTABand";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { generalFaqs } from "@/data/faqs";
+import { getClientLogos } from "@/lib/data/clientLogos";
 
 export const metadata: Metadata = {
   title: "LeverageAds | Branding, Advertising, Websites, Photography, CRM, ERP & WhatsApp Automation in Chennai",
@@ -21,11 +22,13 @@ export const metadata: Metadata = {
     "LeverageAds is a full-service brand, creative, digital and business solutions company in Chennai offering branding, ad films, product photography, websites, CRM, ERP, digital marketing and WhatsApp automation.",
 };
 
-export default function Home() {
+export default async function Home() {
+  const clientLogos = await getClientLogos();
+
   return (
     <>
       <Hero />
-      <ClientLogos />
+      <ClientLogos logos={clientLogos} />
       <PortfolioShowcase />
       <JingleShowcase />
       <FeaturedWork />

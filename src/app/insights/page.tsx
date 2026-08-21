@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CTABand } from "@/components/sections/CTABand";
-import { insightPosts } from "@/data/insights";
+import { getPublishedInsightPosts } from "@/lib/data/insights";
 
 export const metadata: Metadata = {
   title: "Insights",
@@ -21,7 +21,9 @@ const dateFormatter = new Intl.DateTimeFormat("en-IN", {
   year: "numeric",
 });
 
-export default function InsightsPage() {
+export default async function InsightsPage() {
+  const insightPosts = await getPublishedInsightPosts();
+
   return (
     <>
       <section className="border-b border-brand-line bg-white pt-8 pb-10 md:pt-10 md:pb-12">

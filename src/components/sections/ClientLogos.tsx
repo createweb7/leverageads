@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { clientLogos } from "@/data/clients";
+import type { ClientLogo } from "@/lib/data/clientLogos";
 
-const track = [...clientLogos, ...clientLogos];
+export function ClientLogos({ logos }: { logos: ClientLogo[] }) {
+  const track = [...logos, ...logos];
 
-export function ClientLogos() {
   return (
     <section className="border-y border-brand-line bg-white py-14">
       <Container>

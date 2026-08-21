@@ -14,7 +14,7 @@ export function Footer() {
   return (
     <footer className="mt-24 md:mt-32 bg-brand-ink pt-20 text-white md:pt-24">
       <Container>
-        <div className="grid grid-cols-1 gap-14 border-b border-white/10 pb-16 lg:grid-cols-[1.4fr_1fr_1.2fr]">
+        <div className="grid grid-cols-1 gap-14 border-b border-white/10 pb-16 lg:grid-cols-[1.3fr_0.85fr_0.85fr_1fr]">
           <div>
             <Link href="/">
               <Image
@@ -60,6 +60,22 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-display text-sm font-bold uppercase tracking-wide text-white">
+              Blog
+            </h4>
+            <ul className="mt-6 space-y-3">
+              <li>
+                <Link
+                  href="/insights"
+                  className="text-[15px] text-white/60 transition-all hover:pl-1.5 hover:text-white"
+                >
+                  Read Our Blog
+                </Link>
+              </li>
             </ul>
           </div>
 

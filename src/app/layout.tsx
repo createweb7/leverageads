@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppBar } from "@/components/layout/WhatsAppBar";
+import { HideOnAdmin } from "@/components/layout/HideOnAdmin";
 import { siteConfig } from "@/data/site";
 
 const inter = Inter({
@@ -66,7 +67,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jakarta.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${jakarta.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col font-sans text-brand-ink">
         <noscript>
           <style>{".reveal{opacity:1!important;transform:none!important}"}</style>
@@ -75,10 +80,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <Header />
+        <HideOnAdmin>
+          <Header />
+        </HideOnAdmin>
         <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppBar />
+        <HideOnAdmin>
+          <Footer />
+        </HideOnAdmin>
+        <HideOnAdmin>
+          <WhatsAppBar />
+        </HideOnAdmin>
       </body>
     </html>
   );

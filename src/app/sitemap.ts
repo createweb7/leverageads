@@ -2,10 +2,12 @@ import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 import { caseStudies } from "@/data/caseStudies";
 import { industries } from "@/data/industries";
-import { insightPosts } from "@/data/insights";
+import { getPublishedInsightPosts } from "@/lib/data/insights";
 import { siteConfig } from "@/data/site";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const insightPosts = await getPublishedInsightPosts();
+
   const staticRoutes = [
     "",
     "/about",

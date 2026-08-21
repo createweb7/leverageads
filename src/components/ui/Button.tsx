@@ -2,8 +2,8 @@ import Link from "next/link";
 import clsx from "clsx";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 
-type Variant = "primary" | "dark" | "ghost" | "white" | "wa";
-type Size = "md" | "lg";
+type Variant = "primary" | "dark" | "ghost" | "white" | "wa" | "danger";
+type Size = "sm" | "md" | "lg";
 
 const base =
   "inline-flex items-center justify-center gap-2 rounded-full font-display font-semibold transition-[transform,box-shadow,background-color,color,border-color] duration-300 ease-brand hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red disabled:opacity-50 disabled:pointer-events-none disabled:hover:translate-y-0";
@@ -16,9 +16,11 @@ const variants: Record<Variant, string> = {
     "bg-transparent text-brand-ink border border-black/15 hover:border-brand-ink hover:bg-white",
   white: "bg-white text-brand-ink hover:shadow-[0_14px_32px_rgba(0,0,0,.3)]",
   wa: "bg-[#1EBE5D] text-white shadow-[0_8px_24px_rgba(30,190,93,.25)] hover:bg-[#17A852]",
+  danger: "bg-red-600 text-white hover:bg-red-700",
 };
 
 const sizes: Record<Size, string> = {
+  sm: "text-xs px-4 py-2",
   md: "text-sm px-6 py-3",
   lg: "text-base px-7 py-4",
 };
