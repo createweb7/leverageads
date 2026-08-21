@@ -92,6 +92,13 @@ export const portfolioItems: PortfolioItem[] = [
   { src: "/portfolio/corporate/06.webp", alt: "Industrial coating and corrosion campaign", categorySlug: "corporate", width: 908, height: 1284 },
   { src: "/portfolio/corporate/07.webp", alt: "Pulse72 fitness brand campaign", categorySlug: "corporate", width: 945, height: 945 },
   { src: "/portfolio/corporate/08.webp", alt: "Philips sustainability campaign", categorySlug: "corporate", width: 939, height: 2004 },
+  { src: "/portfolio/corporate/09.webp", alt: "Ergonomic office chair product campaign", categorySlug: "corporate", width: 1754, height: 2480 },
+  { src: "/portfolio/corporate/10.webp", alt: "Chola MS insurance campaign", categorySlug: "corporate", width: 1188, height: 849 },
+  { src: "/portfolio/corporate/11.webp", alt: "Sai Travel Solutions corporate transport campaign", categorySlug: "corporate", width: 975, height: 1300 },
+  { src: "/portfolio/corporate/12.webp", alt: "Indo-American Chamber of Commerce event invitation", categorySlug: "corporate", width: 1688, height: 1261 },
+  { src: "/portfolio/corporate/13.webp", alt: "Neyveli Lignite Corporation brand campaign", categorySlug: "corporate", width: 954, height: 1340 },
+  { src: "/portfolio/corporate/14.webp", alt: "Kaiyaan LED lighting campaign", categorySlug: "corporate", width: 945, height: 638 },
+  { src: "/portfolio/corporate/15.webp", alt: "Fenner industrial belts brand campaign", categorySlug: "corporate", width: 1181, height: 926 },
 
   // real-estate
   { src: "/portfolio/real-estate/02.webp", alt: "Landmax real estate campaign", categorySlug: "real-estate", width: 945, height: 1508 },
@@ -118,6 +125,15 @@ export const portfolioItems: PortfolioItem[] = [
   { src: "/portfolio/textile-fashion/07.webp", alt: "Fashion retail digital campaign creative", categorySlug: "textile-fashion", width: 1250, height: 850 },
   { src: "/portfolio/textile-fashion/08.webp", alt: "Rajendira's Women's Store & Men's Store family campaign photography", categorySlug: "textile-fashion", width: 1000, height: 1001 },
   { src: "/portfolio/textile-fashion/09.webp", alt: "Rajendira's Women's Store \"What Women Want\" hoarding campaign", categorySlug: "textile-fashion", width: 1000, height: 1000 },
+  { src: "/portfolio/textile-fashion/10.webp", alt: "Nakshatira silks lifestyle campaign", categorySlug: "textile-fashion", width: 750, height: 568 },
+  { src: "/portfolio/textile-fashion/11.webp", alt: "Nakshatira silk saree portrait campaign", categorySlug: "textile-fashion", width: 350, height: 547 },
+  { src: "/portfolio/textile-fashion/12.webp", alt: "Rajendira's Diwali festive family campaign", categorySlug: "textile-fashion", width: 2056, height: 2894 },
+  { src: "/portfolio/textile-fashion/13.webp", alt: "Rajendira's \"Everything for Everyone\" hoarding campaign", categorySlug: "textile-fashion", width: 1200, height: 800 },
+  { src: "/portfolio/textile-fashion/14.webp", alt: "Rajendira's wedding silk sarees hoarding campaign", categorySlug: "textile-fashion", width: 720, height: 388 },
+  { src: "/portfolio/textile-fashion/15.webp", alt: "S.M. Silks Kancheepuram press campaign", categorySlug: "textile-fashion", width: 1260, height: 1929 },
+  { src: "/portfolio/textile-fashion/16.webp", alt: "Singapore Silk Mall saree campaign", categorySlug: "textile-fashion", width: 800, height: 1212 },
+  { src: "/portfolio/textile-fashion/17.webp", alt: "Singapore Silk Mall menswear campaign", categorySlug: "textile-fashion", width: 800, height: 1212 },
+  { src: "/portfolio/textile-fashion/18.webp", alt: "S.M. Silks Kancheepuram saree pair campaign", categorySlug: "textile-fashion", width: 2315, height: 3248 },
 
   // website
   { src: "/portfolio/website/01.webp", alt: "RT magazine website design", categorySlug: "website", width: 945, height: 1293 },
