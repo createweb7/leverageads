@@ -4,7 +4,7 @@ import { whatsappHref } from "@/data/site";
 export function WhatsAppBar() {
   return (
     <a
-      href={whatsappHref("Hi LeverageAds, I need help with branding, website, photography, CRM or WhatsApp automation.")}
+      href={whatsappHref("Hi LeverageAds, I'd like to share my requirement.")}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with LeverageAds on WhatsApp"

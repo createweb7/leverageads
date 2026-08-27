@@ -4,29 +4,40 @@ import { useState, type FormEvent } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { industries } from "@/data/industries";
+import { getRecaptchaToken } from "@/lib/recaptcha-client";
+import { RecaptchaNotice } from "@/components/sections/RecaptchaNotice";
 
 type Status = "idle" | "submitting" | "success" | "error";
+type FieldErrors = Partial<Record<string, string>>;
 
 const enquirySources = ["Website", "Ads", "Social Media", "Walk-ins", "Referrals", "Mixed / Not Sure"];
 const volumeBuckets = ["Under 20", "20–50", "50–100", "100+"];
 
 export function WhatsAppRequirementForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
+    setFieldErrors({});
 
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
+    const recaptchaToken = await getRecaptchaToken("whatsapp_automation_form");
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, formType: "whatsapp-automation" }),
+        body: JSON.stringify({ ...data, formType: "whatsapp-automation", recaptchaToken }),
       });
-      if (!res.ok) throw new Error("Request failed");
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setFieldErrors(result.fieldErrors ?? {});
+        setStatus("error");
+        return;
+      }
       setStatus("success");
       form.reset();
     } catch {
@@ -53,9 +64,15 @@ export function WhatsAppRequirementForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} noValidate className="space-y-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <Field label="Business Name" name="businessName" required />
+        <Field
+          label="Business Name"
+          name="businessName"
+          required
+          minLength={2}
+          error={fieldErrors.businessName}
+        />
         <div>
           <label htmlFor="industry" className="mb-1.5 block text-sm font-semibold text-brand-ink">
             Industry
@@ -74,6 +91,9 @@ export function WhatsAppRequirementForm() {
             ))}
             <option value="Other">Other</option>
           </select>
+          {fieldErrors.industry && (
+            <p className="mt-1 text-xs font-medium text-brand-red">{fieldErrors.industry}</p>
+          )}
         </div>
       </div>
 
@@ -95,6 +115,9 @@ export function WhatsAppRequirementForm() {
               </option>
             ))}
           </select>
+          {fieldErrors.enquirySource && (
+            <p className="mt-1 text-xs font-medium text-brand-red">{fieldErrors.enquirySource}</p>
+          )}
         </div>
         <div>
           <label htmlFor="monthlyVolume" className="mb-1.5 block text-sm font-semibold text-brand-ink">
@@ -113,6 +136,9 @@ export function WhatsAppRequirementForm() {
               </option>
             ))}
           </select>
+          {fieldErrors.monthlyVolume && (
+            <p className="mt-1 text-xs font-medium text-brand-red">{fieldErrors.monthlyVolume}</p>
+          )}
         </div>
       </div>
 
@@ -125,22 +151,33 @@ export function WhatsAppRequirementForm() {
           name="automationGoal"
           rows={4}
           required
+          minLength={10}
           className="w-full rounded-lg border border-brand-line bg-white px-4 py-3 text-sm text-brand-ink outline-none focus:border-brand-red"
           placeholder="e.g. website leads, ad responses, catalogue enquiries, appointments, admissions or follow-ups"
         />
+        {fieldErrors.automationGoal && (
+          <p className="mt-1 text-xs font-medium text-brand-red">{fieldErrors.automationGoal}</p>
+        )}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <RadioGroup label="Need CRM Integration?" name="crmIntegration" />
-        <RadioGroup label="Need Human Handover?" name="humanHandover" />
+        <RadioGroup label="Need CRM Integration?" name="crmIntegration" error={fieldErrors.crmIntegration} />
+        <RadioGroup label="Need Human Handover?" name="humanHandover" error={fieldErrors.humanHandover} />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <Field label="Phone / WhatsApp Number" name="phone" type="tel" required />
-        <Field label="Email" name="email" type="email" required />
+        <Field
+          label="Phone / WhatsApp Number"
+          name="phone"
+          type="tel"
+          required
+          pattern="^\+?[0-9()\-\s]{7,20}$"
+          error={fieldErrors.phone}
+        />
+        <Field label="Email" name="email" type="email" required error={fieldErrors.email} />
       </div>
 
-      {status === "error" && (
+      {status === "error" && !Object.keys(fieldErrors).length && (
         <p className="text-sm font-medium text-brand-red">
           Something went wrong sending your requirement. Please try WhatsApp or call us directly.
         </p>
@@ -155,6 +192,8 @@ export function WhatsAppRequirementForm() {
           "Plan My WhatsApp Workflow"
         )}
       </Button>
+
+      <RecaptchaNotice />
     </form>
   );
 }
@@ -164,11 +203,17 @@ function Field({
   name,
   type = "text",
   required,
+  minLength,
+  pattern,
+  error,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
+  minLength?: number;
+  pattern?: string;
+  error?: string;
 }) {
   return (
     <div>
@@ -180,13 +225,16 @@ function Field({
         name={name}
         type={type}
         required={required}
+        minLength={minLength}
+        pattern={pattern}
         className="w-full rounded-lg border border-brand-line bg-white px-4 py-2.5 text-sm text-brand-ink outline-none focus:border-brand-red"
       />
+      {error && <p className="mt-1 text-xs font-medium text-brand-red">{error}</p>}
     </div>
   );
 }
 
-function RadioGroup({ label, name }: { label: string; name: string }) {
+function RadioGroup({ label, name, error }: { label: string; name: string; error?: string }) {
   return (
     <div>
       <span className="mb-1.5 block text-sm font-semibold text-brand-ink">{label}</span>
@@ -204,6 +252,7 @@ function RadioGroup({ label, name }: { label: string; name: string }) {
           </label>
         ))}
       </div>
+      {error && <p className="mt-1 text-xs font-medium text-brand-red">{error}</p>}
     </div>
   );
 }

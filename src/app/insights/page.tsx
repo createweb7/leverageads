@@ -7,6 +7,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CTABand } from "@/components/sections/CTABand";
 import { getPublishedInsightPosts } from "@/lib/data/insights";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Insights",
@@ -26,6 +28,12 @@ export default async function InsightsPage() {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Insights", path: "/insights" },
+        ])}
+      />
       <section className="border-b border-brand-line bg-white pt-8 pb-10 md:pt-10 md:pb-12">
         <Container>
           <Breadcrumbs items={[{ label: "Insights" }]} />

@@ -5,11 +5,13 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CTABand } from "@/components/sections/CTABand";
 import { PortfolioGrid } from "@/components/sections/PortfolioGrid";
 import { getPortfolioItems } from "@/lib/data/portfolio";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Portfolio – Branding & Design Work in Chennai",
   description:
-    "LeverageAds works across branding, advertising, visual production, websites, digital communication and business systems. Our portfolio brings together selected work across these categories.",
+    "LeverageAds works across branding, advertising, visual production, websites, digital communication and business systems in Chennai. Our portfolio brings together selected work across these categories.",
   alternates: { canonical: "/portfolio" },
 };
 
@@ -18,6 +20,12 @@ export default async function PortfolioPage() {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Portfolio", path: "/portfolio" },
+        ])}
+      />
       <section className="border-b border-brand-line bg-white pt-8 pb-10 md:pt-10 md:pb-12">
         <Container>
           <Breadcrumbs items={[{ label: "Portfolio" }]} />

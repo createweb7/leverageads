@@ -7,6 +7,8 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CTABand } from "@/components/sections/CTABand";
 import { IndustryGraphic } from "@/components/sections/IndustryGraphic";
 import { industries } from "@/data/industries";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Industries We Work With",
@@ -20,6 +22,12 @@ const builtIndustries = industries.filter((i) => i.intro);
 export default function IndustriesPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Industries", path: "/industries" },
+        ])}
+      />
       <section className="border-b border-brand-line bg-white pt-8 pb-10 md:pt-10 md:pb-12">
         <Container>
           <Breadcrumbs items={[{ label: "Industries" }]} />

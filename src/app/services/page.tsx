@@ -4,18 +4,26 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CoreServicesGrid } from "@/components/sections/CoreServicesGrid";
 import { CTABand } from "@/components/sections/CTABand";
+import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/data/site";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Our Services in Chennai",
   description:
-    "Branding, advertising, ad films, product photography, websites, e-commerce, CRM, ERP, WhatsApp automation, SEO and digital marketing — explore LeverageAds' full range of services.",
+    "Branding, advertising, ad films, product photography, websites, e-commerce, CRM, ERP, WhatsApp automation, SEO and digital marketing — explore LeverageAds' full range of services in Chennai.",
   alternates: { canonical: "/services" },
 };
 
 export default function ServicesIndexPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+        ])}
+      />
       <section
         className="border-b border-brand-line bg-brand-paper"
         style={{

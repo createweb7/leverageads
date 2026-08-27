@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Building2, Image as ImageIcon, Newspaper, ArrowUpRight } from "lucide-react";
+import { Building2, Image as ImageIcon, Newspaper, MessageSquare, ArrowUpRight } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = { title: "Dashboard" };
 
 async function getCounts() {
   const supabase = await createClient();
-  const [clients, portfolio, blog] = await Promise.all([
+  const [clients, portfolio, blog, newEnquiries] = await Promise.all([
     supabase.from("client_logos").select("*", { count: "exact", head: true }),
     supabase.from("portfolio_items").select("*", { count: "exact", head: true }),
     supabase.from("blog_posts").select("*", { count: "exact", head: true }),
+    supabase.from("enquiries").select("*", { count: "exact", head: true }).eq("status", "new"),
   ]);
 
   return {
     clients: clients.count ?? 0,
     portfolio: portfolio.count ?? 0,
     blog: blog.count ?? 0,
+    newEnquiries: newEnquiries.count ?? 0,
   };
 }
 
@@ -45,6 +47,13 @@ export default async function AdminDashboard() {
       icon: Newspaper,
       accent: "bg-emerald-50 text-emerald-600",
     },
+    {
+      href: "/admin/enquiries",
+      label: "New Enquiries",
+      count: counts.newEnquiries,
+      icon: MessageSquare,
+      accent: "bg-red-50 text-brand-red",
+    },
   ];
 
   return (
@@ -54,7 +63,7 @@ export default async function AdminDashboard() {
         Manage the content shown on the public site.
       </p>
 
-      <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {cards.map((card) => {
           const Icon = card.icon;
           return (

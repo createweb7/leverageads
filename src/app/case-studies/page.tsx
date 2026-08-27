@@ -4,6 +4,8 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CTABand } from "@/components/sections/CTABand";
 import { CaseStudiesGrid } from "@/components/sections/CaseStudiesGrid";
 import { caseStudies } from "@/data/caseStudies";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Case Studies",
@@ -15,6 +17,12 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Case Studies", path: "/case-studies" },
+        ])}
+      />
       <section className="border-b border-brand-line bg-white pt-8 pb-10 md:pt-10 md:pb-12">
         <Container>
           <Breadcrumbs items={[{ label: "Case Studies" }]} />

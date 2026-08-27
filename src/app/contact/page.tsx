@@ -5,11 +5,13 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { siteConfig, whatsappHref } from "@/data/site";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us – Chennai Branding & Advertising Agency",
   description:
-    "Talk to LeverageAds about branding, a website, product photography, advertising support, CRM, ERP, WhatsApp automation or a broader business communication consultation.",
+    "Talk to LeverageAds, a branding and advertising agency in Chennai, about a website, product photography, advertising support, CRM, ERP, WhatsApp automation or a broader business communication consultation.",
   alternates: { canonical: "/contact" },
 };
 
@@ -24,6 +26,13 @@ const reasons = [
 
 export default function ContactPage() {
   return (
+    <>
+    <JsonLd
+      data={breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Contact", path: "/contact" },
+      ])}
+    />
     <section
       className="pt-8 pb-20 md:pt-10 md:pb-28 bg-white"
       style={{
@@ -88,5 +97,6 @@ export default function ContactPage() {
         </div>
       </Container>
     </section>
+    </>
   );
 }

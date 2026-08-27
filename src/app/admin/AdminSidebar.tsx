@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import clsx from "clsx";
-import { LayoutDashboard, Building2, Image as ImageIcon, Newspaper, Menu, X } from "lucide-react";
+import { LayoutDashboard, Building2, Image as ImageIcon, Newspaper, MessageSquare, Menu, X } from "lucide-react";
 import { LogoutButton } from "./LogoutButton";
 
 const navItems = [
@@ -13,6 +13,7 @@ const navItems = [
   { href: "/admin/clients", label: "Client Logos", icon: Building2 },
   { href: "/admin/portfolio", label: "Portfolio", icon: ImageIcon },
   { href: "/admin/blog", label: "Blog", icon: Newspaper },
+  { href: "/admin/enquiries", label: "Enquiries", icon: MessageSquare },
 ];
 
 export function AdminSidebar({ email }: { email: string }) {

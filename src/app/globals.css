@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* We show the required reCAPTCHA attribution text next to the submit button
+   instead (see RecaptchaNotice.tsx) — Google's terms allow hiding the
+   floating badge as long as that notice is shown somewhere on the page. */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 /* Compact treatment for short viewports (laptop windows with browser chrome) —
    lets the hero fit in one screen without scrolling, mirroring the reference design's
    own max-height:900px breakpoint. */
