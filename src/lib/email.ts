@@ -75,7 +75,7 @@ function renderEmailHtml({
                 <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:${COLORS.gray2};margin-bottom:6px">${escapeHtml(messageLabel)}</div>
                 <div style="background-color:${COLORS.paper};border-left:3px solid ${COLORS.red};border-radius:8px;padding:14px 16px;font-size:14px;color:${COLORS.ink};line-height:1.6;white-space:pre-wrap;margin-bottom:28px">${escapeHtml(message)}</div>
 
-                <a href="mailto:${encodeURIComponent(replyEmail)}" style="display:inline-block;background-color:${COLORS.red};color:#ffffff;font-size:14px;font-weight:700;text-decoration:none;padding:12px 24px;border-radius:8px">Reply to ${escapeHtml(replyName)}</a>
+                <a href="mailto:${escapeHtml(replyEmail)}" style="display:inline-block;background-color:${COLORS.red};color:#ffffff;font-size:14px;font-weight:700;text-decoration:none;padding:12px 24px;border-radius:8px">Reply to ${escapeHtml(replyName)}</a>
               </td>
             </tr>
             <tr>
