@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(__dirname),
   },
+  // Reduces build output size — source maps aren't needed in production.
+  productionBrowserSourceMaps: false,
+  // sharp is a native binary — bundling it into the serverless function
+  // (the default) can break its binary resolution in production even when
+  // it works fine in local dev. Keep it external so Vercel loads it as-is.
+  serverExternalPackages: ["sharp"],
   experimental: {
     serverActions: {
       // Admin image uploads (client logos, portfolio items, blog covers) are
@@ -12,8 +18,20 @@ const nextConfig: NextConfig = {
       // multipart/form-data overhead above Next's 1MB default.
       bodySizeLimit: "10mb",
     },
+    optimizePackageImports: ["lucide-react"],
   },
   images: {
+    // All admin-uploaded images are already converted to WebP at upload
+    // time (src/lib/supabase/upload.ts), so there's no need to also
+    // generate AVIF variants here — that would only add another billed
+    // format dimension on top of the existing WebP source.
+    formats: ["image/webp"],
+    // Trimmed from Next's defaults (which also include 3840 and 16) to
+    // curb the number of distinct cached image variants Vercel bills for —
+    // neither extreme is actually used anywhere on this site.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2560],
+    imageSizes: [32, 48, 64, 96, 128, 256, 384],
+    qualities: [65, 70, 75, 80],
     remotePatterns: [
       {
         protocol: "https",
