@@ -161,27 +161,21 @@ export function Header() {
               onMouseEnter={() => setOpenPillar(pillar.slug)}
               onMouseLeave={() => setOpenPillar((v) => (v === pillar.slug ? null : v))}
             >
-              <span className="flex items-center gap-1 py-8">
-                <Link
-                  href={pillar.href}
-                  className="text-brand-ink transition-colors hover:text-brand-red"
-                >
-                  {pillar.label}
-                </Link>
+              <button
+                type="button"
+                className="flex items-center gap-1 py-8 text-brand-ink transition-colors hover:text-brand-red"
+                aria-label={`Toggle ${pillar.label} menu`}
+                aria-expanded={openPillar === pillar.slug}
+                onClick={() => setOpenPillar((v) => (v === pillar.slug ? null : pillar.slug))}
+              >
+                {pillar.label}
                 {pillar.links.length > 0 && (
-                  <button
-                    type="button"
-                    aria-label={`Toggle ${pillar.label} menu`}
-                    aria-expanded={openPillar === pillar.slug}
-                    onClick={() => setOpenPillar((v) => (v === pillar.slug ? null : pillar.slug))}
-                  >
-                    <ChevronDown
-                      size={15}
-                      className={clsx("transition-transform", openPillar === pillar.slug && "rotate-180")}
-                    />
-                  </button>
+                  <ChevronDown
+                    size={15}
+                    className={clsx("transition-transform", openPillar === pillar.slug && "rotate-180")}
+                  />
                 )}
-              </span>
+              </button>
 
               {pillar.links.length > 0 && (
                 <div
@@ -249,37 +243,29 @@ export function Header() {
                 className="transform-[translateY(1rem)] border-b border-brand-line opacity-0 animate-[menuLink_.55s_var(--ease-brand)_forwards]"
                 style={{ animationDelay: `${(3 + i) * 60 + 50}ms` }}
               >
-                <div className="flex items-center justify-between gap-4 py-4">
-                  <Link
-                    href={pillar.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-baseline gap-4 font-display text-2xl font-bold text-brand-ink"
-                  >
+                <button
+                  type="button"
+                  aria-label={`Toggle ${pillar.label} submenu`}
+                  aria-expanded={mobileSubOpen === pillar.slug}
+                  onClick={() => setMobileSubOpen((v) => (v === pillar.slug ? null : pillar.slug))}
+                  className="flex w-full items-center justify-between gap-4 py-4"
+                >
+                  <span className="flex items-baseline gap-4 font-display text-2xl font-bold text-brand-ink">
                     <span className="text-xs font-bold tracking-wide text-brand-red">
                       {String(3 + i + 1).padStart(2, "0")}
                     </span>
                     {pillar.label}
-                  </Link>
+                  </span>
                   {pillar.links.length > 0 && (
-                    <button
-                      type="button"
-                      aria-label={`Toggle ${pillar.label} submenu`}
-                      aria-expanded={mobileSubOpen === pillar.slug}
-                      onClick={() =>
-                        setMobileSubOpen((v) => (v === pillar.slug ? null : pillar.slug))
-                      }
-                      className="flex h-9 w-9 shrink-0 items-center justify-center text-brand-ink"
-                    >
-                      <ChevronDown
-                        size={20}
-                        className={clsx(
-                          "transition-transform duration-300 ease-brand",
-                          mobileSubOpen === pillar.slug && "rotate-180",
-                        )}
-                      />
-                    </button>
+                    <ChevronDown
+                      size={20}
+                      className={clsx(
+                        "shrink-0 text-brand-ink transition-transform duration-300 ease-brand",
+                        mobileSubOpen === pillar.slug && "rotate-180",
+                      )}
+                    />
                   )}
-                </div>
+                </button>
 
                 {pillar.links.length > 0 && (
                   <div
